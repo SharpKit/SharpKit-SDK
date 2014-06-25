@@ -3,6 +3,8 @@ SharpKit-SDK
 
 3rd party C# library bindings for SharpKit, JsClr framework, source maps debugging handlers
 
+##### Folder Structure
+```
 Defs/
   Defs.sln
   JavaScript/
@@ -16,3 +18,4 @@ Tests/
   Tests.sln
 Demos/
   Demos.sln
+```
