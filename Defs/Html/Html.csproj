@@ -654,7 +654,7 @@
   <ItemGroup>
     <ProjectReference Include="..\JavaScript\JavaScript.csproj">
       <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>SharpKit.JavaScript</Name>
+      <Name>JavaScript</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

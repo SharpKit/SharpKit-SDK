@@ -157,14 +157,14 @@
     <Content Include="res\System.Text.js" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SharpKit.JavaScript\SharpKit.JavaScript.csproj">
+    <ProjectReference Include="..\..\Defs\JavaScript\JavaScript.csproj">
       <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>SharpKit.JavaScript</Name>
+      <Name>JavaScript</Name>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\SharpKit.Html\SharpKit.Html.csproj">
+    <ProjectReference Include="..\..\Defs\Html\Html.csproj">
       <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
-      <Name>SharpKit.Html</Name>
+      <Name>Html</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

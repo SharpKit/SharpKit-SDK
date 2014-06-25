@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -27,11 +27,11 @@
     <Compile Include="SharpKit.Html.Linq.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SharpKit.Html\SharpKit.Html.csproj">
+    <ProjectReference Include="..\..\Defs\Html\Html.csproj">
       <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
       <Name>SharpKit.Html</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SharpKit.JavaScript\SharpKit.JavaScript.csproj">
+    <ProjectReference Include="..\..\Defs\JavaScript\JavaScript.csproj">
       <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
       <Name>SharpKit.JavaScript</Name>
     </ProjectReference>
