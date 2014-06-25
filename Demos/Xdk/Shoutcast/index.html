@@ -1,0 +1,194 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<!--
+Copyright (c) 2011, 2012, 2013 Intel Corporation
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+-->
+  <head>
+    <title>Shoutcast</title>
+	<style type="text/css">
+	* { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+	</style>
+    <script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/demo-shoutcast.js"></script>
+   
+	
+
+<style type="text/css">
+@font-face {
+        font-family: 'EurostileANDROID';
+        src: url('eurosti_1-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'EurostileRegular';
+	src: url('eurosti_1-webfont.eot');
+	src: local('☺'), url('eurosti_1-webfont.woff') format('woff'), url('eurosti_1-webfont.ttf') format('truetype'), url('eurosti_1-webfont.svg#webfontBGthSONA') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+             
+
+#body {
+	background-image:url(images/Bkgrd.jpg);
+
+}
+#apDiv1 {
+	position:absolute;
+	width:320px;
+	height:185px;
+	z-index:1;
+	left: 0px;
+	top: 264px;
+	font-size: 14px;
+}
+#apDiv2 {
+	position:absolute;
+	width:320px;
+	height:260px;
+	z-index:1;
+	left: 0px;
+	top: 0px;
+}
+#apDiv3 {
+	position:absolute;
+	width:108px;
+	height:25px;
+	z-index:1;
+	left: 103px;
+	top: 64px;
+}
+#apDiv4 {
+	position:absolute;
+	width:79px;
+	height:47px;
+	z-index:2;
+	left: 202px;
+	top: 35px;
+}
+#play {
+	position:absolute;
+	width:36px;
+	height:26px;
+	z-index:2;
+	left: 118px;
+	top: 220px;
+}
+#apDiv5 {
+	position:absolute;
+	width:36px;
+	height:26px;
+	z-index:3;
+	left: 167px;
+	top: 220px;
+}
+#apDiv6 {
+	position:absolute;
+	width:36px;
+	height:27px;
+	z-index:4;
+	left: 71px;
+	top: 220px;
+}
+#apDiv7 {
+	position:absolute;
+	width:36px;
+	height:27px;
+	z-index:2;
+	left: 211px;
+	top: 220px;
+}
+#apDiv8 {
+	position:absolute;
+	width:37px;
+	height:27px;
+	z-index:5;
+	left: 26px;
+	top: 220px;
+}
+#apDiv9 {
+	position:absolute;
+	width:37px;
+	height:27px;
+	z-index:6;
+	left: 255px;
+	top: 220px;
+}
+#apDiv10 {
+	position:absolute;
+	width:160px;
+	height:30px;
+	z-index:7;
+	left: 80px;
+	top: 108px;
+}
+#apDiv11 {
+	position:absolute;
+	width:160px;
+	height:28px;
+	z-index:8;
+	left: 81px;
+	top: 158px;
+}
+#apDiv12 {
+	position:absolute;
+	width:320px;
+	height:500px;
+	z-index:2;
+	left: 0px;
+	top: 0px;
+}
+*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+</style>
+<script type="text/javascript" src="js/demo-shoutcast.js"></script>
+
+</head>
+
+<!--Buttons-->
+<body style="background:url(images/Bkgrd.jpg); background-repeat:no-repeat;">
+
+<div id="apDiv2">
+
+  <img id="play" ontouchstart="Playbutton();" src="images/Play.png"/>
+  <img id="apDiv5" ontouchstart="AppMobi.player.stop();"src="images/Stop.png"/>
+  <img id="apDiv6" ontouchstart="AppMobi.player.rewind();"src="images/Back.png"/>
+  <img id="apDiv7" ontouchstart="AppMobi.player.ffwd();"src="images/Forward.png"/>
+  <img id="apDiv9" ontouchstart="AdjustVolume(10);"src="images/VolumeUp.png"/>
+  <img id="apDiv8" ontouchstart="adjustVolume(-10);"src="images/VolumeDown.png"/>
+  <img id="apDiv10" ontouchstart="MusicShowPlayer();"src="images/ShowPlayer.png"/>
+  <img id="apDiv11" onClick="music();" src="images/StartStreaming.png"/>
+</div>
+
+
+<!--End Buttons-->
+  <div id="apDiv1">
+	<hr>
+
+	<div id='trackInfo' style="color:green;font-family:EurostileRegular;"></div>
+	<div id='volume' style="color:white;font-family:EurostileRegular;"></div>
+
+	<hr>
+
+	<div id='log' style="color: white; margin-left:10px;font-family:EurostileRegular;"></div></div>
+  
+</body>
+</html>

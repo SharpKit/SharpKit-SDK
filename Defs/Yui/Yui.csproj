@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E85B2A11-D0D0-4879-92D6-3D6A12CFD14B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpKit.Yui</RootNamespace>
+    <AssemblyName>SharpKit.Yui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TargetFrameworkVersion Condition="'$(Configuration)' == 'v3.5'">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(Configuration)' == 'v4.0'">v4.0</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
+    <NoWarn>1591,0108,0114,1570</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Assembly.cs" />
+    <Compile Include="SharpKit\Attributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Y_\Anim.cs" />
+    <Compile Include="Y_\App.cs" />
+    <Compile Include="Y_\App_\Base.cs" />
+    <Compile Include="Y_\App_\Transitions.cs" />
+    <Compile Include="Y_\App_\TransitionsNative.cs" />
+    <Compile Include="Y_\AreaSeries.cs" />
+    <Compile Include="Y_\AreaSplineSeries.cs" />
+    <Compile Include="Y_\Array.cs" />
+    <Compile Include="Y_\ArrayList.cs" />
+    <Compile Include="Y_\ArraySort.cs" />
+    <Compile Include="Y_\AsyncQueue.cs" />
+    <Compile Include="Y_\Attribute.cs" />
+    <Compile Include="Y_\AttributeCore.cs" />
+    <Compile Include="Y_\AttributeEvents.cs" />
+    <Compile Include="Y_\AttributeExtras.cs" />
+    <Compile Include="Y_\AttributeLite.cs" />
+    <Compile Include="Y_\AutoComplete.cs" />
+    <Compile Include="Y_\AutoCompleteBase.cs" />
+    <Compile Include="Y_\AutoCompleteFilters.cs" />
+    <Compile Include="Y_\AutoCompleteHighlighters.cs" />
+    <Compile Include="Y_\AutoCompleteList.cs" />
+    <Compile Include="Y_\Axis.cs" />
+    <Compile Include="Y_\AxisType.cs" />
+    <Compile Include="Y_\BarSeries.cs" />
+    <Compile Include="Y_\Base.cs" />
+    <Compile Include="Y_\BaseCore.cs" />
+    <Compile Include="Y_\BottomAxisLayout.cs" />
+    <Compile Include="Y_\Button.cs" />
+    <Compile Include="Y_\ButtonCore.cs" />
+    <Compile Include="Y_\ButtonGroup.cs" />
+    <Compile Include="Y_\ButtonPlugin.cs" />
+    <Compile Include="Y_\Cache.cs" />
+    <Compile Include="Y_\CacheOffline.cs" />
+    <Compile Include="Y_\Calendar.cs" />
+    <Compile Include="Y_\CalendarBase.cs" />
+    <Compile Include="Y_\CanvasCircle.cs" />
+    <Compile Include="Y_\CanvasDrawing.cs" />
+    <Compile Include="Y_\CanvasEllipse.cs" />
+    <Compile Include="Y_\CanvasGraphic.cs" />
+    <Compile Include="Y_\CanvasPath.cs" />
+    <Compile Include="Y_\CanvasPieSlice.cs" />
+    <Compile Include="Y_\CanvasRect.cs" />
+    <Compile Include="Y_\CanvasShape.cs" />
+    <Compile Include="Y_\CartesianChart.cs" />
+    <Compile Include="Y_\CartesianSeries.cs" />
+    <Compile Include="Y_\CategoryAxis.cs" />
+    <Compile Include="Y_\Chart.cs" />
+    <Compile Include="Y_\ChartBase.cs" />
+    <Compile Include="Y_\ChartLegend.cs" />
+    <Compile Include="Y_\Circle.cs" />
+    <Compile Include="Y_\ClassNameManager.cs" />
+    <Compile Include="Y_\ClickableRail.cs" />
+    <Compile Include="Y_\ColumnSeries.cs" />
+    <Compile Include="Y_\ComboSeries.cs" />
+    <Compile Include="Y_\ComboSplineSeries.cs" />
+    <Compile Include="Y_\config.cs" />
+    <Compile Include="Y_\Console.cs" />
+    <Compile Include="Y_\Controller.cs" />
+    <Compile Include="Y_\Cookie.cs" />
+    <Compile Include="Y_\CurveUtil.cs" />
+    <Compile Include="Y_\CustomEvent.cs" />
+    <Compile Include="Y_\DataSchema_\Array.cs" />
+    <Compile Include="Y_\DataSchema_\Base.cs" />
+    <Compile Include="Y_\DataSchema_\JSON.cs" />
+    <Compile Include="Y_\DataSchema_\Text.cs" />
+    <Compile Include="Y_\DataSchema_\XML.cs" />
+    <Compile Include="Y_\DataSourceArraySchema.cs" />
+    <Compile Include="Y_\DataSourceCache.cs" />
+    <Compile Include="Y_\DataSourceCacheExtension.cs" />
+    <Compile Include="Y_\DataSourceJSONSchema.cs" />
+    <Compile Include="Y_\DataSourceTextSchema.cs" />
+    <Compile Include="Y_\DataSourceXMLSchema.cs" />
+    <Compile Include="Y_\DataSource_\Function.cs" />
+    <Compile Include="Y_\DataSource_\Get.cs" />
+    <Compile Include="Y_\DataSource_\IO.cs" />
+    <Compile Include="Y_\DataSource_\Local.cs" />
+    <Compile Include="Y_\DataTable.cs" />
+    <Compile Include="Y_\DataTable_\Base.cs" />
+    <Compile Include="Y_\DataTable_\BodyView.cs" />
+    <Compile Include="Y_\DataTable_\ColumnWidths.cs" />
+    <Compile Include="Y_\DataTable_\Core.cs" />
+    <Compile Include="Y_\DataTable_\HeaderView.cs" />
+    <Compile Include="Y_\DataTable_\Message.cs" />
+    <Compile Include="Y_\DataTable_\Mutable.cs" />
+    <Compile Include="Y_\DataTable_\Scrollable.cs" />
+    <Compile Include="Y_\DataTable_\Sortable.cs" />
+    <Compile Include="Y_\DataType_\Date.cs" />
+    <Compile Include="Y_\DataType_\Date_\Locale.cs" />
+    <Compile Include="Y_\DataType_\Number.cs" />
+    <Compile Include="Y_\DataType_\XML.cs" />
+    <Compile Include="Y_\DD_\DDM.cs" />
+    <Compile Include="Y_\DD_\Delegate.cs" />
+    <Compile Include="Y_\DD_\Drag.cs" />
+    <Compile Include="Y_\DD_\Drop.cs" />
+    <Compile Include="Y_\DD_\Plugin_\DDWindowScroll.cs" />
+    <Compile Include="Y_\DD_\Scroll.cs" />
+    <Compile Include="Y_\Dial.cs" />
+    <Compile Include="Y_\Do.cs" />
+    <Compile Include="Y_\DOM.cs" />
+    <Compile Include="Y_\DOMEventFacade.cs" />
+    <Compile Include="Y_\Do_\AlterArgs.cs" />
+    <Compile Include="Y_\Do_\AlterReturn.cs" />
+    <Compile Include="Y_\Do_\Error.cs" />
+    <Compile Include="Y_\Do_\Halt.cs" />
+    <Compile Include="Y_\Do_\Method.cs" />
+    <Compile Include="Y_\Do_\Prevent.cs" />
+    <Compile Include="Y_\Drawing.cs" />
+    <Compile Include="Y_\Easing.cs" />
+    <Compile Include="Y_\EditorBase.cs" />
+    <Compile Include="Y_\EditorSelection.cs" />
+    <Compile Include="Y_\Ellipse.cs" />
+    <Compile Include="Y_\EllipseGroup.cs" />
+    <Compile Include="Y_\Escape.cs" />
+    <Compile Include="Y_\Event.cs" />
+    <Compile Include="Y_\EventFacade.cs" />
+    <Compile Include="Y_\EventHandle.cs" />
+    <Compile Include="Y_\EventTarget.cs" />
+    <Compile Include="Y_\ExecCommand.cs" />
+    <Compile Include="Y_\Features.cs" />
+    <Compile Include="Y_\File.cs" />
+    <Compile Include="Y_\FileFlash.cs" />
+    <Compile Include="Y_\FileHTML5.cs" />
+    <Compile Include="Y_\Fills.cs" />
+    <Compile Include="Y_\Frame.cs" />
+    <Compile Include="Y_\Get.cs" />
+    <Compile Include="Y_\GetNodeJS.cs" />
+    <Compile Include="Y_\Get_\Transaction.cs" />
+    <Compile Include="Y_\Graph.cs" />
+    <Compile Include="Y_\Graphic.cs" />
+    <Compile Include="Y_\GraphicBase.cs" />
+    <Compile Include="Y_\Gridlines.cs" />
+    <Compile Include="Y_\GroupCircle.cs" />
+    <Compile Include="Y_\GroupDiamond.cs" />
+    <Compile Include="Y_\GroupRect.cs" />
+    <Compile Include="Y_\Handlebars.cs" />
+    <Compile Include="Y_\Highlight.cs" />
+    <Compile Include="Y_\Histogram.cs" />
+    <Compile Include="Y_\HistoryBase.cs" />
+    <Compile Include="Y_\HistoryHash.cs" />
+    <Compile Include="Y_\HistoryHTML5.cs" />
+    <Compile Include="Y_\HorizontalLegendLayout.cs" />
+    <Compile Include="Y_\ImgLoadGroup.cs" />
+    <Compile Include="Y_\ImgLoadImgObj.cs" />
+    <Compile Include="Y_\Intl.cs" />
+    <Compile Include="Y_\IO.cs" />
+    <Compile Include="Y_\json.cs" />
+    <Compile Include="Y_\JSONPRequest.cs" />
+    <Compile Include="Y_\Lang.cs" />
+    <Compile Include="Y_\LeftAxisLayout.cs" />
+    <Compile Include="Y_\Lines.cs" />
+    <Compile Include="Y_\LineSeries.cs" />
+    <Compile Include="Y_\Loader.cs" />
+    <Compile Include="Y_\MarkerSeries.cs" />
+    <Compile Include="Y_\Matrix.cs" />
+    <Compile Include="Y_\Model.cs" />
+    <Compile Include="Y_\ModelList.cs" />
+    <Compile Include="Y_\Node.cs" />
+    <Compile Include="Y_\NodeList.cs" />
+    <Compile Include="Y_\NumericAxis.cs" />
+    <Compile Include="Y_\Overlay.cs" />
+    <Compile Include="Y_\Panel.cs" />
+    <Compile Include="Y_\Parallel.cs" />
+    <Compile Include="Y_\Path.cs" />
+    <Compile Include="Y_\PieChart.cs" />
+    <Compile Include="Y_\PieSeries.cs" />
+    <Compile Include="Y_\Pjax.cs" />
+    <Compile Include="Y_\PjaxBase.cs" />
+    <Compile Include="Y_\Plots.cs" />
+    <Compile Include="Y_\Plugin_\Align.cs" />
+    <Compile Include="Y_\Plugin_\AutoComplete.cs" />
+    <Compile Include="Y_\Plugin_\Base.cs" />
+    <Compile Include="Y_\Plugin_\Cache.cs" />
+    <Compile Include="Y_\Plugin_\CalendarNavigator.cs" />
+    <Compile Include="Y_\Plugin_\ConsoleFilters.cs" />
+    <Compile Include="Y_\Plugin_\CreateLinkBase.cs" />
+    <Compile Include="Y_\Plugin_\DataTableDataSource.cs" />
+    <Compile Include="Y_\Plugin_\DDConstrained.cs" />
+    <Compile Include="Y_\Plugin_\DDNodeScroll.cs" />
+    <Compile Include="Y_\Plugin_\DDProxy.cs" />
+    <Compile Include="Y_\Plugin_\Drag.cs" />
+    <Compile Include="Y_\Plugin_\Drop.cs" />
+    <Compile Include="Y_\Plugin_\EditorBidi.cs" />
+    <Compile Include="Y_\Plugin_\EditorBR.cs" />
+    <Compile Include="Y_\Plugin_\EditorLists.cs" />
+    <Compile Include="Y_\Plugin_\EditorPara.cs" />
+    <Compile Include="Y_\Plugin_\EditorParaBase.cs" />
+    <Compile Include="Y_\Plugin_\EditorParaIE.cs" />
+    <Compile Include="Y_\Plugin_\EditorTab.cs" />
+    <Compile Include="Y_\Plugin_\ExecCommand.cs" />
+    <Compile Include="Y_\Plugin_\Flick.cs" />
+    <Compile Include="Y_\Plugin_\Host.cs" />
+    <Compile Include="Y_\Plugin_\NodeFocusManager.cs" />
+    <Compile Include="Y_\Plugin_\NodeFX.cs" />
+    <Compile Include="Y_\Plugin_\NodeMenuNav.cs" />
+    <Compile Include="Y_\Plugin_\Pjax.cs" />
+    <Compile Include="Y_\Plugin_\Resize.cs" />
+    <Compile Include="Y_\Plugin_\ResizeConstrained.cs" />
+    <Compile Include="Y_\Plugin_\ResizeProxy.cs" />
+    <Compile Include="Y_\Plugin_\ScrollViewList.cs" />
+    <Compile Include="Y_\Plugin_\ScrollViewPaginator.cs" />
+    <Compile Include="Y_\Plugin_\ScrollViewScrollbars.cs" />
+    <Compile Include="Y_\Plugin_\Shim.cs" />
+    <Compile Include="Y_\Plugin_\SortScroll.cs" />
+    <Compile Include="Y_\Plugin_\WidgetAnim.cs" />
+    <Compile Include="Y_\Pollable.cs" />
+    <Compile Include="Y_\Profiler.cs" />
+    <Compile Include="Y_\QueryString.cs" />
+    <Compile Include="Y_\Queue.cs" />
+    <Compile Include="Y_\Record.cs" />
+    <Compile Include="Y_\Recordset.cs" />
+    <Compile Include="Y_\RecordsetFilter.cs" />
+    <Compile Include="Y_\RecordsetIndexer.cs" />
+    <Compile Include="Y_\RecordsetSort.cs" />
+    <Compile Include="Y_\Rect.cs" />
+    <Compile Include="Y_\Renderer.cs" />
+    <Compile Include="Y_\Resize.cs" />
+    <Compile Include="Y_\RightAxisLayout.cs" />
+    <Compile Include="Y_\Router.cs" />
+    <Compile Include="Y_\ScrollView.cs" />
+    <Compile Include="Y_\Selector.cs" />
+    <Compile Include="Y_\Shape.cs" />
+    <Compile Include="Y_\ShapeGroup.cs" />
+    <Compile Include="Y_\Slider.cs" />
+    <Compile Include="Y_\SliderBase.cs" />
+    <Compile Include="Y_\SliderValueRange.cs" />
+    <Compile Include="Y_\Sortable.cs" />
+    <Compile Include="Y_\SplineSeries.cs" />
+    <Compile Include="Y_\StackedAreaSeries.cs" />
+    <Compile Include="Y_\StackedAreaSplineSeries.cs" />
+    <Compile Include="Y_\StackedAxis.cs" />
+    <Compile Include="Y_\StackedBarSeries.cs" />
+    <Compile Include="Y_\StackedColumnSeries.cs" />
+    <Compile Include="Y_\StackedComboSeries.cs" />
+    <Compile Include="Y_\StackedComboSplineSeries.cs" />
+    <Compile Include="Y_\StackedLineSeries.cs" />
+    <Compile Include="Y_\StackedMarkerSeries.cs" />
+    <Compile Include="Y_\StackedSplineSeries.cs" />
+    <Compile Include="Y_\StackingUtil.cs" />
+    <Compile Include="Y_\State.cs" />
+    <Compile Include="Y_\StyleSheet.cs" />
+    <Compile Include="Y_\Subscriber.cs" />
+    <Compile Include="Y_\SVGCircle.cs" />
+    <Compile Include="Y_\SVGDrawing.cs" />
+    <Compile Include="Y_\SVGEllipse.cs" />
+    <Compile Include="Y_\SVGGraphic.cs" />
+    <Compile Include="Y_\SVGPath.cs" />
+    <Compile Include="Y_\SVGPieSlice.cs" />
+    <Compile Include="Y_\SVGRect.cs" />
+    <Compile Include="Y_\SVGShape.cs" />
+    <Compile Include="Y_\SWF.cs" />
+    <Compile Include="Y_\SWFDetect.cs" />
+    <Compile Include="Y_\SyntheticEvent.cs" />
+    <Compile Include="Y_\SyntheticEvent_\Notifier.cs" />
+    <Compile Include="Y_\SynthRegistry.cs" />
+    <Compile Include="Y_\Tab.cs" />
+    <Compile Include="Y_\TabView.cs" />
+    <Compile Include="Y_\Test.cs" />
+    <Compile Include="Y_\Test_\ArrayAssert.cs" />
+    <Compile Include="Y_\Test_\Assert.cs" />
+    <Compile Include="Y_\Test_\AssertionError.cs" />
+    <Compile Include="Y_\Test_\ComparisonFailure.cs" />
+    <Compile Include="Y_\Test_\Console.cs" />
+    <Compile Include="Y_\Test_\CoverageFormat_\CoverageFormat.cs" />
+    <Compile Include="Y_\Test_\DateAssert.cs" />
+    <Compile Include="Y_\Test_\EventTarget.cs" />
+    <Compile Include="Y_\Test_\Mock_\Mock.cs" />
+    <Compile Include="Y_\Test_\Mock_\Value.cs" />
+    <Compile Include="Y_\Test_\ObjectAssert.cs" />
+    <Compile Include="Y_\Test_\Reporter.cs" />
+    <Compile Include="Y_\Test_\Results.cs" />
+    <Compile Include="Y_\Test_\Runner.cs" />
+    <Compile Include="Y_\Test_\ShouldError.cs" />
+    <Compile Include="Y_\Test_\ShouldFail.cs" />
+    <Compile Include="Y_\Test_\TestCase.cs" />
+    <Compile Include="Y_\Test_\TestFormat.cs" />
+    <Compile Include="Y_\Test_\TestNode.cs" />
+    <Compile Include="Y_\Test_\TestRunner.cs" />
+    <Compile Include="Y_\Test_\TestSuite.cs" />
+    <Compile Include="Y_\Test_\UnexpectedError.cs" />
+    <Compile Include="Y_\Test_\UnexpectedValue.cs" />
+    <Compile Include="Y_\Test_\Wait.cs" />
+    <Compile Include="Y_\Text_\AccentFold.cs" />
+    <Compile Include="Y_\Text_\WordBreak.cs" />
+    <Compile Include="Y_\TimeAxis.cs" />
+    <Compile Include="Y_\ToggleButton.cs" />
+    <Compile Include="Y_\TopAxisLayout.cs" />
+    <Compile Include="Y_\Transition.cs" />
+    <Compile Include="Y_\UA.cs" />
+    <Compile Include="Y_\Uploader.cs" />
+    <Compile Include="Y_\UploaderFlash.cs" />
+    <Compile Include="Y_\UploaderHTML5.cs" />
+    <Compile Include="Y_\Uploader_\Queue.cs" />
+    <Compile Include="Y_\ValueChange.cs" />
+    <Compile Include="Y_\VerticalLegendLayout.cs" />
+    <Compile Include="Y_\View.cs" />
+    <Compile Include="Y_\View_\NodeMap.cs" />
+    <Compile Include="Y_\VMLCircle.cs" />
+    <Compile Include="Y_\VMLDrawing.cs" />
+    <Compile Include="Y_\VMLEllipse.cs" />
+    <Compile Include="Y_\VMLGraphic.cs" />
+    <Compile Include="Y_\VMLPath.cs" />
+    <Compile Include="Y_\VMLPieSlice.cs" />
+    <Compile Include="Y_\VMLRect.cs" />
+    <Compile Include="Y_\VMLShape.cs" />
+    <Compile Include="Y_\Widget.cs" />
+    <Compile Include="Y_\WidgetAutohide.cs" />
+    <Compile Include="Y_\WidgetButtons.cs" />
+    <Compile Include="Y_\WidgetChild.cs" />
+    <Compile Include="Y_\WidgetModality.cs" />
+    <Compile Include="Y_\WidgetParent.cs" />
+    <Compile Include="Y_\WidgetPosition.cs" />
+    <Compile Include="Y_\WidgetPositionAlign.cs" />
+    <Compile Include="Y_\WidgetPositionConstrain.cs" />
+    <Compile Include="Y_\WidgetStack.cs" />
+    <Compile Include="Y_\WidgetStdMod.cs" />
+    <Compile Include="Y_\YQL.cs" />
+    <Compile Include="Y_\YQLRequest.cs" />
+    <Compile Include="Y_\YUI.cs" />
+    <Compile Include="Y_\YuiObject.cs" />
+    <Compile Include="Y_\YUI_substitute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SharpKit.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavaScript\JavaScript.csproj">
+      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
+      <Name>SharpKit.JavaScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Html\Html.csproj">
+      <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
+      <Name>SharpKit.Html</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

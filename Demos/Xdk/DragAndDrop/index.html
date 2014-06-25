@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<!--
+Copyright (c) 2011, 2012, 2013 Intel Corporation
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+-->
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+    <title>Drag and Drop</title>
+        <script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script> 
+        
+        <style type="text/css">
+            
+        /*** Prevent copy paste for all elements except text fields ****/
+        * { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+        input, textarea  { -webkit-user-select:text; } 
+        body { color:White;font-family:Arial;font-size:22pt; }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+	        height: 100%;	
+        }
+
+        #container {
+	        min-height: 100%;
+	        width:100%;
+	        margin: 0 auto;	
+        }
+        * html #container {
+	        height: 100%;	
+        }
+
+        </style>
+        
+        <script type="text/javascript" src="js/demo-draganddrop.js"></script>
+	
+    </head>
+    <body onload="Init();" id="stage" style="height:100%;background-image:url(images/app_bg_textured.jpg); background-repeat:no-repeat;">
+	<div id="container" style="position:relative;overflow:hidden;">
+    <img id="dragItem"  src="images/poker_chip.png" style="width:180px;position:absolute; top:280px; left:280px;" />
+<img id="dragItem2"  src="images/poker_chip_green.png" style="width:180px;position:absolute; top:10px; left:100px;" />
+	</div>
+    </body>
+</html>

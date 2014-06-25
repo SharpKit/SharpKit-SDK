@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F876266E-971B-49D2-B848-0E357E52A230}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpKit.Three</RootNamespace>
+    <AssemblyName>SharpKit.ThreeJs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TargetFrameworkVersion Condition="'$(Configuration)' == 'v3.5'">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(Configuration)' == 'v4.0'">v4.0</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
+    <NoWarn>1591,0108,0114,1570</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'v3.5'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'v4.0'" />
+  <ItemGroup>
+    <Compile Include="AxisHelper.cs" />
+    <Compile Include="BoxHelper.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CircleGeometry.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="ConvexGeometry.cs" />
+    <Compile Include="Curve.cs" />
+    <Compile Include="Face3.cs" />
+    <Compile Include="Face4.cs" />
+    <Compile Include="GeometryUtils.cs" />
+    <Compile Include="GridHelper.cs" />
+    <Compile Include="ImageUtils.cs" />
+    <Compile Include="JSONLoader.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="MeshFaceMaterial.cs" />
+    <Compile Include="ParticleBasicMaterial.cs" />
+    <Compile Include="ParticleSystem.cs" />
+    <Compile Include="ShaderMaterial.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="Side.cs" />
+    <Compile Include="TrackballControls.cs" />
+    <Compile Include="TypeValue.cs" />
+    <Compile Include="Uniforms.cs" />
+    <Compile Include="UV.cs" />
+    <Compile Include="Vector2.cs" />
+    <Compile Include="CubeGeometry.cs" />
+    <Compile Include="CurvePath.cs" />
+    <Compile Include="CylinderGeometry.cs" />
+    <Compile Include="ExtrudeGeometry.cs" />
+    <Compile Include="Geometry.cs" />
+    <Compile Include="IcosahedronGeometry.cs" />
+    <Compile Include="LatheGeometry.cs" />
+    <Compile Include="Light.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="MaterialOptions.cs" />
+    <Compile Include="Matrix4.cs" />
+    <Compile Include="Mesh.cs" />
+    <Compile Include="MeshLambertMaterial.cs" />
+    <Compile Include="MeshLambertMaterialOptions.cs" />
+    <Compile Include="Object3D.cs" />
+    <Compile Include="OctahedronGeometry.cs" />
+    <Compile Include="OrthographicCamera.cs" />
+    <Compile Include="ParametricGeometry.cs" />
+    <Compile Include="Path.cs" />
+    <Compile Include="PerspectiveCamera.cs" />
+    <Compile Include="PlaneGeometry.cs" />
+    <Compile Include="PointLight.cs" />
+    <Compile Include="PolyhedronGeometry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quaternion.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="ShapeGeometry.cs" />
+    <Compile Include="SphereGeometry.cs" />
+    <Compile Include="SpotLight.cs" />
+    <Compile Include="TetrahedronGeometry.cs" />
+    <Compile Include="TextGeometry.cs" />
+    <Compile Include="TorusGeometry.cs" />
+    <Compile Include="TorusKnotGeometry.cs" />
+    <Compile Include="TubeGeometry.cs" />
+    <Compile Include="Vector3.cs" />
+    <Compile Include="Vector4.cs" />
+    <Compile Include="WebGLRenderer.cs" />
+    <Compile Include="WebGLRendererOptions.cs" />
+    <Compile Include="WebGLRenderTarget.cs" />
+    <Compile Include="WebGLRenderTargetOptions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavaScript\JavaScript.csproj">
+      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
+      <Name>SharpKit.JavaScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\jQuery\jQuery.csproj">
+      <Project>{872605DE-E8EC-4D3D-8CEE-A62449A8DAEB}</Project>
+      <Name>SharpKit.jQuery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Html\Html.csproj">
+      <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
+      <Name>SharpKit.Html</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\Default.js" />
+    <Content Include="res\jquery-1.6.4.min.js" />
+    <Content Include="res\three.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SharpKit.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

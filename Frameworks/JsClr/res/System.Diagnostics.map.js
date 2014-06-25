@@ -1,0 +1,1 @@
+{"version":3,"file":"res/System.Diagnostics.js","lineCount":42,"sourceRoot":"SourceMaps.ashx/","sources":["C:/Projects/SharpKit/googlecode/trunk/SharpKit.JsClr/System/Diagnostics/Trace.cs"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4CAeE;AACC,kDACC;;AACD,0DACC;;AACD;AACA;mEAGD;AACC,kDACC;;AACD;AACA;"}

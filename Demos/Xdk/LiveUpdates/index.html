@@ -1,0 +1,74 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<!--
+Copyright (c) 2011, 2012, 2013 Intel Corporation
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+-->
+<head>
+<title>Over the Air Updates - Sample Application</title>
+   
+    <!-- be sure to include the appMobi javascript API library -->
+    <script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script> 
+  
+    <!-- add the webkit-user-select style to prevent selecting on the device -->
+    <style type="text/css">
+        * { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+        input, textarea  { -webkit-user-select:text; } 
+        body {
+            background-color:#000;
+            color:#fff;
+            font-family:Arial;
+            font-size:48pt;
+            margin:0px;
+            padding:0px;
+            visibility:hidden;  /* Only show the body once the sizing is done */
+        }
+        .marquee 
+        {
+            white-space:nowrap;
+            width:100%;
+            vertical-align:middle;
+            background-color:Transparent;
+            overflow: hidden;
+            overflow-x:-webkit-marquee;
+            -webkit-marquee-direction: backwards;
+            -webkit-marquee-speed: normal;
+            -webkit-marquee-increment: medium;
+            -webkit-marquee-repetition: infinite;	
+        }
+    </style>
+    <script type="text/javascript" src="js/demo-liveupdates.js"></script>
+</head>
+
+
+<body id="bodyTag" onload="Init();">
+<div id="divAnchor" style="position:absolute;top:50px;left:0px;">
+    <img src="anchorman.png" width="768" height="429" style="position:absolute;top:270px;left:0px;" />
+    <div id="divTextBalloon" style="position:absolute;top:0px;left:50px;height:300px;width:650px;background-color:White;-moz-border-radius: 10px;-webkit-border-radius:10px;color:Black;font-size:32pt;padding:10px;"></div>
+    <img src="anchorHead.png" width="768" height="429" style="position:absolute;top:270px;left:0px;" />
+    <div id="divFooter" style="position:absolute;top:575px;left:0px;height:80px;width:768px;background-color:Red;color:White;text-align:center;">Live Update</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/confirmationBox.js"></script>
+</html>

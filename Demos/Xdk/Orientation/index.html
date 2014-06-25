@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!--
+Copyright (c) 2011, 2012, 2013 Intel Corporation
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+-->
+<head>
+    <title>Orientation</title>
+	<script type="text/javascript" src="http://localhost:58888/_appMobi/appmobi.js"></script> 
+	<style>
+		.dataCategory {
+			color : #FFFFFF;
+			font-family : Arial, Helvetica, sans-serif;
+			font-size : 24px;
+			line-height: 28px;
+			text-align: right;
+			text-decoration : none;
+			font-weight : bold;
+		}
+
+		.dataReadout {
+			color : #FFFFFF;
+			font-family : Arial, Helvetica, sans-serif;
+			font-size : 24px;
+			line-height: 28px;
+			text-align: left;
+			text-decoration : none;
+			font-weight : normal;
+		}
+		
+		* { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+        input, textarea  { -webkit-user-select:text; } 
+	</style>
+    <script type="text/javascript" src="js/demo-orientation.js"></script>
+
+</head>
+
+<body id='body' style="visibility:hidden;">
+    <img id='bg' src="" style='position:absolute;top:0px;left:0px;z-index:-1;'>
+    <img id='note' src="" style='position:absolute;top:0px;left:0px;z-index:0;'>
+    <div id='data' style="padding:0px 50px 0px 10px;position:absolute;top:0px;left:0px;z-index:1;background-image:url('black_tint_1x1.png');">
+	    <span class="dataCategory">width:&nbsp;</span><span id='width' class="dataReadout"></span><br>
+	    <span class="dataCategory">height:&nbsp;</span><span id='height' class="dataReadout"></span><br>
+	    <span class="dataCategory">orientation:&nbsp;</span><span id='orient' class="dataReadout"></span>
+    </div>
+</body>
+</html>
+

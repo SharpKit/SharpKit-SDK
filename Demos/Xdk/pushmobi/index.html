@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+<title>pushMobi</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+<style type="text/css">
+    /* Prevent copy paste for all elements except text fields */
+    * { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+    input, textarea  { -webkit-user-select:text; }
+    
+    /* Set up the page with a default background image */
+    body {
+        background-color:#fff;
+        color:#000;
+        font-family:Arial;
+        font-size:48pt;
+        margin:0px;padding:0px;
+        background-image:url('images/background.jpg');
+    }
+    button 
+    { font-size:48pt; }
+	#spnShirtMessage {
+		position:absolute;background-color:transparent;top:200px;left:215px;text-align:center; width:320px;height:350px;overflow:hidden;border-radius:10px;color:#000;
+		font-family:Arial; font-size:32pt;
+	}
+</style>
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script> 
+<script type="text/javascript" src="js/demo-pushmobi.js"></script>
+<script type="text/javascript">
+</script>
+
+</head>
+<body>
+<div style="text-align:center;">
+	<img src="images/T-ShirtGuy.jpg" style="border:solid 5px #000;" />
+	<span id="spnShirtMessage" style=""></span>
+</div>
+
+<table>
+	<tr><td valign="middle"><img id="imgSendPushMessage" src="images/push.png" onclick="SendPushMessage();" /></td>
+	<td valign="middle"><input id="txtMessage" type="text" style="font-size:38pt;width:440px;" placeholder="Text Message:" /></td></tr>
+</table>
+<br/>
+<span id="spnMessage" style="text-align:center;position:absolute;bottom:0px;left:0px; width:768px;font-size:32pt;"></span>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html><!--
+ Copyright (c) 2011, 2012, 2013 Intel Corporation
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+-->
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+    <title>Podcast</title>
+
+    <script type="text/javascript" src="http://localhost:58888/_appMobi/appmobi.js"></script>
+
+        <style type="text/css">
+        * { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+        input, textarea  { -webkit-user-select:text; } 
+        body {
+            color:black;
+            font-family:Arial;
+            background-color: #000;
+        }
+        #podcastEpisodes {
+            padding: 0px;
+            background-color: #006b84;
+            -webkit-border-top-left-radius: 30px;
+            -webkit-border-top-right-radius: 30px;
+            color: #FFF;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #podcastTitle {
+            color: #000;
+            margin-bottom: 20px;
+            -webkit-border-radius: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 36px;
+            height: 50px;
+            background-color: #91E04D;
+        }
+        .ListItem {
+            background-image: url(images/grad.png);
+            background-repeat: repeat-x;
+            height: 75px;
+            margin: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 20px;
+            -webkit-border-top-left-radius: 30px;
+            -webkit-border-top-right-radius: 30px;
+        }
+        .header {
+            background-image: url(images/podcast_header.gif);
+            height: 136px;
+            width: 768px;
+        }
+        </style>
+
+        <script type="text/javascript" src="js/demo-podcast.js"></script>
+		
+    </head>
+    <body style="width:100%;height:100%;font-family:Arial;">
+<center>
+<div class="header"></div>
+    <div id="podcastTitle" style="width:95%; text-align:center; font-weight:bold;"></div>
+    <div id="podcastEpisodes" style="position:absolute;top:220px;width:768px; height:782px; overflow:hidden;">
+    </div>
+    
+</center>
+</body>
+</html>

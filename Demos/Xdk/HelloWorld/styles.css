@@ -1,0 +1,16 @@
+/* Hello World Sample Stylesheet */
+
+body
+{
+	font-family:Arial;
+	font-size:22pt;
+	color:Black;
+}
+body.portrait
+{
+	width:320px;
+}
+button
+{
+	font-size:18pt;
+}

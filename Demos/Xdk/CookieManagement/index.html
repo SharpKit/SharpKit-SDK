@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<!--
+Copyright (c) 2011, 2012, 2013 Intel Corporation
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+-->
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+    <title>Cookie Management</title>
+
+        <!--Applications that access the AppMobi library must include this library-->
+        <script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script>
+
+        <style type="text/css">
+
+            /*** Prevent copy paste for all elements except text fields ****/
+            * { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
+            input, textarea  { -webkit-user-select:text; } 
+
+			.categoryHead {
+                color : #FFFFFF;
+                font-family : Arial, Helvetica, sans-serif;
+                font-size : 32px;
+                line-height: 34px;
+                text-decoration : none;
+                font-weight : bold;
+			}
+
+			.categoryCopy {
+                color : #FFFFFF;
+                font-family : Arial, Helvetica, sans-serif;
+                font-size : 32px;
+                line-height: 34px;
+                text-decoration : none;
+                font-weight : normal;
+			}
+
+			ul.bulletCopy {
+				list-style-type:none;
+				padding:0px;
+				margin:0px;
+			}
+
+			li.bulletCopy {
+				background-image: url('bullet_blue.png');
+				background-repeat:no-repeat;
+				background-position:0px 5px;
+                color : #FFFFFF;
+                font-family : Arial, Helvetica, sans-serif;
+                font-size : 21px;
+                line-height: 22px;
+                text-decoration : none;
+                font-weight : normal;
+                width:650px;
+                padding:2px 0px 10px 25px;
+            }
+
+			.dropDown {
+				width: 400px;
+				height: 34px;
+                font-family : Arial, Helvetica, sans-serif;
+                font-size : 32px;
+                line-height: 34px;
+                text-decoration : none;
+                font-weight : normal;
+			}
+			.dropDownbak {
+				padding: 0 24px 0 8px;
+				color: #fff;
+				background: url(menu_button_up.png) no-repeat;
+				font: 12px/21px arial,sans-serif;
+				overflow: hidden;
+			}
+        </style>
+
+        <script type="text/javascript" src="js/demo-cookiemanagement"></script>
+        		
+    </head>
+    <body onload="Init();" style="background-image:url('app_bg.jpg');background-repeat:no-repeat;">
+
+    <select class='dropDown' style='position:absolute;top:152px;left:240px' id='name' onchange=ShowCookie()></select><br>
+    <div style='position:absolute;top:155px;left:20px'>
+    	<span class='categoryHead'>Cookie Name:&nbsp;</span>
+    </div>
+    <div style='position:absolute;top:190px;left:20px'>
+    	<span class='categoryHead'>Cookie Value:&nbsp;</span>
+    	<span class='categoryCopy' id='cookieValue'>&nbsp;</span>
+    </div>
+	<!-- delete button-->
+    <a style='position:absolute;top:258px;left:402px' onMouseOut="document.getElementById('imgDelete').src='delete_button_up.png'" onMouseUp="document.getElementById('imgDelete').src='delete_button_up.png'" onMouseDown="document.getElementById('imgDelete').src='delete_button_press.png'" onclick="DeleteCookie();"><img id='imgDelete' src='delete_button_up.png'/></a><br>
+	<!-- add button-->
+    <a style='position:absolute;top:258px;left:582px' onMouseOut="document.getElementById('imgAdd').src='add_button_up.png'" onMouseUp="document.getElementById('imgAdd').src='add_button_up.png'" onMouseDown="document.getElementById('imgAdd').src='add_button_press.png'" onclick="AddCookie();"><img id='imgAdd' src='add_button_up.png'/></a><br>
+	<ul class='bulletCopy' style='position:absolute;top:788px;left:20px'>
+		<li class='bulletCopy'>appMobi cookies with an expiry of zero expire when the current session ends. These are the equivalent of session-based browser cookies and can be used to store data across page transitions.</li>
+		<li class='bulletCopy'>To test appMobi cookie expiration, set a cookie with an expiry of zero, quit the app, relaunch and verify that the cookie was deleted.</li>
+		<li class='bulletCopy'>appMobi cookies with an expiry of less than zero do not expire.</li>
+		<li class='bulletCopy'>You can test cross-session appMobi cookie persistence by exiting the app, relaunch, and verify that your cookies are still set.</li>
+	</ul>
+    <img style='position:absolute;top:0px;left:0px;display:none' id='cookiemonster' src='monster.png'/>
+    </body>
+</html>
