@@ -1,0 +1,2 @@
+compile:
+	xbuild Defs.sln
