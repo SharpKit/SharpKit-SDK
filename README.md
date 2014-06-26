@@ -1,7 +1,7 @@
 SharpKit-SDK
 ============
 
-3rd party C# library bindings for SharpKit, JsClr framework, source maps debugging handlers
+SharpKit C# to JavaScript Compiler SDK - 3rd party C# library bindings for SharpKit, JsClr framework, source maps debugging handlers
 
 ##### Folder Structure
 ```
