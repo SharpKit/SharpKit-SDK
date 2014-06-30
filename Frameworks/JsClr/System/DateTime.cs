@@ -150,7 +150,7 @@ namespace SharpKit.JavaScript.Private
         {
             get
             {
-#warning to be implemented correctly
+//TODO: to be implemented correctly
               return Now;
             }
         }

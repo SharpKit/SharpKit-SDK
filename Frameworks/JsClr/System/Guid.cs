@@ -1,5 +1,5 @@
 ﻿
-#warning this is a very basic implementation of Guid
+//TODO: this is a very basic implementation of Guid
 // For the generation of NewGuid(), we use System.Random()
 // No parsing currently implemented
 

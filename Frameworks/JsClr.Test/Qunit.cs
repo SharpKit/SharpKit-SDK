@@ -28,7 +28,6 @@ namespace SharpKit.Test
         [JsMethod(Export = false,Code = "alert('hoi');")]
         private static void Compile()
         {
-            var i = 55;
             throw new NotImplementedException();
         }
 

@@ -222,7 +222,7 @@ namespace SharpKit.JavaScript.Private
 
 		private void InitializeAdd(IList items, int index)
 		{
-#warning need to implement ArrayList
+//TODO: need to implement ArrayList
 #if ARRAYLIST_IMPLEMENTED
 			this.newItems = ArrayList.ReadOnly(items);
 #else
@@ -237,7 +237,7 @@ namespace SharpKit.JavaScript.Private
 
 		private void InitializeRemove(IList items, int index)
 		{
-#warning need to implement ArrayList
+//TODO need to implement ArrayList
 #if ARRAYLIST_IMPLEMENTED
 			this.oldItems = ArrayList.ReadOnly(items);
 #else

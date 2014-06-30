@@ -59,7 +59,7 @@ namespace SharpKit.JavaScript.Private
 		{
 			List<T> l = new List<T>();
 			IList l2 = l as IList;
-#warning The following line generates a runtime error: "Microsoft JScript runtime error: Object doesn't support property or method 'get_SyncRoot'"
+//TODO: The following line generates a runtime error: "Microsoft JScript runtime error: Object doesn't support property or method 'get_SyncRoot'"
 			//syncRoot = l2.SyncRoot;
 			items = l;
 		}
@@ -70,7 +70,7 @@ namespace SharpKit.JavaScript.Private
 				throw new ArgumentNullException("items");
 			this.items = items;
 			ICollection l = items as ICollection;
-#warning The following line generates a runtime error: "Microsoft JScript runtime error: Object doesn't support property or method 'get_SyncRoot'"
+//TODO: The following line generates a runtime error: "Microsoft JScript runtime error: Object doesn't support property or method 'get_SyncRoot'"
 			//syncRoot = (l != null) ? l.SyncRoot : new object ();
 		}
 
