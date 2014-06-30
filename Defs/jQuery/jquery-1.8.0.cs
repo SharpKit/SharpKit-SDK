@@ -2002,7 +2002,7 @@ namespace SharpKit.jQuery
         /// <summary>
         /// Retrieve all the DOM elements contained in the jQuery set, as an array.
         /// </summary>
-        public JsArray toArray() { return null; }
+        public JsArray<HtmlElement> toArray() { return null; }
         /// <summary>
         /// Display or hide the matched elements.
         /// </summary>
@@ -2074,6 +2074,10 @@ namespace SharpKit.jQuery
         /// <summary>
         /// Execute all handlers and behaviors attached to the matched elements for the given event type.
         /// </summary>
+        public jQuery trigger(JsString eventType) { return null; }
+        /// <summary>
+        /// Execute all handlers and behaviors attached to the matched elements for the given event type.
+        /// </summary>
         public jQuery trigger(Event @event) { return null; }
         /// <summary>
         /// Execute all handlers and behaviors attached to the matched elements for the given event type.
@@ -2087,6 +2091,7 @@ namespace SharpKit.jQuery
         /// Execute all handlers attached to an element for an event.
         /// </summary>
         public object triggerHandler(JsString eventType) { return null; }
+        public object triggerHandler(Event ev) { return null; }
         /// <summary>
         /// Remove a previously-attached event handler from the elements.
         /// </summary>
@@ -2630,6 +2635,7 @@ namespace SharpKit.jQuery
         /// </summary>
         /// <value>The ui object.</value>
         public static dynamic ui { get; private set; }
+        public static dynamic @event { get; private set; }
 #endif
         public static jQueryFx fx { get; set; }
         /// <summary>
@@ -2757,7 +2763,7 @@ namespace SharpKit.jQuery
         /// <param name="events2"></param>
         /// <param name="handler"></param>
         /// <returns></returns>
-        public jQuery on(JsString events1, JsString events2, JsAction handler) { return null; }
+        public jQuery on(JsString events1, JsString events2, JsAction<Event> handler) { return null; }
         /// <summary>
         /// Attach an event handler function for one or more events to the selected elements.
         /// </summary>
@@ -2801,6 +2807,13 @@ namespace SharpKit.jQuery
         /// <param name="handler">A handler function previously attached for the event(s), or the special value false.</param>
         /// <returns></returns>
         public jQuery off(JsString events, JsString selector, JsAction<Event> handler) { return null; }
+        /// <summary>
+        /// Remove an event handler.
+        /// </summary>
+        /// <param name="events">One or more space-separated event types and optional namespaces, or just namespaces, such as "click", "keydown.myPlugin", or ".myPlugin".</param>
+        /// <param name="handler">A handler function previously attached for the event(s), or the special value false.</param>
+        /// <returns></returns>
+        public jQuery off(JsString events, JsAction<Event> handler) { return null; }
         /// <summary>
         /// Remove an event handler.
         /// </summary>
@@ -3248,9 +3261,11 @@ namespace SharpKit.jQuery
     }
     #endregion
     #region Event
-    [JsType(JsMode.Json, Export = false)]
+    [JsType(JsMode.Prototype, Export = false, Name = "jQuery.Event")]
     public partial class Event
     {
+        public Event(JsString type, object props) { }
+        public Event(JsString type) { }
         /// <summary>
         /// Returns whether event.stopImmediatePropagation() was ever called on this event object.
         /// </summary>
@@ -3628,6 +3643,7 @@ namespace SharpKit.jQuery
         /// <param name="context">
         /// context Context passed to the doneCallbacks as the this object.
         /// </param>
+        /// <param name="result"></param>
         /// <returns>
         /// Returns: Deferred
         /// </returns>
@@ -4016,6 +4032,79 @@ namespace SharpKit.jQuery
     {
         public JsNumber top { get; set; }
         public JsNumber left { get; set; }
+    }
+
+
+    /// <summary>
+    /// (Object) An object containing these properties(same as the remove method):
+    /// </summary>
+    public partial class HandleObj
+    {
+        /// <summary>
+        /// (String) The name of the event.
+        /// </summary>
+        /// <returns></returns>
+        public JsString type { get; set; }
+        /// <summary>
+        /// // - (Anything) Whatever data object (optional) was passed in when binding the event.
+        /// </summary>
+        /// <returns></returns>
+        public object data { get; set; }
+        /// <summary>
+        /// // - (String) A sorted, dot-delimited list of namespaces specified when binding the event.
+        /// </summary>
+        /// <returns></returns>
+        public JsString @namespace { get; set; }
+        /// <summary>
+        /// (Function) The event handler being bound to the event. This function will be called whenever the event is triggered.
+        /// </summary>
+        /// <returns></returns>
+        public JsString handler { get; set; }
+        /// <summary>
+        /// (Number) A unique ID for this event handler. This is used internally for managing handlers.
+        /// </summary>
+        /// <returns></returns>
+        public JsString guid { get; set; }// - 
+        /// <summary>
+        /// (String) The selector used by the delegate or live jQuery methods. Only available when binding event handlers using these two methods.
+        /// </summary>
+        /// <returns></returns>
+        public JsString selector { get; set; }// - 
+    }
+    /// <summary>
+    /// A special event can be defined using the following five methods. Each method is optional, and only needs to be specified if necessary. The namespace for the special event is jQuery.event.special.myevent where myevent is the name of your event. Also note that while you can have any number of other methods and properties attached to this namespace, all but these five will be ignored:
+    /// </summary>
+    public partial class SpecialEvent : jQuery
+    {
+        /// <summary>
+        /// Do something when the first event handler is bound to a particular element.
+        /// More explicitly: do something when an event handler is bound to a particular element, but only if there are not currently any event handlers bound. This may occur in two scenarios: 1) either the very first time that event is bound to that element, or 2) the next time that event is bound to that element, after all previous handlers for that event have been unbound from that element.
+        /// </summary>
+        /// <param name="data">(Anything) Whatever eventData (optional) was passed in when binding the event.</param>
+        /// <param name="namespaces">(Array) An array of namespaces specified when binding the event.</param>
+        /// <param name="eventHandle">(Function) The actual function that will be bound to the browser’s native event (this is used internally for the beforeunload event, you’ll never use it).</param>
+        public virtual void setup(object data, JsArray<JsString> namespaces, JsFunction eventHandle) { }
+        /// <summary>
+        /// Do something when the last event handler is unbound from a particular element.
+        /// </summary>
+        /// <param name="namespaces"></param>
+        public virtual void teardown(JsArray<JsString> namespaces) { }
+        /// <summary>
+        /// Do something each time an event handler is bound to a particular element.
+        /// 'this' is the element to which the event handler is being bound.
+        /// </summary>
+        /// <param name="handleObj"></param>
+        public virtual void add(HandleObj handleObj) { }
+        /// <summary>
+        /// Do something each time an event handler is unbound from a particular element.
+        /// </summary>
+        /// <param name="handleObj"></param>
+        public virtual void remove(HandleObj handleObj) { }
+        /// <summary>
+        /// The default action for the event. This callback will be triggered unless event.preventDefault() is called.
+        /// </summary>
+        /// <param name="e"></param>
+        public virtual void _default(Event e) { }
     }
 
     #endregion

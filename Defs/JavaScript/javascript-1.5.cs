@@ -202,14 +202,18 @@ namespace SharpKit.JavaScript
         /// Documentation from MDN.
         ///</summary>
         [JsMethod(NativeOverloads = true)]
-        public JsBoolean some(JsFunc<JsObject, JsNumber, JsArray, JsBoolean> callback) { return default(JsBoolean); }
+        public JsBoolean some(JsFunc<object, JsNumber, JsArray, JsBoolean> callback) { return default(JsBoolean); }
         ///<summary>
         /// Executes a provided function once per array element.
         /// Supported in Chrome, Firefox, IE 9, Opera and Safari
         /// Documentation from MDN.
         ///</summary>
         [JsMethod(NativeOverloads = true)]
-        public void forEach(JsAction<JsObject, JsNumber, JsArray> callback) { }
+        public void forEach(JsAction<object, JsNumber, JsArray> callback) { }
+        [JsMethod(NativeOverloads = true)]
+        public void forEach(JsAction<object, JsNumber> callback) { }
+        [JsMethod(NativeOverloads = true)]
+        public void forEach(JsAction<object> callback) { }
         ///<summary>
         ///Returns an Array object with the elements reversed.
         ///</summary>

@@ -2,7 +2,7 @@ bin
 obj
 *.suo
 *.user
-lib/*.pdb
+*.ide
 
 # Windows image file caches
 Thumbs.db
