@@ -56,6 +56,7 @@
   <ItemGroup>
     <None Include="SharpKit.snk" />
   </ItemGroup>
+  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent></PreBuildEvent>

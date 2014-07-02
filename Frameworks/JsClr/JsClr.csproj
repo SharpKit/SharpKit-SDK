@@ -33,7 +33,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compilation\JsCompiler.cs" />
@@ -155,17 +154,6 @@
     <Content Include="res\System.Linq.js" />
     <Content Include="res\System.Reflection.js" />
     <Content Include="res\System.Text.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Defs\JavaScript\JavaScript.csproj">
-      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>JavaScript</Name>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Defs\Html\Html.csproj">
-      <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
-      <Name>Html</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpKit.snk" />
