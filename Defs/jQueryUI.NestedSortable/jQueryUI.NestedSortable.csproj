@@ -17,7 +17,6 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
@@ -26,10 +25,6 @@
   <ItemGroup>
     <Compile Include="nestedsortable-1.3.5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="documentation\readme.html" />
-    <Content Include="res\nestedSortable-1.3.5.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpKit.snk" />

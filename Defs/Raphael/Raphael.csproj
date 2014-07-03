@@ -18,7 +18,6 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
@@ -40,9 +39,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpKit.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="res\raphael-min.js" />
   </ItemGroup>
   <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

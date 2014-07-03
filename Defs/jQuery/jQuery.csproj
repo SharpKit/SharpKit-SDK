@@ -17,31 +17,14 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
     <NoWarn>1591,0108,0114,1570</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'v4.0'">
-    <DefineConstants>NET4</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'v3.5'">
-    <DefineConstants>NET3_5</DefineConstants>
-  </PropertyGroup>
   <ItemGroup>
     <Compile Include="jquery-1.8.0.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="res\jquery-1.4.4.min.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="res\jquery-ui-1.7.2.min.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="res\jquery.validate.js" />
-    <Content Include="res\jquery.validate.min.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JavaScript\JavaScript.csproj">
@@ -59,7 +42,8 @@
   <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent></PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

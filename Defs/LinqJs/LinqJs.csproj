@@ -17,20 +17,14 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
     <NoWarn>1591,0108,0114,1570</NoWarn>
   </PropertyGroup>
-  
   <ItemGroup>
     <Compile Include="linq-2.2.0.2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="jquery.linq-vsdoc.js" />
-    <Content Include="linq-vsdoc.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JavaScript\JavaScript.csproj">

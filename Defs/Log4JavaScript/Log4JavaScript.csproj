@@ -3,13 +3,12 @@
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
     <NoWarn>1591,0108,0114,1570</NoWarn>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -74,6 +73,7 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

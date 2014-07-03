@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SharpKit.DotNet.JavaScript</RootNamespace>
-    <AssemblyName>SharpKit.DotNet.JavaScript</AssemblyName>
+    <AssemblyName>SharpKit.Xdk.JavaScript</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <ErrorReport>prompt</ErrorReport>
@@ -17,17 +17,16 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
-  
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DocumentationFile>..\bin\SharpKit.Xdk.JavaScript.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="javascript-1.5.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="javascript-1.5.cs" />
     <Compile Include="JsAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
