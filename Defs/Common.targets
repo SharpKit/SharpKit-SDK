@@ -3,4 +3,11 @@
 		<OutputPath>bin\</OutputPath>
 		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.0'">
+    <DefineConstants>NET4</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v3.5'">
+    <DefineConstants>NET3_5</DefineConstants>
+  </PropertyGroup>
+
 </Project>
