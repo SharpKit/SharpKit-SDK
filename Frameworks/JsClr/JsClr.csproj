@@ -31,6 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SharpKit.Html, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpKit.JavaScript, Version=1.5.0.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Defs\bin\SharpKit.JavaScript.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -159,6 +167,7 @@
     <None Include="SharpKit.snk" />
     <Compile Include="System\Linq\Enumerable.SelectManyArrayIterator.cs" />
   </ItemGroup>
+  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildToolsPath)\SharpKit\5\SharpKit.Build.targets" />
   <PropertyGroup>
