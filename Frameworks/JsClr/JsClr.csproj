@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">v3.5</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7170C3A4-CD48-4D99-8048-E04AFA8BCA99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -31,16 +29,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SharpKit.Html, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpKit.JavaScript, Version=1.5.0.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Defs\bin\SharpKit.JavaScript.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="SharpKit.Html">
+      <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpKit.JavaScript">
+      <HintPath>..\..\Defs\bin\SharpKit.JavaScript.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compilation\JsCompiler.cs" />
@@ -167,11 +163,17 @@
     <None Include="SharpKit.snk" />
     <Compile Include="System\Linq\Enumerable.SelectManyArrayIterator.cs" />
   </ItemGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
+  <Import Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildToolsPath)\SharpKit\5\SharpKit.Build.targets" />
+  <Import Project="$(SkcToolPath)\SharpKit.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem copy "D:\sharpkit\sdk\src\SharpKit.JsClr\res\jsclr.js" "C:\Users\sebastian.sharpkit\Documents\Visual Studio 2012\Projects\SharpKitTestWebApp\SharpKitTestWebApp\res"</PostBuildEvent>
+    <PostBuildEvent Condition=" '$(OS)' == 'Windows_NT' ">rem copy "D:\sharpkit\sdk\src\SharpKit.JsClr\res\jsclr.js" "C:\Users\sebastian.sharpkit\Documents\Visual Studio 2012\Projects\SharpKitTestWebApp\SharpKitTestWebApp\res"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'v3.5|AnyCPU' ">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'v4.0|AnyCPU' ">
+    <Optimize>false</Optimize>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

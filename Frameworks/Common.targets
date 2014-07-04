@@ -1,4 +1,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+	<SkcToolPath Condition=" '$(SkcToolPath)' == '' And Exists('$(ProjectDir)..\..\..\Compiler\skc5\bin\') ">$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\</SkcToolPath>
+	<SkcToolPath Condition=" '$(SkcToolPath)' == '' ">$(MSBuildToolsPath)SharpKit\5</SkcToolPath>
+  </PropertyGroup>
+
 <!--
 	<ItemDefinitionGroup Condition="'$(DontCopyLocalReferences)' == 'true'">
 	  <Reference>

@@ -4,9 +4,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E18669CC-D615-47BA-8C07-3A3F01B86A2D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -44,18 +41,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SharpKit.Html, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpKit.JavaScript, Version=1.5.0.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Defs\bin\SharpKit.JavaScript.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpKit.jQuery, Version=1.6.4.0, Culture=neutral, PublicKeyToken=2575297a09c47a96, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Defs\bin\SharpKit.jQuery.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -68,6 +53,15 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="SharpKit.Html">
+      <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpKit.JavaScript">
+      <HintPath>..\..\Defs\bin\SharpKit.JavaScript.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpKit.jQuery">
+      <HintPath>..\..\Defs\bin\SharpKit.jQuery.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="QUnit.Teamcity.js" />
@@ -94,25 +88,20 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JsClr\JsClr.csproj">
-      <Project>{7170c3a4-cd48-4d99-8048-e04afa8bca99}</Project>
-      <Name>JsClr</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
+  <Import Project="..\Common.targets" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!--<Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />!-->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <Import Project="$(MSBuildBinPath)\SharpKit\5\SharpKit.Build.targets" />
+  <Import Project="$(SkcToolPath)\SharpKit.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <PropertyGroup>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
-
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
@@ -131,6 +120,11 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="True" VerifyCodeBehindEvents="True">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
   </ProjectExtensions>
   <PropertyGroup>
     <PreBuildEvent Condition=" '$(OS)' == 'Windows_NT' ">rem xcopy .\..\..\SharpKit.JsClr\res\jsclr.js .\..\ /Y</PreBuildEvent>
@@ -142,4 +136,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\JsClr\JsClr.csproj">
+      <Project>{7170C3A4-CD48-4D99-8048-E04AFA8BCA99}</Project>
+      <Name>JsClr</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

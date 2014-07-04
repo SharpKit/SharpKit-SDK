@@ -266,7 +266,7 @@ namespace SharpKit.JavaScript.Private
 		public static decimal Round(decimal d, int decimals)
 		{
 			var pow = JsMath.pow(10, decimals);
-			return JsMath.round(d * pow) / pow;
+            return JsMath.round(d.As<JsNumber>() * pow.As<JsNumber>()) / pow;
 		}
 		public static decimal Round(decimal d, MidpointRounding mode)
 		{
