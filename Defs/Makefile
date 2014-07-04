@@ -1,2 +1,5 @@
-compile:
-	xbuild Defs.sln
+debug:
+	xbuild
+
+release:
+	xbuild /p:Configuration=Release
