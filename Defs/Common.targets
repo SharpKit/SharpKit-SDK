@@ -1,4 +1,5 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!--
 	<ItemDefinitionGroup Condition="'$(DontCopyLocalReferences)' == 'true'">
 	  <Reference>
 		<Private>False</Private>
@@ -7,6 +8,7 @@
 		<Private>False</Private>
 	  </ProjectReference>
 	</ItemDefinitionGroup>
+-->
 	<PropertyGroup>
 		<OutputPath>..\bin\</OutputPath>
 		<DocumentationFile>..\bin\$(AssemblyName).xml</DocumentationFile>

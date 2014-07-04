@@ -48,7 +48,7 @@
   <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>rem copy "$(ProjectDir)jquery-ui-1.8.11.cs" "$(ProjectDir)jquery-ui-1.8.11.bak" /Y
+    <PreBuildEvent Condition=" '$(OS)' == 'Windows_NT' ">rem copy "$(ProjectDir)jquery-ui-1.8.11.cs" "$(ProjectDir)jquery-ui-1.8.11.bak" /Y
 rem copy "$(ProjectDir)..\SharpKit.jQueryUI-1.8.11\jquery-ui-1.8.11.cs" "$(ProjectDir)" /Y</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
