@@ -2,6 +2,7 @@ bin
 obj
 *.suo
 *.user
+*.userprefs
 *.ide
 
 # Windows image file caches
