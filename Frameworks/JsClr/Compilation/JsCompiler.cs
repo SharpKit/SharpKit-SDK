@@ -303,7 +303,7 @@ namespace SharpKit.JavaScript.Compilation
                     if (currentType.ns == null || currentType.ns == "")
                     {
                         var jsCtor = window.As<JsObject>()[currentType.name].As<JsFunction>();
-                        if (JsTypeOf(jsCtor) == JavaScript.JsTypes.function)
+                        if (JsTypeOf(jsCtor) == JavaScript.JsTypes.function || JsTypeOf(jsCtor) == JavaScript.JsTypes.@object)
                             currentType.ctor = jsCtor;
                     }
                     if (currentType.ctor == null && currentType.ctors != null)
