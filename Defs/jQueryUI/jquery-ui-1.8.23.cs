@@ -2719,9 +2719,9 @@ namespace SharpKit.jQuery
         ///<summary>
         ///Enable animations for hiding and showing tab panels. The duration option can be a string representing one of the three predefined speeds ("slow", "normal", "fast") or the duration in milliseconds to run an animation (default is "normal").
         ///Default: null
-        ///Types: Options, Array&lt;Options&gt;
+        ///Types: Options, Array&lt;Options>
         ///</summary>
-        //[Obsoloete("Removed from documentation at jQuery UI v1.9.0")]
+        //[Obsolete("Removed from documentation at jQuery UI v1.9.0")]
         public object fx { get; set; }
         ///<summary>
         ///If the remote tab, its anchor element that is, has no title attribute to generate an id from, an id/fragment identifier is created from this prefix and a unique id returned by $.data(el), for example "ui-tabs-54".
@@ -3389,11 +3389,11 @@ namespace SharpKit.jQuery
         /// <summary>
         /// Serializes the sortable's item id's into a form/ajax submittable string.
         /// Calling this method produces a hash that can be appended to any url to easily submit a new item order back to the server.
-        ///It works by default by looking at the id of each item in the format 'setname_number', and it spits out a hash like "setname[]=number&setname[]=number".
+        ///It works by default by looking at the id of each item in the format 'setname_number', and it spits out a hash like "setname[]=number&amp;setname[]=number".
         ///You can also give in a option hash as second argument to custom define how the function works.
         ///The possible options are: 'key' (replaces part1[] with whatever you want), 'attribute' (test another attribute than 'id') and 'expression' (use your own regexp).
         ///If serialize returns an empty string, make sure the id attributes include an underscore.
-        ///They must be in the form: "set_number" For example, a 3 element list with id attributes foo_1, foo_5, foo_2 will serialize to foo[]=1&foo[]=5&foo[]=2.
+        ///They must be in the form: "set_number" For example, a 3 element list with id attributes foo_1, foo_5, foo_2 will serialize to foo[]=1&amp;foo[]=5&amp;foo[]=2.
         ///You can use an underscore, equal sign or hyphen to separate the set and number. For example foo=1 or foo-1 or foo_1 all serialize to foo[]=1.
         /// </summary>
         /// <param name="options"></param>
@@ -5519,6 +5519,7 @@ namespace SharpKit.jQuery
         /// <code>
         /// $( ".selector" ).jQuery.Widget({ show: { effect: "explode", duration: 1000 } });
         /// </code>
+        /// </example>
         /// <example>
         /// Initialize the jQuery.Widget with the show option specified:
         /// <code>
@@ -5566,6 +5567,7 @@ namespace SharpKit.jQuery
         /// <code>
         /// $( ".selector" ).jQuery.Widget({ show: { effect: "explode", duration: 1000 } });
         /// </code>
+        /// </example>
         /// <example>
         /// Initialize the jQuery.Widget with the show option specified:
         /// <code>

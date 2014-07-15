@@ -143,7 +143,7 @@ namespace SharpKit.JavaScript
         /// <summary>
         /// Turns on the JavaScript profiler. The optional argument title would contain the text to be printed in the header of the profile report.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="title"></param>
         public static void profile(JsString title)
         {
 
@@ -152,7 +152,7 @@ namespace SharpKit.JavaScript
         /// <summary>
         /// Turns off the JavaScript profiler and prints its report.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="title"></param>
         public static void profileEnd(JsString title)
         {
 
@@ -161,7 +161,7 @@ namespace SharpKit.JavaScript
         /// <summary>
         /// Writes the number of times that the line of code where count was called was executed. The optional argument title will print a message in addition to the number of the count.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="title"></param>
         public static void count(JsString title)
         {
 

@@ -30,7 +30,7 @@ namespace qx.bom
 		/// <item>Opera 9.2.1</item>
 		/// <item>Safari 3.0 beta (3.0.2)</item>
 		/// <item>Internet Explorer 7.0</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="win">The window to query</param>
 		/// <returns>The height of the actual document (which includes the body and its margin).  NOTE: Opera 9.5x and 9.6x have wrong value for the scrollWidth property, if an element use negative value for top and left to be outside the viewport! See: http://bugzilla.qooxdoo.org/show_bug.cgi?id=2869</returns>
@@ -51,7 +51,7 @@ namespace qx.bom
 		/// <item>Opera 9.2.1</item>
 		/// <item>Safari 3.0 beta (3.0.2)</item>
 		/// <item>Internet Explorer 7.0</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="win">The window to query</param>
 		/// <returns>The width of the actual document (which includes the body and its margin).  NOTE: Opera 9.5x and 9.6x have wrong value for the scrollWidth property, if an element use negative value for top and left to be outside the viewport! See: http://bugzilla.qooxdoo.org/show_bug.cgi?id=2869</returns>

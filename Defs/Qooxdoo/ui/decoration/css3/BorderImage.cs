@@ -56,7 +56,7 @@ namespace qx.ui.decoration.css3
 		/// <item>round: The image is tiled (repeated) to fill the area. If it does not
 		/// fill the area with a whole number of tiles, the image is rescaled so
 		/// that it does.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "stretch","repeat","round"
@@ -74,7 +74,7 @@ namespace qx.ui.decoration.css3
 		/// <item>round: The image is tiled (repeated) to fill the area. If it does not
 		/// fill the area with a whole number of tiles, the image is rescaled so
 		/// that it does.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "stretch","repeat","round"

@@ -149,7 +149,7 @@ namespace qx.ui.menu
 		/// <item>hidden: Hide the widget but don't relayout the widget's parent.</item>
 		/// <item>excluded: Hide the widget and relayout the parent as if the
 		/// widget was not a child of its parent.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "visible","hidden","excluded"

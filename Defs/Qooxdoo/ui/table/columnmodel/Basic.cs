@@ -20,7 +20,7 @@ namespace qx.ui.table.columnmodel
 		/// The data property of the event is a map having the following attributes:
 		/// <list type="bullet">
 		/// <item>col: The model index of the column that was moved.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnHeaderCellRendererChanged;
 
@@ -31,7 +31,7 @@ namespace qx.ui.table.columnmodel
 		/// <item>col: The model index of the column that was moved.</item>
 		/// <item>fromOverXPos: The old overall x position of the column.</item>
 		/// <item>toOverXPos: The new overall x position of the column.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnOrderChanged;
 
@@ -41,7 +41,7 @@ namespace qx.ui.table.columnmodel
 		/// <list type="bullet">
 		/// <item>col: The model index of the column the visibility of which has changed.</item>
 		/// <item>visible: Whether the column is now visible.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnVisibilityChanged;
 
@@ -58,7 +58,7 @@ namespace qx.ui.table.columnmodel
 		/// <item>col: The model index of the column the width of which has changed.</item>
 		/// <item>newWidth: The new width of the column in pixels.</item>
 		/// <item>oldWidth: The old width of the column in pixels.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnWidthChanged;
 

@@ -346,7 +346,7 @@ namespace qx.ui.core
 		/// <list type="bullet">
 		/// <item>User value: Value defined by the widget user, using the size properties</item>
 		/// <item>Layout value: The value computed by <see cref="qx.ui.core.Widget#_getContentHint"/></item>
-		/// </list
+		/// </list>
 		/// Algorithm
 		/// <list type="bullet">
 		/// <item>minSize: If the user min size is not null, the user value is taken,
@@ -354,7 +354,7 @@ namespace qx.ui.core
 		/// <item>(preferred) size: If the user value is not null the user value is used,
 		/// otherwise the layout value is used.</item>
 		/// <item>max size: Same as the preferred size.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="compute">Automatically compute size hint if currently not cached?</param>
 		/// <returns>The map with the preferred width/height and the allowed minimum and maximum values in cases where shrinking or growing is required.</returns>

@@ -49,7 +49,7 @@ namespace qx.ui.table.celleditor
 		/// <item>col (int): the model index of the column the cell belongs to.</item>
 		/// <item>xPos (int): the x position of the cell in the table pane.</item>
 		/// <item>table (qx.ui.table.Table) reference to the table, the cell belongs to. </item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <param name="cellInfo">A map containing the information about the cell to create.</param>
 		/// <returns>the widget that should be used as cell editor.</returns>

@@ -60,7 +60,7 @@ namespace qx.ui.core.scroll
 		/// <item>auto: Show scrollbar on demand</item>
 		/// <item>on: Always show the scrollbar</item>
 		/// <item>off: Never show the scrollbar</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "auto","on","off"
@@ -74,7 +74,7 @@ namespace qx.ui.core.scroll
 		/// <item>auto: Show scrollbar on demand</item>
 		/// <item>on: Always show the scrollbar</item>
 		/// <item>off: Never show the scrollbar</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "auto","on","off"

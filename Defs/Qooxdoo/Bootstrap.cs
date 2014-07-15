@@ -16,12 +16,12 @@ namespace qx
 	/// <item>Members</item>
 	/// <item>Extend</item>
 	/// <item>Defer</item>
-	/// </list
+	/// </list>
 	/// <para>Does not support:</para>
 	/// <list type="bullet">
 	/// <item>Super class calls</item>
 	/// <item>Mixins, Interfaces, Properties, ...</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.Bootstrap", OmitOptionalParameters = true, Export = false)]
     public partial class Bootstrap 

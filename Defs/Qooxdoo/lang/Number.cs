@@ -43,7 +43,7 @@ namespace qx.lang
 		/// <item>If the number is greater than the upper bound, the upper bound is returned</item>
 		/// <item>If the number is smaller than the lower bound, the lower bound is returned</item>
 		/// <item>If the number is in the range, the number is returned</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="nr">the number to limit</param>
 		/// <param name="vmin">lower bound of the range</param>

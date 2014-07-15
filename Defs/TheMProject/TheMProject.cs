@@ -1731,7 +1731,7 @@ namespace SharpKit.TheMProject
     /// M.FormViews is the prototype of a form view, a container-like view for grouping input views, e.g. M.TextFieldView.
     /// It covers a lot of the jobs concerning the validation of input views.
     /// There is no visible representation of a M.FormView, it is only used to ease the validation process and its access from a controller.
-    /// A M.FormView can be seen similar to the <form> tag in HTML. It is a container for other views that together build a formular.
+    /// A M.FormView can be seen similar to the &lt;form> tag in HTML. It is a container for other views that together build a formular.
     /// </summary>
     [JsType(JsMode.Prototype, Name = "M.FormView", Export = false)]
     public class FormView

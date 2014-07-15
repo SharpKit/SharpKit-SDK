@@ -48,7 +48,7 @@ namespace SharpKit.NodeJs
         /// Gives the actual byte length of a string. encoding defaults to 'utf8'. This is not the same as String.prototype.length since that returns the number of characters in a string.
         /// </summary>
         /// <param name="str"> String</param>
-        /// <param naNumberme="encoding"> String, Optional, Default: 'utf8'</param>
+        /// <param name="encoding"> String, Optional, Default: 'utf8'</param>
         /// <returns></returns>
         public static JsNumber byteLength(JsString str, JsString encoding) { return null; }
         /// <summary>

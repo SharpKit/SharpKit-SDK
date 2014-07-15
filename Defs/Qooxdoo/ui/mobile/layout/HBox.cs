@@ -19,7 +19,7 @@ namespace qx.ui.mobile.layout
 	/// of two items, the larger the resizing of the first item compared to the
 	/// second.
 	/// </item>
-	/// </list
+	/// </list>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the HBox layout.</para>
 	/// <code>

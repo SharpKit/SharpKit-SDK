@@ -141,7 +141,7 @@ namespace qx.ui.virtualx.cell
 		/// <item>content (String): HTML fragment of the innerHTML of the cell</item>
 		/// <item>insets (Array): insets (padding + border) of the cell as
 		/// two-dimensional array.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <param name="data">Data needed for the cell to render.</param>
 		/// <param name="states">The states set on the cell (e.g. selected, focused, editable).</param>

@@ -17,7 +17,7 @@ namespace qx.ui.decoration
 	/// <item>Opera 11.1+</item>
 	/// <item>IE 10+</item>
 	/// <item>IE 5.5+ (with limitations)</item>
-	/// </list
+	/// </list>
 	/// <para>For IE 5.5 to IE 9,this class uses the filter rules to create the gradient. This
 	/// has some limitations: The start and end position property can not be used. For
 	/// more details, see the original documentation:

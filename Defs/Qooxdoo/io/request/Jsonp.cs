@@ -42,7 +42,7 @@ namespace qx.io.request
 	/// <item>Stream-lined authentication</item>
 	/// <item>Flexible callback handling</item>
 	/// <item>Cross-origin requests</item>
-	/// </list
+	/// </list>
 	/// <para>In order to debug requests, set the environment flag
 	/// qx.debug.io.</para>
 	/// <para>Internally uses <see cref="qx.bom.request.Jsonp"/>.</para>
@@ -91,7 +91,7 @@ namespace qx.io.request
 		/// <list type="bullet">
 		/// <item>true: Allow caching (Default)</item>
 		/// <item>false: Prohibit caching. Appends nocache parameter to URL.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		[JsProperty(Name = "cache", NativeField = true)]
 		public bool Cache { get; set; }

@@ -104,7 +104,7 @@ namespace SharpKit.Html5Sdk
         public void refundTransaction(RefundTransactionOptions options) { }
         /// <summary>
         /// Requests a subscription based on the payment options passed. 
-        /// This method will present a popup to the user where they will be given the opportunity to authorize or decline the transaction with AT&T.
+        /// This method will present a popup to the user where they will be given the opportunity to authorize or decline the transaction with AT&amp;T.
         /// </summary>
         /// <param name="options"></param>
         /// <example>
@@ -297,7 +297,7 @@ namespace SharpKit.Html5Sdk
         /// </summary>
         public JsString transactionId { get; set; }
         /// <summary>
-        /// refund options. See AT&T payment documentation for a complete set of refund options and restrictions.
+        /// refund options. See AT&amp;T payment documentation for a complete set of refund options and restrictions.
         /// </summary>
         public JsString refundOPtions { get; set; }
         /// <summary>
@@ -482,7 +482,7 @@ namespace SharpKit.Html5Sdk
         /// </summary>
         public JsString transactionId { get; set; }
         /// <summary>
-        /// refund options. See AT&T payment documentation for a complete set of refund options and restrictions.
+        /// refund options. See AT&amp;T payment documentation for a complete set of refund options and restrictions.
         /// </summary>
         public JsObject refundOptions { get; set; }
         /// <summary>

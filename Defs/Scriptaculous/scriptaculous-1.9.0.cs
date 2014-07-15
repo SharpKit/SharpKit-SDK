@@ -55,7 +55,7 @@ namespace SharpKit.Scriptaculous
         /// <summary>
         /// Hook for a custom function to replace the built-in function that adds the list item text to the input field.
         /// The custom function is called after the element has been updated (i.e. when the user has selected an entry).
-        /// The function receives one parameter only: the selected item (the <li> item selected)
+        /// The function receives one parameter only: the selected item (the &lt;li> item selected)
         /// </summary>
         public JsString updateElement { get; set; }
 
@@ -76,7 +76,7 @@ namespace SharpKit.Scriptaculous
         //TODO: must check
 
         /// <summary>
-        /// To send additional parameters to the server, add them here in the format: 'field=value&another=value'.
+        /// To send additional parameters to the server, add them here in the format: 'field=value&amp;another=value'.
         /// Errata/bug: The hash format {field: 'value',another: 'value'} was noted in this wiki to work, but it does not,
         /// as the Ruby on Rails project has separately documented and fixed in their codebase.
         /// </summary>
@@ -117,7 +117,7 @@ namespace SharpKit.Scriptaculous
         public JsArray<HtmlElement> collection { get; set; }
 
         /// <summary>
-        /// Loads values and tag texts for the <option> tags
+        /// Loads values and tag texts for the &lt;option> tags
         /// </summary>
         public JsString loadCollectionURL { get; set; }
 
@@ -1083,7 +1083,7 @@ namespace SharpKit.Scriptaculous
         public object tag { get; set; }
 
         /// <summary>
-        /// The name of the key that will be used to create the key/value pairs for serializing in HTTP GET/POST format (that is, key[]=value&key[]=value …)
+        /// The name of the key that will be used to create the key/value pairs for serializing in HTTP GET/POST format (that is, key[]=value&amp;key[]=value …)
         /// </summary>
         public JsString name { get; set; }
     }
@@ -1248,7 +1248,7 @@ namespace SharpKit.Scriptaculous
         /// <summary>
         /// The basic syntax to start an effect
         /// </summary>
-        /// <param name="el">element can be either a string containing the id of the element, or a Java Script DOM element object.</param>
+        /// <param name="id_of_element">element can be either a string containing the id of the element, or a Java Script DOM element object.</param>
         /// <param name="required_params">required-params depend on the effect being called and may not be needed. Most effects do not have required parameters.
         /// See the documentation for the core effects to learn if the effect has required parameters or if this parameter should be omitted.</param>
         public Effect(JsString id_of_element, EffectOptions required_params)

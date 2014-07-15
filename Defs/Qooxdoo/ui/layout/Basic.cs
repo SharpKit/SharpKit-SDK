@@ -17,12 +17,12 @@ namespace qx.ui.layout
 	/// <item>Margins for top and left side (including negative ones)</item>
 	/// <item>Respects right and bottom margins in the size hint</item>
 	/// <item>Auto-sizing</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <list type="bullet">
 	/// <item>left (Integer): The left coordinate in pixel</item>
 	/// <item>top (Integer): The top coordinate in pixel</item>
-	/// </list
+	/// </list>
 	/// <para>Details</para>
 	/// <para>The default location of any widget is zero for both
 	/// left and top.</para>

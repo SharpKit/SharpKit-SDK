@@ -16,7 +16,7 @@ namespace qx.data.controller.website
 	/// <list type="bullet">
 	/// <item>Synchronize the model and the target</item>
 	/// <item>Filtering</item>
-	/// </list
+	/// </list>
 	/// <para>Usage</para>
 	/// <para>As model, <see cref="qx.data.Array"/>s and plain JavaScript Arrays work. As a
 	/// Target, you have to use a DOM element e.g. a plain DIV element. Make sure

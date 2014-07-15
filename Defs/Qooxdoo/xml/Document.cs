@@ -19,7 +19,7 @@ namespace qx.xml
 	/// <item>MS xml Object</item>
 	/// <item>MSXML GUIDs and ProgIDs</item>
 	/// <item>MDN Parsing and Serializing XML</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.xml.Document", OmitOptionalParameters = true, Export = false)]
     public partial class Document 

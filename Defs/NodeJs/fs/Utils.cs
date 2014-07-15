@@ -494,7 +494,7 @@ namespace SharpKit.NodeJs.fs
         /// Asynchronous close(2). No arguments other than a possible exception are given to the completion callback.
         /// </summary>
         /// <param name="fd"></param>
-        /// <param name="?"></param>
+        /// <param name="callback"></param>
         /// <returns></returns>
         public object close(JsNumber fd, JsAction callback) { return null; }
         /// <summary>

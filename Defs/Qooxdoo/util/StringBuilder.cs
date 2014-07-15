@@ -35,7 +35,7 @@ namespace qx.util
 		/// <item>length: The initial length of the StringBuilder.</item>
 		/// <item>itemN:  A substring that will make up the newly created StringBuilder.
 		/// The StringBuilder&#8217;s length property is set to the number of arguments.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="length_or_items">The initial length of the StringBuilder OR an argument list of values.</param>
 		public StringBuilder(object length_or_items = null) { throw new NotImplementedException(); }

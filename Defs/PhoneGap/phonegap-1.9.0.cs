@@ -2442,7 +2442,7 @@ namespace SharpKit.PhoneGap
     /// <summary>
     ///  A callback that is called with a Metadata object. 
     /// </summary>
-    /// <param name="successCallback "></param>
+    /// <param name="successCallback"></param>
     public delegate void UploadSuccessCallback(FileUploadResult successCallback);
     /// <summary>
     /// A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object.
@@ -2453,7 +2453,7 @@ namespace SharpKit.PhoneGap
     /// <summary>
     ///   A callback that is called with a FileEntry object 
     /// </summary>
-    /// <param name="successCallback "></param>
+    /// <param name="successCallback"></param>
     public delegate void DownloadSuccessCallback(FileEntry successCallback);
     /// <summary>
     ///  A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object.
@@ -2558,6 +2558,9 @@ namespace SharpKit.PhoneGap
         /// Requests a filesystem.
         /// </summary>
         /// <param name="fileSystem"></param>
+        /// <param name="x"></param>
+        /// <param name="successCallback"></param>
+        /// <param name="errorCallback"></param>
         /// <example>
         /// usage
         /// <code>
@@ -2568,12 +2571,14 @@ namespace SharpKit.PhoneGap
         ///window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
         /// </code>
         /// </example>
-        public static void requestFileSystem(LocalFileSystem fs, JsNumber x, JsAction<FileSystem> successCallback, JsAction errorCallback) { }
+		public static void requestFileSystem(LocalFileSystem fileSystem, JsNumber x, JsAction<FileSystem> successCallback, JsAction errorCallback) { }
 
         /// <summary>
         ///  Retrieve a DirectoryEntry or FileEntry using local URI.
         /// </summary>
-        /// <param name="entry"></param>
+        /// <param name="url"></param>
+        /// <param name="successCallback"></param>
+        /// <param name="errorCallback"></param>
         /// <example>
         /// usage
         /// <code>
@@ -3428,7 +3433,7 @@ namespace SharpKit.PhoneGap
     ///function querySuccess(tx, results) {
     ///    var len = results.rows.length;
     ///    console.log("DEMO table: " + len + " rows found.");
-    ///    for (var i=0; i<len; i++){
+	///    for (var i=0; i&lt;len; i++){
     ///        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
     ///    }
     ///}

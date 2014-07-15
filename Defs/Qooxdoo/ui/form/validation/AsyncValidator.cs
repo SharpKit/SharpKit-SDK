@@ -16,7 +16,7 @@ namespace qx.ui.form.validation
 	/// <list type="bullet">
 	/// <item>asyncValidator: A reference to the corresponding validator.</item>
 	/// <item>value: The value of the assigned input field.</item>
-	/// </list
+	/// </list>
 	/// These two parameters are needed to set the validation status of the current
 	/// validator. <see cref="SetValid"/> is responsible for doing that.</para>
 	/// <para>Warning: Instances of this class can only be used with one input

@@ -41,7 +41,7 @@ namespace SharpKit.NodeJs.events
         /// Execute each of the listeners in order with the supplied arguments.
         /// </summary>
         /// <param name="event"></param>
-        /// <param name="___"></param>
+        /// <param name="arg1"></param>
         /// <returns></returns>
         public object emit(object @event, object arg1) { return null; }
         /// <summary>

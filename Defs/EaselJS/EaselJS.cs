@@ -92,7 +92,7 @@ namespace SharpKit.EaselJS
         /// <summary>
         /// AlphaMaskFilter Constructor
         /// </summary>
-        /// <param name="mask ">The image (or canvas) to use as the mask.
+        /// <param name="mask">The image (or canvas) to use as the mask.
         /// This should be exactly the same dimensions as the target.</param>
         public AlphaMaskFilter(object mask) { }
         //TODO: parameter type is image
@@ -283,7 +283,7 @@ namespace SharpKit.EaselJS
         /// <summary>
         /// BitmapAnimation  Constructor
         /// </summary>
-        /// <param name="imageOrUri">The SpriteSheet instance to play back.
+        /// <param name="spriteSheet">The SpriteSheet instance to play back.
         /// This includes the source image(s), frame dimensions, and frame data. See SpriteSheet for more information.</param>
         public BitmapAnimation(SpriteSheet spriteSheet) { }
 

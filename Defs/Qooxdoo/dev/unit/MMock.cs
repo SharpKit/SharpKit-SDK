@@ -129,13 +129,13 @@ namespace qx.dev.unit
 		/// <item>var mock = mock(obj)
 		/// Creates a mock for the provided object. Does not change the object, but
 		/// returns a mock object to set expectations on the object&#8217;s methods.</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>var expectation = mock.expects(&#8220;method&#8221;)
 		/// Overrides obj.method with a mock function and returns an expectation
 		/// object. Expectations implement both the spy and stub interface plus
 		/// the methods described below.</item>
-		/// </list
+		/// </list>
 		/// <para>Set expectations with following methods. All methods return the expectation
 		/// itself, meaning expectations can be chained.</para>
 		/// <list type="bullet">
@@ -150,7 +150,7 @@ namespace qx.dev.unit
 		/// <item>expectation.withExactArgs(arg1, arg2, ...);</item>
 		/// <item>expectation.on(obj);</item>
 		/// <item>expecation.verify();</item>
-		/// </list
+		/// </list>
 		/// <para>See http://sinonjs.org/docs/#mocks.</para>
 		/// </summary>
 		/// <param name="objectx">The object to create a mock of.</param>
@@ -191,11 +191,11 @@ namespace qx.dev.unit
 		/// <item>spy()
 		/// Creates an anonymous function that records arguments,
 		/// this value, exceptions and return values for all calls.</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>spy(func)
 		/// Spies on the provided function</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>spy(object, &#8220;method&#8221;)
 		/// Creates a spy for object.method and replaces the original method
@@ -203,12 +203,12 @@ namespace qx.dev.unit
 		/// The original method can be restored by calling object.method.restore().
 		/// The returned spy is the function object which replaced the original method.
 		/// spy === object.method.</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>spy.withArgs(arg1[, arg2, ...])
 		/// Creates a spy that only records calls when the received arguments matches those
 		/// passed to withArgs.</item>
-		/// </list
+		/// </list>
 		/// <para>A spy has a rich interface to introspect how the wrapped function was used:</para>
 		/// <list type="bullet">
 		/// <item>spy.callCount</item>
@@ -237,7 +237,7 @@ namespace qx.dev.unit
 		/// <item>spy.args</item>
 		/// <item>spy.exceptions</item>
 		/// <item>spy.returnValues</item>
-		/// </list
+		/// </list>
 		/// <para>See http://sinonjs.org/docs/#spies.</para>
 		/// <para>Note: Spies are transparently added to a sandbox. To restore
 		/// the original function for all spies run this.getSandbox().restore()
@@ -254,23 +254,23 @@ namespace qx.dev.unit
 		/// <list type="bullet">
 		/// <item>stub()
 		/// Creates an anonymous stub function</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>stub(object, &#8220;method&#8221;)
 		/// Replaces object.method with a stub function. The original function
 		/// can be restored by calling object.method.restore() (or stub.restore()).
 		/// An exception is thrown if the property is not already a function,
 		/// to help avoid typos when stubbing methods.</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>stub(obj)
 		/// Stubs all the object&#8217;s methods.</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>stub.withArgs(arg1[, arg2, ...])
 		/// Stubs the method only for the provided arguments. Can be used to create
 		/// a stub that acts differently in response to different arguments.</item>
-		/// </list
+		/// </list>
 		/// <para>A stub has the interface of a spy in addition to methods that allow to define behaviour:</para>
 		/// <list type="bullet">
 		/// <item>stub.returns(obj)</item>
@@ -280,7 +280,7 @@ namespace qx.dev.unit
 		/// <item>stub.callsArg(index)</item>
 		/// <item>stub.callsArg(0)</item>
 		/// <item>stub.callsArgWith(index, arg1, arg2, ...)</item>
-		/// </list
+		/// </list>
 		/// <para>See http://sinonjs.org/docs/#stubs.</para>
 		/// <para>Note: Stubs are transparently added to a sandbox. To restore
 		/// the original function for all stubs run this.getSandbox().restore()

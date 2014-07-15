@@ -25,7 +25,7 @@ namespace qx.dev
 		/// combined to generate the richest trace, including line numbers.</item>
 		/// <item>For Internet Explorer (and other engines that do not provide stack
 		/// traces), <see cref="GetStackTraceFromCaller"/> is used</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <returns>Stack trace of the current position in the code. Each line in the array represents one call in the stack trace.</returns>
 		[JsMethod(Name = "getStackTrace")]

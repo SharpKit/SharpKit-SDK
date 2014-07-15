@@ -41,7 +41,7 @@ namespace qx.ui.core.selection
 		/// <item>multi: Multi items could be selected. Also allows empty selections.</item>
 		/// <item>additive: Easy Web-2.0 selection mode. Allows multiple selections without modifier keys.</item>
 		/// <item>one: If possible always exactly one item is selected</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "single","multi","additive","one"

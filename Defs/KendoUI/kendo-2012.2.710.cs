@@ -487,7 +487,6 @@ namespace SharpKit.KendoUI
         /// Sets or gets the current culture. Uses the passed culture name to select a culture from the culture scripts that you have included and then sets the current culture.
         /// If there is no corresponding culture then the method will try to find culture which is equal to the country part of the culture name. If no culture is found the default one is used
         /// </summary>
-        /// <param name="enGB"></param>
         public static JsString culture() { return null; }
 
         //TODO: Ask Dan-elformat(JsString value, JsNumber number, ...)
@@ -958,14 +957,14 @@ namespace SharpKit.KendoUI
         /// <summary>
         /// Adds a new Model instance to the DataSource
         /// </summary>
-        /// <param name="model">Either a Model instance or raw object from which the Model will be created</param>
+        /// <param name="objectToWrap">Either a Model instance or raw object from which the Model will be created</param>
         /// <returns>The Model instance which has been added</returns>
         public object add(T objectToWrap) { return null; }
 
         /// <summary>
         /// Adds a new Model instance to the DataSource
         /// </summary>
-        /// <param name="model">Either a Model instance or raw object from which the Model will be created</param>
+        /// <param name="modelInstance">Either a Model instance or raw object from which the Model will be created</param>
         /// <returns>The Model instance which has been added</returns>
         public object add(Model<T> modelInstance) { return null; }
 
@@ -1089,7 +1088,7 @@ namespace SharpKit.KendoUI
         /// <summary>
         /// Get current filters or filter the data.
         /// </summary>
-        /// <param name="val">Supported filter operators/aliases are:
+        /// <param name="filterConfig">Supported filter operators/aliases are:
         ///Equal To
         ///"eq", "==", "isequalto", "equals", "equalto", "equal"
         ///Not Equal To

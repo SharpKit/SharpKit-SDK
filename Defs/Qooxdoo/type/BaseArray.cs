@@ -40,7 +40,7 @@ namespace qx.type
 		/// array. When this form is used, the array is initialized with the specified
 		/// values as its elements, and the array&#8217;s length property is set to the
 		/// number of arguments.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="length_or_items">The initial length of the array OR an argument list of values.</param>
 		public BaseArray(object length_or_items = null) { throw new NotImplementedException(); }

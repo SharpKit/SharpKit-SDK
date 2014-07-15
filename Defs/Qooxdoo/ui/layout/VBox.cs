@@ -21,7 +21,7 @@ namespace qx.ui.layout
 	/// <item>Vertical spacing (collapsed with margins)</item>
 	/// <item>Reversed children layout (from last to first)</item>
 	/// <item>Horizontal children stretching (respecting size hints)</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <list type="bullet">
 	/// <item>flex (Integer): The flexibility of a layout item determines how the container
@@ -41,7 +41,7 @@ namespace qx.ui.layout
 	/// size hint. Percent values are mostly useful for widgets which are sized by
 	/// the outer hierarchy.
 	/// </item>
-	/// </list</para>
+	/// </list></para>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the grid layout.</para>
 	/// <code>

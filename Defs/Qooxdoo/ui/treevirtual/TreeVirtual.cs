@@ -12,7 +12,7 @@ namespace qx.ui.treevirtual
 	/// <list type="bullet">
 	/// <item><see cref="qx.ui.treevirtual.MNode"/></item>
 	/// <item><see cref="qx.ui.treevirtual.MFamily"/></item>
-	/// </list</para>
+	/// </list></para>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.ui.treevirtual.TreeVirtual", OmitOptionalParameters = true, Export = false)]
     public partial class TreeVirtual : qx.ui.table.Table

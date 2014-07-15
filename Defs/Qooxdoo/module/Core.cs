@@ -17,7 +17,7 @@ namespace qx.module
 	/// <item><see cref="qx.module.Manipulating"/></item>
 	/// <item><see cref="qx.module.Polyfill"/></item>
 	/// <item><see cref="qx.module.Traversing"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.module.Core", OmitOptionalParameters = true, Export = false)]
     public partial class Core 

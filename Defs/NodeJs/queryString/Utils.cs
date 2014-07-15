@@ -37,7 +37,7 @@ namespace SharpKit.NodeJs.queryString
         /// <returns></returns>
         public JsString stringify(object obj, JsString sep) { return null; }
         /// <summary>
-        /// Serialize an object to a query string. Optionally override the default separator ('&') and assignment ('=') characters. 
+        /// Serialize an object to a query string. Optionally override the default separator ('&amp;') and assignment ('=') characters. 
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="sep"></param>
@@ -52,7 +52,7 @@ namespace SharpKit.NodeJs.queryString
         /// <example>
         /// Example:
         /// <code>
-        /// querystring.parse('foo=bar&baz=qux&baz=quux&corge')
+        /// querystring.parse('foo=bar&amp;baz=qux&baz=quux&corge')
         /// // returns
         /// { foo: 'bar', baz: ['qux', 'quux'], corge: '' }
         /// </code>

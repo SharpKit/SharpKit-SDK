@@ -136,6 +136,7 @@ namespace log4javascript
         /// Starts a new group of log messages. In appenders that support grouping (currently PopUpAppender and InPageAppender), a group appears as an expandable section in the console, labelled with the name specified. Specifying initiallyExpanded determines whether the group starts off expanded (the default is true). Groups may be nested. 
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="initiallyExpanded"></param>
         [JsMethod(NativeOverloads = true)]
         public virtual void group(JsString name, JsBoolean initiallyExpanded) { }
         /// <summary>

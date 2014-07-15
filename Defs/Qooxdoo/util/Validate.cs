@@ -15,7 +15,7 @@ namespace qx.util
 	/// <item>string</item>
 	/// <item>url</item>
 	/// <item>color</item>
-	/// </list
+	/// </list>
 	/// All these validators don&#8217;t need an input so the listed function just return a
 	/// method fitting for the use in the property system.
 	/// The methods with the check prefix are the returned methods and can be used in
@@ -25,7 +25,7 @@ namespace qx.util
 	/// <item>range</item>
 	/// <item>inArray</item>
 	/// <item>regExp</item>
-	/// </list
+	/// </list>
 	/// These methods do need some addition parameters to specify the validator. So
 	/// there is no check function which you can use in other contexts because the
 	/// check function for the validation is created based on the given parameter.</para>

@@ -13,12 +13,12 @@ namespace qx.eventx.handler
 	/// <list type="bullet">
 	/// <item>Webkit and Opera (before 9.5) do not support tabIndex for all elements
 	/// (See also: http://bugs.webkit.org/show_bug.cgi?id=7138)</item>
-	/// </list
+	/// </list>
 	/// <list type="bullet">
 	/// <item>TabIndex is normally 0, which means all naturally focusable elements are focusable.</item>
 	/// <item>TabIndex > 0 means that the element is focusable and tabable</item>
 	/// <item>TabIndex 
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.event.handler.Focus", OmitOptionalParameters = true, Export = false)]
     public partial class Focus : qx.core.Object, qx.eventx.IEventHandler

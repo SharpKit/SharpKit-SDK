@@ -24,7 +24,7 @@ namespace qx.ui.virtualx.core
 		/// <item>content (String): HTML fragment of the innerHTML of the cell</item>
 		/// <item>insets (Array): insets (padding + border) of the cell as
 		/// two-dimensional array.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <param name="row">The cell&#8217;s row index.</param>
 		/// <param name="column">The cell&#8217;s column index.</param>

@@ -25,14 +25,14 @@ namespace qx.ui.decoration
 		/// <list type="bullet">
 		/// <item>t: top side (vertical orientation)</item>
 		/// <item>b: bottom side (vertical orientation)</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>l: left side (horizontal orientation)</item>
 		/// <item>r: right side (horizontal orientation)</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>c: center image</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <remarks>
 		/// Allow nulls: true

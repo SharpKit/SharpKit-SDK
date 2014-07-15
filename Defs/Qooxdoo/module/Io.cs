@@ -13,7 +13,7 @@ namespace qx.module
 	/// <item>XMLHttpRequest: <see cref="Xhr"/></item>
 	/// <item>Script tag: <see cref="Script"/></item>
 	/// <item>Script tag using JSONP: <see cref="Jsonp"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.module.Io", OmitOptionalParameters = true, Export = false)]
     public partial class Io 

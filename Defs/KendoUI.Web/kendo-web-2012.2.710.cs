@@ -295,7 +295,6 @@ namespace SharpKit.KendoUI.Web
         /// Selects drop-down list item and sets the text of the autocomplete.
         /// </summary>
         /// <param name="li">The LI element.</param>
-        /// <param name="item">The selected item chosen by a user.</param>
         ///<example>
         ///usage
         ///<code>
@@ -2440,7 +2439,6 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Enables or disables a DateTimePicker.
         /// </summary>
-        /// <param name="enable">Enables (true or undefined) or disables (false) a DateTimePicker.</param>
         ///<example>
         ///usage
         ///<code>
@@ -2545,7 +2543,6 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Gets the min value of the DateTimePicker.
         /// </summary>
-        /// <param name="value">The min  date to set.</param>
         ///<example>
         ///usage
         ///<code>
@@ -3006,7 +3003,6 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Enables/disables the dropdownlist widget
         /// </summary>
-        /// <param name="enable">The argument, which defines whether to enable/disable the autocomplete.</param>
         ///<example>
         ///usage
         ///<code>
@@ -3128,8 +3124,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Selects drop-down list item and sets the value and the text of the dropdownlist.
         /// </summary>
-        /// <param name="li">The LI element.</param>
-        /// <param name="item">The selected item chosen by a user.</param>
+        /// <param name="index"></param>
         /// <returns>The index of the selected LI element.</returns>
         /// <example>
         ///usage
@@ -4000,7 +3995,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Collapses specified master row.
         /// </summary>
-        /// <param name="row ">Target master row to collapse.</param>
+        /// <param name="row">Target master row to collapse.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4014,7 +4009,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Collapses specified master row.
         /// </summary>
-        /// <param name="row ">Target master row to collapse.</param>
+        /// <param name="row">Target master row to collapse.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4029,7 +4024,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Returns the data item to which a given table row (tr DOM element) is bound.
         /// </summary>
-        /// <param name="tr  ">Target row.</param>
+        /// <param name="tr">Target row.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4043,7 +4038,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Returns the data item to which a given table row (tr DOM element) is bound.
         /// </summary>
-        /// <param name="tr  ">Target row.</param>
+        /// <param name="tr">Target row.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4058,7 +4053,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Returns the data item to which a given table row (tr DOM element) is bound.
         /// </summary>
-        /// <param name="tr  ">Target row.</param>
+        /// <param name="tr">Target row.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4088,7 +4083,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Switches the specified row from the grid into edit mode. The editRow method triggers edit event.
         /// </summary>
-        /// <param name="row ">Row to be edited.</param>
+        /// <param name="row">Row to be edited.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4102,7 +4097,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Switches the specified row from the grid into edit mode. The editRow method triggers edit event.
         /// </summary>
-        /// <param name="row ">Row to be edited.</param>
+        /// <param name="row">Row to be edited.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4146,7 +4141,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Expands specified master row.
         /// </summary>
-        /// <param name="row ">Target master row to expand.</param>
+        /// <param name="row">Target master row to expand.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4160,7 +4155,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Expands specified master row.
         /// </summary>
-        /// <param name="row ">Target master row to expand.</param>
+        /// <param name="row">Target master row to expand.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4189,7 +4184,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Removes the specified row from the grid. The removeRow method triggers remove event. (Note: In inline or popup edit modes the changes will be automatically synced)
         /// </summary>
-        /// <param name="row ">Row to be removed.</param>
+        /// <param name="row">Row to be removed.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4203,7 +4198,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Removes the specified row from the grid. The removeRow method triggers remove event. (Note: In inline or popup edit modes the changes will be automatically synced)
         /// </summary>
-        /// <param name="row ">Row to be removed.</param>
+        /// <param name="row">Row to be removed.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4244,7 +4239,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Selects the specified Grid rows/cells. If called without arguments - returns the selected rows/cells.
         /// </summary>
-        /// <param name="items ">Items to select.</param>
+        /// <param name="items">Items to select.</param>
         ///<example>
         ///usage
         ///<code>
@@ -4258,7 +4253,7 @@ namespace SharpKit.KendoUI.Web
         /// <summary>
         /// Selects the specified Grid rows/cells. If called without arguments - returns the selected rows/cells.
         /// </summary>
-        /// <param name="items ">Items to select.</param>
+        /// <param name="items">Items to select.</param>
         ///<example>
         ///usage
         ///<code>
@@ -8703,7 +8698,7 @@ namespace SharpKit.KendoUI.Web
         /// Note: Invoking the method will not trigger collapse or expand events.
         /// </summary>
         /// <param name="pane">The pane to be resized.</param>
-        /// <param name="expand ">(Optional) Represents the desired state of the specified pane; to be expanded (true) or collapsed (false).
+        /// <param name="expand">(Optional) Represents the desired state of the specified pane; to be expanded (true) or collapsed (false).
         /// If undefined, toggle() will collapse the pane if it is expanded or will expand the pane if it is collapsed.</param>
         ///<example>
         ///usage
@@ -8724,7 +8719,7 @@ namespace SharpKit.KendoUI.Web
         /// Note: Invoking the method will not trigger collapse or expand events.
         /// </summary>
         /// <param name="pane">The pane to be resized.</param>
-        /// <param name="expand ">(Optional) Represents the desired state of the specified pane; to be expanded (true) or collapsed (false).
+        /// <param name="expand">(Optional) Represents the desired state of the specified pane; to be expanded (true) or collapsed (false).
         /// If undefined, toggle() will collapse the pane if it is expanded or will expand the pane if it is collapsed.</param>
         ///<example>
         ///usage

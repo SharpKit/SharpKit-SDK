@@ -14,10 +14,10 @@ namespace qx.module
 	/// placeholders which makes the fallback only relevant for IE 
 	/// <list type="bullet">
 	/// <item>HTML Spec</item>
-	/// </list
+	/// </list>
 	/// <list type="bullet">
 	/// <item>Browser Support</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.module.Placeholder", OmitOptionalParameters = true, Export = false)]
     public partial class Placeholder 

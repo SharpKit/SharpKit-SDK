@@ -33,7 +33,7 @@ namespace qx.eventx.type
 		/// <item>-90: &#8220;Landscape (right, screen turned clockwise)&#8221;</item>
 		/// <item>90: &#8220;Landscape (left, screen turned counterclockwise)&#8221;</item>
 		/// <item>180: &#8220;Portrait (upside-down portrait)&#8221;</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <returns>The current orientation in degree</returns>
 		[JsMethod(Name = "getOrientation")]

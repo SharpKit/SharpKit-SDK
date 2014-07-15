@@ -14,7 +14,7 @@ namespace qx.application
 	/// manually by calling the <see cref="ExecuteGet"/> method.</item>
 	/// <item>POST / DELETE / PUT has to be triggered manually right now (will be changed later)
 	/// by calling the <see cref="ExecutePost"/>, <see cref="ExecuteDelete"/>, <see cref="ExecutePut"/> method.</item>
-	/// </list
+	/// </list>
 	/// <para>This manager can also be used to provide browser history.</para>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the widget.</para>
@@ -22,16 +22,16 @@ namespace qx.application
 	/// var r = new qx.application.Routing();
 	/// // show the start page, when no hash is given or the hash is "#/"
 	/// r.onGet("/", function(data) {
-	/// startPage.show();
+	/// 	startPage.show();
 	/// }, this);
 	/// // whenever the url /address is called show the addressbook page.
-	/// r.onGet("/address", function(data) {
-	/// addressBookPage.show();
+	/// 	r.onGet("/address", function(data) {
+	/// 	addressBookPage.show();
 	/// }, this);
 	/// // address with the parameter "id"
 	/// r.onGet("/address/{id}", function(data) {
-	/// addressPage.show();
-	/// model.loadAddress(data.params.id);
+	/// 	addressPage.show();
+	/// 	model.loadAddress(data.params.id);
 	/// }, this);
 	/// // Alternative you can use regExp for a route
 	/// r.onGet(/address\/(.*)/, function(data) {

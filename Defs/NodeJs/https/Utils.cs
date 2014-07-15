@@ -190,7 +190,7 @@ namespace SharpKit.NodeJs.https
         ///}
         ///</code>
         ///</example>
-        public object request(RequestOptions options, JsAction callbace) { return null; }
+        public object request(RequestOptions options, JsAction callback) { return null; }
         /// <summary>
         /// Makes a request to a secure web server.
         /// </summary>

@@ -6728,7 +6728,6 @@ namespace SharpKit.Google.Chrome
         /// <summary>
         /// Gets the window that was most recently focused — typically the window 'on top'.
         /// </summary>
-        /// <param name="getInfo"></param>
         /// <param name="callback"></param>
         public static void getLastFocused(JsAction callback) { }
 

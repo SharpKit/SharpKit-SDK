@@ -20,7 +20,7 @@ namespace qx.data.store
 	/// <item>upgrade from qooxdoo 1.4 or lower</item>
 	/// <item>choose not to force the old transport</item>
 	/// <item>use a delegate with qx.data.store.IStoreDelegate#configureRequest</item>
-	/// </list
+	/// </list>
 	/// <para>you probably need to change the implementation of your delegate to configure
 	/// the <see cref="qx.io.request.Xhr"/> request.</para>
 	/// </summary>

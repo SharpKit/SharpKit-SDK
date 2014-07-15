@@ -13,14 +13,14 @@ namespace qx.bom
 	/// <item>Simple movie embedding (returning a cross-browser working DOM node)</item>
 	/// <item>Support for custom parameters and attributes</item>
 	/// <item>Support for Flash&#8482; variables</item>
-	/// </list
+	/// </list>
 	/// <para>Does not include the following features from SWFFix:</para>
 	/// <list type="bullet">
 	/// <item>Active content workarounds for already inserted movies (via markup)</item>
 	/// <item>Express install support</item>
 	/// <item>Transformation of standard conformance markup to cross browser support</item>
 	/// <item>Support for alternative content (alt text)</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.bom.Flash", OmitOptionalParameters = true, Export = false)]
     public partial class Flash 
@@ -47,7 +47,7 @@ namespace qx.bom
 		/// <summary>
 		/// <para>Destroys the flash object from DOM, but not the parent DOM element.</para>
 		/// <para>Note: Removing the flash object like this:</para>
-		/// 
+		/// <code>
 		/// var div = qx.dom.Element.create("div");
 		/// document.body.appendChild(div);
 		/// var flashObject = qx.bom.Flash.create(div, { movie : "Flash.swf", id : "id" });

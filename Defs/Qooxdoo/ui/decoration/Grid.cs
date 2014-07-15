@@ -32,17 +32,17 @@ namespace qx.ui.decoration
 		/// <item>tl (top-left edge)</item>
 		/// <item>t (top side)</item>
 		/// <item>tr (top-right edge)</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>bl (bottom-left edge)</item>
 		/// <item>b (bottom side)</item>
 		/// <item>br (bottom-right edge)</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>l (left side)</item>
 		/// <item>c (center image)</item>
 		/// <item>r (right side)</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <remarks>
 		/// Allow nulls: true

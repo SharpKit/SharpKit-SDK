@@ -18,7 +18,7 @@ namespace qx.lang
 	/// <item>http://www.ecma-international.org/publications/standards/Ecma-262.htm</item>
 	/// <item>http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference</item>
 	/// <item>http://developer.mozilla.org/en/docs/New_in_JavaScript_1.6</item>
-	/// </list
+	/// </list>
 	/// <para>The following methods are added if they are not supported natively:</para>
 	/// <list type="bullet">
 	/// <item>Error.toString()</item>
@@ -30,7 +30,7 @@ namespace qx.lang
 	/// <item>Array.some()</item>
 	/// <item>Array.every()</item>
 	/// <item>String.quote()</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.lang.Core", OmitOptionalParameters = true, Export = false)]
     public partial class Core 
