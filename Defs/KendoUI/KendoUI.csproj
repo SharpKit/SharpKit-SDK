@@ -24,6 +24,11 @@
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
     <NoWarn>1591,0108,0114,1570</NoWarn>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <NoWarn>1587,1591,108,1570,1572</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="kendo-2012.2.710.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

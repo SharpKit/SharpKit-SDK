@@ -24,8 +24,10 @@
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
     <NoWarn>1591,0108,0114,1570</NoWarn>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <NoWarn>1587,1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="fullcalendar.cs" />

@@ -23,7 +23,11 @@
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
     <NoWarn>1591,0108,0114,1574,1584,1658,1570,0419</NoWarn>
   </PropertyGroup>
-  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <NoWarn>1587,1591,108,1574,114,1584,1570,419</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Missing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
