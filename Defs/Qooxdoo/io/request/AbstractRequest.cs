@@ -113,7 +113,7 @@ namespace qx.io.request
 		/// <item>String</item>
 		/// <item>Map</item>
 		/// <item>qooxdoo Object</item>
-		/// </list
+		/// </list>
 		/// <para>For every supported type except strings, a URL encoded string
 		/// with unsafe characters escaped is internally generated and sent
 		/// as part of the request.</para>

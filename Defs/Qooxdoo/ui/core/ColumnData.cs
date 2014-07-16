@@ -51,7 +51,7 @@ namespace qx.ui.core
 		/// <item>Autosized: &#8220;auto&#8221;</item>
 		/// <item>Flex: e.g. &#8220;1*&#8221;</item>
 		/// <item>Percent: e.g. &#8220;33%&#8221;</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="width">The column width</param>
 		/// <param name="flex">Optional flex value of the column</param>

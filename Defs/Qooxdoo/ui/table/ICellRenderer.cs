@@ -34,7 +34,7 @@ namespace qx.ui.table
 		/// <item>styleLeft (string): The left position of the cell.</item>
 		/// <item>styleWidth (string): The cell&#8217;s width (pixel).</item>
 		/// <item>styleHeight (string): The cell&#8217;s height (pixel).</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <param name="cellInfo">A map containing the information about the cell to create.</param>
 		/// <param name="htmlArr">Target string container. The HTML of the data cell should be appended to this array.</param>

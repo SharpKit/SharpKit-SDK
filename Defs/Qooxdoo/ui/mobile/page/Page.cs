@@ -29,7 +29,7 @@ namespace qx.ui.mobile.page
 	/// <item>initialize: Initializes the page to show</item>
 	/// <item>start: Gets called when the page to show is started</item>
 	/// <item>stop:  Stops the current page</item>
-	/// </list
+	/// </list>
 	/// <para>IMPORTANT: Define all child widgets of a page when the <see cref="Initialize"/> lifecycle
 	/// method is called, either by listening to the <see cref="Initialize"/> event or overriding
 	/// the <see cref="#_initialize"/> method. This is because a page can be instanced during

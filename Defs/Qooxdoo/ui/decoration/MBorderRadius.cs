@@ -16,7 +16,7 @@ namespace qx.ui.decoration
 	/// <item>Safari 3.0+</item>
 	/// <item>Opera 10.5+</item>
 	/// <item>Chrome 4.0+</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.ui.decoration.MBorderRadius", OmitOptionalParameters = true, Export = false)]
     public partial class MBorderRadius 

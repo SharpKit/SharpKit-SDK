@@ -26,7 +26,7 @@ namespace qx.bom
 	/// <item>An array of DOM node elements</item>
 	/// <item>A collection</item>
 	/// <item>A string representing HTML</item>
-	/// </list
+	/// </list>
 	/// <para>Example:</para>
 	/// <code>
 	/// qx.bom.Collection.query("#div1").append(
@@ -83,7 +83,7 @@ namespace qx.bom
 		/// <list type="bullet">
 		/// <item>length: The initial size of the collection of elements.</item>
 		/// <item>elem1, elem2. .. elemN:  the elements that will compose the newly created collection</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="length_or_items">The initial size of the collection OR an argument list of elements.</param>
 		public Collection(object length_or_items = null) { throw new NotImplementedException(); }
@@ -400,7 +400,7 @@ namespace qx.bom
 		/// <item>border: Calculate the border box (useful to align to border edges of two elements).</item>
 		/// <item>scroll: Calculate the scroll box (relevant for absolute positioned content).</item>
 		/// <item>padding: Calculate the padding box (relevant for static/relative positioned content).</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="mode">A supported option. See comment above.</param>
 		/// <returns>Returns a map with left, top, right and bottom which contains the distance of the element relative to the document.</returns>

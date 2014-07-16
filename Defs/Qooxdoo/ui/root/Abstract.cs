@@ -72,7 +72,7 @@ namespace qx.ui.root
 		/// <item>wait</item>
 		/// <item>help </item>
 		/// <item>url([file]) = self defined cursor, file should be an ANI- or CUR-type</item>
-		/// </list</para>
+		/// </list></para>
 		/// <para>Please note that in the current implementation this has no effect in IE.</para>
 		/// </summary>
 		/// <remarks>

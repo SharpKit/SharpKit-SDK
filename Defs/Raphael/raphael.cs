@@ -260,7 +260,7 @@ namespace SharpKit.Raphael
         }
         /// <summary>
         /// Unique id of the element. Especially usesful when you want to listen to events of the element,
-        /// because all events are fired in format <module>.<action>.<id>. Also useful for Paper.getById method.
+        /// because all events are fired in format &lt;module>.&lt;action>.&lt;id>. Also useful for Paper.getById method.
         /// </summary>
         public JsNumber id { get; set; }
         //TODO: D.check
@@ -1961,7 +1961,7 @@ namespace SharpKit.Raphael
         /// <returns>HSL object in format:</returns>
         public Rgb2Hsl rgb2hsl(JsNumber r, JsNumber g, JsNumber b) { return null; }
         /// <summary>
-        /// Used when you need to draw in <iframe>. Switched window to the iframe one.
+        /// Used when you need to draw in &lt;iframe>. Switched window to the iframe one.
         /// </summary>
         /// <param name="newwin">new window object</param>
         public void setWindow(Window newwin) { }
@@ -2059,7 +2059,7 @@ namespace SharpKit.Raphael
         /// Removes given element from the set
         /// </summary>
         /// <param name="element">element to remove</param>
-        /// <returns>true if object was found & removed from the set</returns>
+        /// <returns>true if object was found &amp; removed from the set</returns>
         public JsBoolean exclude(object element) { return null; }
         /// <summary>
         /// Executes given function for each element in the set.

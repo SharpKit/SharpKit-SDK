@@ -51,6 +51,11 @@
     <PreBuildEvent Condition=" '$(OS)' == 'Windows_NT' ">rem copy "$(ProjectDir)jquery-ui-1.8.11.cs" "$(ProjectDir)jquery-ui-1.8.11.bak" /Y
 rem copy "$(ProjectDir)..\SharpKit.jQueryUI-1.8.11\jquery-ui-1.8.11.cs" "$(ProjectDir)" /Y</PreBuildEvent>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <NoWarn>1587,1591,108</NoWarn>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

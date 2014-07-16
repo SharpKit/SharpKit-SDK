@@ -43,7 +43,7 @@ namespace SharpKit.NodeJs
         /// Updates the cipher with data, the encoding of which is given in input_encoding and can be 'utf8', 'ascii' or 'binary'. Defaults to 'binary'.
         /// </summary>
         /// <param name="data"></param>
-        /// <param name="input_encoding">can be 'utf8', 'ascii' or 'binary'. Defaults to 'binary'.</param>
+        /// <param name="output_encoding">can be 'utf8', 'ascii' or 'binary'. Defaults to 'binary'.</param>
         /// <returns>Returns the enciphered contents, and can be called many times with new data as it is streamed.</returns>
         public object update(JsString data, JsString output_encoding) { return null; }
         /// <summary>

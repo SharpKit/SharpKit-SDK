@@ -17,7 +17,7 @@ namespace qx.log.appender
 	/// <item>Clearing the console using a button.</item>
 	/// <item>Display of offset (time after loading) of each message</item>
 	/// <item>Supports keyboard shortcuts F7 or Ctrl+D to toggle the visibility</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.log.appender.Console", OmitOptionalParameters = true, Export = false)]
     public partial class Console 

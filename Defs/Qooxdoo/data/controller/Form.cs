@@ -18,7 +18,7 @@ namespace qx.data.controller
 	/// <list type="bullet">
 	/// <item>Connect a form to a model (bidirectional)</item>
 	/// <item>Create a model for a given form</item>
-	/// </list
+	/// </list>
 	/// <para>Usage</para>
 	/// <para>The controller only works if both a controller and a model are set.
 	/// Creating a model will automatically set the created model.</para>
@@ -27,7 +27,7 @@ namespace qx.data.controller
 	/// <item>If you want to bind single values, use <see cref="qx.data.controller.Object"/></item>
 	/// <item>If you want to bind a list like widget, use <see cref="qx.data.controller.List"/></item>
 	/// <item>If you want to bind a tree widget, use <see cref="qx.data.controller.Tree"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.data.controller.Form", OmitOptionalParameters = true, Export = false)]
     public partial class Form : qx.core.Object

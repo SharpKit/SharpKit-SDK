@@ -27,7 +27,7 @@ namespace qx.type
 		/// <list type="bullet">
 		/// <item>length: The initial length of the array.</item>
 		/// <item>item1, item2. .. itemN:  the items that will make up the newly created array</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="length_or_items">The initial size of the collection OR an argument list of elements.</param>
 		public Array(object length_or_items = null) { throw new NotImplementedException(); }

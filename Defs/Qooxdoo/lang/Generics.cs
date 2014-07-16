@@ -29,7 +29,7 @@ namespace qx.lang
 	/// <item>filter</item>
 	/// <item>some</item>
 	/// <item>every</item>
-	/// </list
+	/// </list>
 	/// <para>String</para>
 	/// <list type="bullet">
 	/// <item>quote</item>
@@ -50,7 +50,7 @@ namespace qx.lang
 	/// <item>substr</item>
 	/// <item>concat</item>
 	/// <item>slice</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.lang.Generics", OmitOptionalParameters = true, Export = false)]
     public partial class Generics 

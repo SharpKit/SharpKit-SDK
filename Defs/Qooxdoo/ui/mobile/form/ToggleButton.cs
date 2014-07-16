@@ -126,11 +126,11 @@ namespace qx.ui.mobile.form
 		/// <list type="bullet">
 		/// <item>Don&#8217;t use equal models in one widget using the
 		/// <see cref="qx.ui.form.MModelSelection"/>.</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>Avoid setting only some model properties if the widgets are added to
 		/// a <see cref="qx.ui.form.MModelSelection"/> widge.</item>
-		/// </list
+		/// </list>
 		/// <para>Both restrictions result of the fact, that the set models are deputies
 		/// for their widget.</para>
 		/// </summary>

@@ -1513,8 +1513,9 @@ namespace SharpKit.Fabric
             /// </summary>
             public Object setClipTo(object clipTo) { return null; }
             /// <summary>
-            /// Sets "color" of an instance (alias of `set('fill', &hellip;)`)
+            /// Sets "color" of an instance (alias of `set('fill', &amp;hellip;)`)
             /// </summary>
+            /// <param name="color"></param>
             public Text setColor(string color) { return null; }
             /// <summary>
             /// Sets the visibility state of object controls.
@@ -1922,8 +1923,11 @@ namespace SharpKit.Fabric
         public partial class Path : Object
         {
             /// <summary>
-            /// Creates an instance of fabric.Path from an SVG <path> element
+            /// Creates an instance of fabric.Path from an SVG &lt;path> element
             /// </summary>
+            /// <param name="element"></param>
+            /// <param name="callback"></param>
+            /// <param name="options"></param>
             public void fromElement(object element, JsAction callback, Object options) { }
             /// <summary>
             /// Creates an instance of fabric.Path from an object

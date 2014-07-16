@@ -34,7 +34,7 @@ namespace qx.bom
 		/// <item>0: &#8220;Portrait&#8221;</item>
 		/// <item>90: &#8220;Landscape&#8221;</item>
 		/// <item>180: &#8220;Portrait&#8221;</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="win">The window to query. (Default = top window)</param>
 		/// <returns>The current orientation in degree</returns>

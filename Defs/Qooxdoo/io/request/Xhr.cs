@@ -32,7 +32,7 @@ namespace qx.io.request
 	/// <item>Transparent processing of request data</item>
 	/// <item>Stream-lined authentication</item>
 	/// <item>Automagic parsing of response based on content type</item>
-	/// </list
+	/// </list>
 	/// <para>Cross-origin requests are supported, but require browser support
 	/// (see caniuse.com) and backend configuration
 	/// (see MDN).
@@ -109,7 +109,7 @@ namespace qx.io.request
 		/// <item>true: Allow caching (Default)</item>
 		/// <item>false: Prohibit caching. Appends nocache parameter to URL.</item>
 		/// <item>String: Any Cache-Control request directive</item>
-		/// </list
+		/// </list>
 		/// <para>If a string is given, it is inserted in the request&#8217;s Cache-Control
 		/// header. A request&#8217;s Cache-Control header may contain a number of directives
 		/// controlling the behavior of any caches in between client and origin
@@ -122,7 +122,7 @@ namespace qx.io.request
 		/// bandwidth when possible.</item>
 		/// <item>&#8220;no-store&#8221;: Do not keep a copy of the representation under
 		/// any conditions.</item>
-		/// </list
+		/// </list>
 		/// <para>See 
 		/// Caching tutorial for an excellent introduction to Caching in general.
 		/// Refer to the corresponding section in the

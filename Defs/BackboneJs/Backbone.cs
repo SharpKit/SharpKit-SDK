@@ -1120,7 +1120,7 @@ namespace SharpKit.BackboneJs
         ///<code>
         ///<script>
         ///   var Accounts = new Backbone.Collection;
-        ///   Accounts.reset(<%= @accounts.to_json %>);
+        ///   Accounts.reset(&lt;%= @accounts.to_json %>);
         /// </script>
         ///</code>
         ///</example>
@@ -1137,7 +1137,7 @@ namespace SharpKit.BackboneJs
         ///<code>
         ///<script>
         ///   var Accounts = new Backbone.Collection;
-        ///   Accounts.reset(<%= @accounts.to_json %>);
+        ///   Accounts.reset(&lt;%= @accounts.to_json %>);
         /// </script>
         ///</code>
         ///</example>
@@ -1381,7 +1381,6 @@ namespace SharpKit.BackboneJs
         /// </summary>
         /// <param name="list"></param>
         /// <param name="iterator"></param>
-        /// <param name="context"></param>
         /// <returns></returns>
         /// <example>
         ///usage
@@ -1935,7 +1934,6 @@ namespace SharpKit.BackboneJs
         /// When creating a new router, you may pass its routes hash directly as an option, if you choose.
         /// All options will also be passed to your initialize function, if defined.
         /// </summary>
-        /// <param name="options"></param>
         public Router() { }
 
 
@@ -2153,7 +2151,7 @@ namespace SharpKit.BackboneJs
         /// 
         /// If the server has already rendered the entire page, and you don't want the initial route to trigger when starting History, pass silent: true.
         /// 
-        /// Because hash-based history in Internet Explorer relies on an <iframe>, be sure to only call start() after the DOM is ready.
+        /// Because hash-based history in Internet Explorer relies on an &lt;iframe>, be sure to only call start() after the DOM is ready.
         /// </summary>
         /// <param name="options"></param>
         ///<example>
@@ -2180,7 +2178,7 @@ namespace SharpKit.BackboneJs
         /// 
         /// If the server has already rendered the entire page, and you don't want the initial route to trigger when starting History, pass silent: true.
         /// 
-        /// Because hash-based history in Internet Explorer relies on an <iframe>, be sure to only call start() after the DOM is ready.
+        /// Because hash-based history in Internet Explorer relies on an &lt;iframe>, be sure to only call start() after the DOM is ready.
         /// </summary>
         ///<example>
         ///usage

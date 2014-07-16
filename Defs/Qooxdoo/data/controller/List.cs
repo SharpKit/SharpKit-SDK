@@ -21,7 +21,7 @@ namespace qx.data.controller
 	/// <item>Label and icon are bindable</item>
 	/// <item>Takes care of the selection</item>
 	/// <item>Passes on the options used by the bindings</item>
-	/// </list
+	/// </list>
 	/// <para>Usage</para>
 	/// <para>As model, only <see cref="qx.data.Array"/>s do work. The currently supported
 	/// targets are</para>
@@ -29,7 +29,7 @@ namespace qx.data.controller
 	/// <item><see cref="qx.ui.form.SelectBox"/></item>
 	/// <item><see cref="qx.ui.form.List"/></item>
 	/// <item><see cref="qx.ui.form.ComboBox"/></item>
-	/// </list
+	/// </list>
 	/// <para>All the properties like model, target or any property path is bindable.
 	/// Especially the model is nice to bind to another selection for example.
 	/// The controller itself can only work if it has a model and a target set. The
@@ -39,7 +39,7 @@ namespace qx.data.controller
 	/// <item>If you want to bind single values, use <see cref="qx.data.controller.Object"/></item>
 	/// <item>If you want to bind a tree widget, use <see cref="qx.data.controller.Tree"/></item>
 	/// <item>If you want to bind a form widget, use <see cref="qx.data.controller.Form"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.data.controller.List", OmitOptionalParameters = true, Export = false)]
     public partial class List : qx.core.Object, qx.data.controller.ISelection

@@ -28,6 +28,13 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <DocumentationFile>..\bin\SharpKit.Xdk.Html.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <NoWarn>1587,1591,1574</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="dom\CompositionEventType.cs" />
     <Compile Include="dom\BeforeLoadEventType.cs" />

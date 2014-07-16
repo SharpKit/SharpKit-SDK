@@ -16,7 +16,7 @@ namespace qx.ui.layout
 	/// <list type="bullet">
 	/// <item>Auto-sizing</item>
 	/// <item>Respects minimum and maximum child dimensions</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <para>None</para>
 	/// <para>Example</para>

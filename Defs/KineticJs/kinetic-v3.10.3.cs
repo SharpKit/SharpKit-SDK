@@ -256,7 +256,7 @@ namespace SharpKit.KineticJs
         /// <summary>
         /// rotate node by an amount in degrees
         /// </summary>
-        /// <param name="theta"></param>
+        /// <param name="deg"></param>
         public void rotateDeg(JsNumber deg) { }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace SharpKit.KineticJs
         /// <summary>
         /// set draggable
         /// </summary>
-        /// <param name="constraint"></param>
+        /// <param name="draggable"></param>
         public void setDraggable(JsString draggable) {}
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace SharpKit.KineticJs
         /// <summary>
         /// set node rotation in degrees
         /// </summary>
-        /// <param name="theta"></param>
+        /// <param name="deg"></param>
         public void setRotationDeg(JsNumber deg) { }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace SharpKit.KineticJs
         /// <summary>
         /// set node y position
         /// </summary>
-        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void setY(JsNumber y) { }
 
         /// <summary>
@@ -1577,67 +1577,67 @@ namespace SharpKit.KineticJs
         /// <summary>
         /// set font size
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="fontSize"></param>
         public void setFontSize(JsNumber fontSize) { }
 
         /// <summary>
         /// set text stroke color
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="textStroke"></param>
         public void setFontStroke(JsString textStroke) { }
 
         /// <summary>
         /// set font style. Can be "normal", "italic", or "bold". "normal" is the default.
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="fontStyle"></param>
         public void setFontStyle(FontStyle fontStyle) { }
 
         /// <summary>
         /// set height of text box
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="height"></param>
         public void setHeight(JsNumber height) { }
 
         /// <summary>
         /// set line height
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="lineHeight"></param>
         public void setLineHeight(JsNumber lineHeight) { }
 
         /// <summary>
         /// set padding
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="padding"></param>
         public void setPadding(JsNumber padding) { }
 
         /// <summary>
         /// set shadow of text or textbox
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="config"></param>
         public void setShadow(object config) { }
 
         /// <summary>
         /// set text
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="text"></param>
         public void setText(JsString text) { }
 
         /// <summary>
         /// set text fill color
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="textFill"></param>
         public void setTextFill(JsString textFill) { }
 
         /// <summary>
         /// set text stroke width
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="textStrokeWidth"></param>
         public void setTextStrokeWidth(JsNumber textStrokeWidth) { }
 
         /// <summary>
         /// set width of text box
         /// </summary>
-        /// <param name="fontFamily"></param>
+        /// <param name="width"></param>
         public void setWidth(JsNumber width) { }
     }
 

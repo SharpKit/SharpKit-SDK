@@ -16,7 +16,7 @@ namespace qx.ui.core
 	/// <item>_isAllowEmptySelection, this method has to return a
 	/// Boolean value for allowing empty selection or not.
 	/// </item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.ui.core.MSingleSelectionHandling", OmitOptionalParameters = true, Export = false)]
     public partial class MSingleSelectionHandling 

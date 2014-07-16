@@ -13,7 +13,7 @@ namespace qx.bom
 	/// <item>block the whole document</item>
 	/// <item>block the content of an element</item>
 	/// <item>act as an underlying blocker for an element to shim native controls</item>
-	/// </list
+	/// </list>
 	/// <para>The third mode is mainly necessary for IE browsers.</para>
 	/// <para>The first mode is the easiest to use. Just use the <see cref="Block"/> method
 	/// without a parameter.

@@ -22,7 +22,7 @@ namespace qx.bom
 	/// <item>:last-of-type</item>
 	/// <item>:only-of-type</item>
 	/// <item>:lang()</item>
-	/// </list
+	/// </list>
 	/// <para>In addition to the CSS 3 Selectors the engine supports the following
 	/// additional selectors or conventions.</para>
 	/// <para>Changes</para>
@@ -31,34 +31,34 @@ namespace qx.bom
 	/// <item>:not(div > p): Supports full selectors in :not().</item>
 	/// <item>:not(div, p): Supports multiple selectors in :not().</item>
 	/// <item>[NAME=VALUE]: Doesn&#8217;t require quotes around the specified value in an attribute selector.</item>
-	/// </list
+	/// </list>
 	/// <para>Additions</para>
 	/// <list type="bullet">
 	/// <item>[NAME!=VALUE]: Finds all elements whose NAME attribute doesn&#8217;t match the specified value. Is equivalent to doing :not([NAME=VALUE]).</item>
 	/// <item>:contains(TEXT): Finds all elements whose textual context contains the word TEXT (case sensitive).</item>
 	/// <item>:header: Finds all elements that are a header element (h1, h2, h3, h4, h5, h6).</item>
 	/// <item>:parent: Finds all elements that contains another element.</item>
-	/// </list
+	/// </list>
 	/// <para>Positional Selector Additions</para>
 	/// <list type="bullet">
 	/// <item>:first/:last: Finds the first or last matching element on the page. (e.g. div:first would find the first div on the page, in document order)</item>
 	/// <item>:even/:odd: Finds every other element on the page (counting begins at 0, so :even would match the first element).</item>
 	/// <item>:eq/:nth: Finds the Nth element on the page (e.g. :eq(5) finds the 6th element on the page).</item>
 	/// <item>:lt/:gt: Finds all elements at positions less than or greater than the specified positions.</item>
-	/// </list
+	/// </list>
 	/// <para>Form Selector Additions</para>
 	/// <list type="bullet">
 	/// <item>:input: Finds all input elements (includes textareas, selects, and buttons).</item>
 	/// <item>:text, :checkbox, :file, :password, :submit, :image, :reset, :button: Finds the input element with the specified input type (:button also finds button elements).</item>
-	/// </list
+	/// </list>
 	/// <para>Based on Sizzle by John Resig, see:</para>
 	/// <list type="bullet">
 	/// <item>http://sizzlejs.com/</item>
-	/// </list
+	/// </list>
 	/// <para>For further usage details also have a look at the wiki page at:</para>
 	/// <list type="bullet">
 	/// <item>https://github.com/jquery/sizzle/wiki/Sizzle-Home</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.bom.Selector", OmitOptionalParameters = true, Export = false)]
     public partial class Selector 

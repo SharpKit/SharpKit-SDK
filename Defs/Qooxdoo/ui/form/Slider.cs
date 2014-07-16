@@ -25,7 +25,7 @@ namespace qx.ui.form
 	/// <item>PageDown moves down one page.</item>
 	/// <item>Home moves to the start (minimum).</item>
 	/// <item>End moves to the end (maximum).</item>
-	/// </list
+	/// </list>
 	/// <para>Here are the main properties of the class:</para>
 	/// 
 	/// <item>value: The bounded integer that <see cref="qx.ui.form.INumberForm"/>

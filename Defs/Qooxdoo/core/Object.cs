@@ -16,7 +16,7 @@ namespace qx.core
 	/// <item>generic setter/getter support</item>
 	/// <item>interfaces for logging console</item>
 	/// <item>user friendly OO interfaces like <see cref="Self"/> or <see cref="Base"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.core.Object", OmitOptionalParameters = true, Export = false)]
     public partial class Object : object

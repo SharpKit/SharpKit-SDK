@@ -429,7 +429,7 @@ namespace qx.ui.core
 		/// <item>text</item>
 		/// <item>wait</item>
 		/// <item>help </item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <remarks>
 		/// Allow nulls: true
@@ -656,7 +656,7 @@ namespace qx.ui.core
 		/// <item>hidden: Hide the widget but don't relayout the widget's parent.</item>
 		/// <item>excluded: Hide the widget and relayout the parent as if the
 		/// widget was not a child of its parent.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "visible","hidden","excluded"
@@ -847,7 +847,7 @@ namespace qx.ui.core
 		/// (relevant for absolute positioned content).</item>
 		/// <item>padding: Calculate the padding box
 		/// (relevant for static/relative positioned content).</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="mode">A supported option. See comment above.</param>
 		/// <returns>Returns a map with left, top, right and bottom which contains the distance of the element relative to the document.</returns>
@@ -877,7 +877,7 @@ namespace qx.ui.core
 		/// positioned content).</item>
 		/// <item>padding: Calculate the padding box (relevant for
 		/// static/relative positioned content).</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="mode">A supported option. See comment above.</param>
 		/// <returns>Returns a map with left, top, right and bottom which contains the distance of the element relative to the document.</returns>

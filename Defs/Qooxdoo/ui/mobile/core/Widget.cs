@@ -311,7 +311,7 @@ namespace qx.ui.mobile.core
 		/// <item>visible: Render the widget</item>
 		/// <item>hidden: Hide the widget. The space will be still available.</item>
 		/// <item>excluded: Hide the widget. The space will be released.</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <remarks>
 		/// Possible values: "visible","hidden","excluded"

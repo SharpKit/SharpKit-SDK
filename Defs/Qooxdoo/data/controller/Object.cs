@@ -20,7 +20,7 @@ namespace qx.data.controller
 	/// <item>No need for the user to take care of the binding ids</item>
 	/// <item>Can create an bidirectional binding (read- / write-binding)</item>
 	/// <item>Handles the change of the model which means adding the old targets</item>
-	/// </list
+	/// </list>
 	/// <para>Usage</para>
 	/// <para>The controller only can work if a model is set. If the model property is
 	/// null, the controller is not working. But it can be null on any time.</para>
@@ -29,7 +29,7 @@ namespace qx.data.controller
 	/// <item>If you want to bind a list like widget, use <see cref="qx.data.controller.List"/></item>
 	/// <item>If you want to bind a tree widget, use <see cref="qx.data.controller.Tree"/></item>
 	/// <item>If you want to bind a form widget, use <see cref="qx.data.controller.Form"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.data.controller.Object", OmitOptionalParameters = true, Export = false)]
     public partial class Object : qx.core.Object

@@ -1324,7 +1324,7 @@ namespace SharpKit.PrototypeJs
         /// -...any object with a toElement method: The method is called and the resulting element used 
         /// - ...any object with a toHTML method: The method is called and the resulting HTML string is parsed and rendered
         /// If newContent is omitted, the element's content is blanked out (i.e., replaced with an empty string).
-        /// If newContent is a string and contains one or more inline <script> tags, the scripts are scheduled to be evaluated after a very brief pause (using Function#defer) to allow the browser to finish updating the DOM. Note that the scripts are evaluated in the scope of String#evalScripts, not in the global scope, which has important ramifications for your vars and functions. See String#evalScripts for details.
+        /// If newContent is a string and contains one or more inline &lt;script&gt; tags, the scripts are scheduled to be evaluated after a very brief pause (using Function#defer) to allow the browser to finish updating the DOM. Note that the scripts are evaluated in the scope of String#evalScripts, not in the global scope, which has important ramifications for your vars and functions. See String#evalScripts for details.
         /// Note that this method allows seamless content update of table related elements in Internet Explorer 6 and beyond.
         /// Any nodes replaced with Element.update will first have event listeners unregistered and storage keys removed. This frees up memory and prevents leaks in certain versions of Internet Explorer. (See Element.purge).
         /// This method can be called either as an instance method or as a generic method. If calling as a generic, pass the instance in as the first argument.
@@ -1769,7 +1769,7 @@ namespace SharpKit.PrototypeJs
 
         /// <summary>
         /// Returns the absolute horizontal position of the pointer for a mouse event.
-        /// Note that this position is absolute on the <body>, not on the viewport: scrolling right increases the returned value for events on the same viewport location.
+        /// Note that this position is absolute on the &lt;body>, not on the viewport: scrolling right increases the returned value for events on the same viewport location.
         /// This method can be called either as an instance method or as a generic method. If calling as a generic, pass the instance in as the first argument.
         /// </summary>
         /// <returns></returns>
@@ -1777,7 +1777,7 @@ namespace SharpKit.PrototypeJs
 
         /// <summary>
         /// Returns the absolute vertical position of the pointer for a mouse event.
-        /// Note that this position is absolute on the <body>, not on the viewport: scrolling down increases the returned value for events on the same viewport location.
+        /// Note that this position is absolute on the &lt;body>, not on the viewport: scrolling down increases the returned value for events on the same viewport location.
         /// This method can be called either as an instance method or as a generic method. If calling as a generic, pass the instance in as the first argument.
         /// </summary>
         /// <returns></returns>
@@ -2128,7 +2128,7 @@ namespace SharpKit.PrototypeJs
         /// <summary>
         /// Aliased as: String#toQueryParams:
         /// Parses a URI-like query string and returns an object composed of parameter/value pairs.
-        /// This method is realy targeted at parsing query strings (hence the default value of"&" for the separator argument).
+        /// This method is realy targeted at parsing query strings (hence the default value of"&amp;" for the separator argument).
         /// For this reason, it does not consider anything that is either before a question mark (which signals the beginning of a query string)
         /// or beyond the hash symbol ("#"), and runs decodeURIComponent() on each parameter/value pair.
         /// String#toQueryParams also aggregates the values of identical keys into an array of values.
@@ -2278,7 +2278,7 @@ namespace SharpKit.PrototypeJs
 
         /// <summary>
         /// Parses a URI-like query string and returns an object composed of parameter/value pairs.
-        /// This method is realy targeted at parsing query strings (hence the default value of"&" for the separator argument).
+        /// This method is realy targeted at parsing query strings (hence the default value of"&amp;" for the separator argument).
         /// For this reason, it does not consider anything that is either before a question mark (which signals the beginning of a query string) or beyond the hash symbol ("#"),
         /// and runs decodeURIComponent() on each parameter/value pair.
         /// String#toQueryParams also aggregates the values of identical keys into an array of values.
@@ -2291,7 +2291,7 @@ namespace SharpKit.PrototypeJs
         public static object toQueryParams(this JsString s, JsString separator) { return null; }
         /// <summary>
         /// Parses a URI-like query string and returns an object composed of parameter/value pairs.
-        /// This method is realy targeted at parsing query strings (hence the default value of"&" for the separator argument).
+        /// This method is realy targeted at parsing query strings (hence the default value of"&amp;" for the separator argument).
         /// For this reason, it does not consider anything that is either before a question mark (which signals the beginning of a query string) or beyond the hash symbol ("#"),
         /// and runs decodeURIComponent() on each parameter/value pair.
         /// String#toQueryParams also aggregates the values of identical keys into an array of values.
@@ -2851,7 +2851,6 @@ namespace SharpKit.PrototypeJs
         /// </summary>
         /// <param name="n"></param>
         /// <param name="iterator"> (Function) – An iterator function to call.</param>
-        /// <param name="context">(Object) – An optional context (this value) to use when calling iterator.</param>
         /// <returns></returns>
         [JsMethod(ExtensionImplementedInInstance = true)]
         public static JsNumber times(this JsNumber n, JsAction iterator) { return null; }
@@ -2992,7 +2991,8 @@ namespace SharpKit.PrototypeJs
         /// <summary>
         /// Alias of the native RegExp#test method. Returns true if str matches the regular expression, false otherwise.
         /// </summary>
-        /// <param name="n"></param>
+        /// <param name="r"></param>
+        /// <param name="str"></param>
         /// <returns></returns>
         [JsMethod(ExtensionImplementedInInstance = true)]
         public static bool match(this JsRegExp r, JsString str) { return false; }
@@ -3051,7 +3051,7 @@ namespace SharpKit.PrototypeJs.Ajax
     /// Request headers:
     /// The following headers are sent with all Ajax requests (and can be overridden with the requestHeaders option described below):
     /// X-Requested-With is set to XMLHttpRequest.
-    /// X-Prototype-Version is set to Prototype's current version (e.g., <%= PROTOTYPE_VERSION %>).
+	/// X-Prototype-Version is set to Prototype's current version (e.g., &lt;%= PROTOTYPE_VERSION %&gt;).
     /// Accept is set to text/javascript, text/html, application/xml, text/xml, * / *
     /// Content-type is automatically determined based on the contentType and encoding options.
     /// </summary>
@@ -3446,7 +3446,6 @@ namespace SharpKit.PrototypeJs.Ajax
         /// Can be a DOM node or a string that identifies a node's ID.</param>
         /// <param name="url"> (String) – The URL to fetch. When the same-origin policy is in effect (as it is in most cases),
         /// url must be a relative URL or an absolute URL that starts with a slash (i.e., it must not begin with http).</param>
-        /// <param name="options">(Object) – Configuration for the request. See the Ajax for more information.</param>
         public Updater(JsString container, JsString url) : base(url, null) { }
         /// <summary>
         /// Creates a new Ajax.Updater.
@@ -3464,7 +3463,6 @@ namespace SharpKit.PrototypeJs.Ajax
         /// Can be a DOM node or a string that identifies a node's ID.</param>
         /// <param name="url"> (String) – The URL to fetch. When the same-origin policy is in effect (as it is in most cases),
         /// url must be a relative URL or an absolute URL that starts with a slash (i.e., it must not begin with http).</param>
-        /// <param name="options">(Object) – Configuration for the request. See the Ajax for more information.</param>
         public Updater(Element container, JsString url) : base(url, null) { }
     }
 
@@ -3475,7 +3473,7 @@ namespace SharpKit.PrototypeJs.Ajax
     public class UpdaterOptions : AjaxOptions
     {
         /// <summary>
-        /// (Boolean; defaults to false): Whether <script> elements in the response text should be evaluated.
+        /// (Boolean; defaults to false): Whether &lt;script&gt; elements in the response text should be evaluated.
         /// </summary>
         public bool evalScripts { get; set; }
 
@@ -3743,7 +3741,7 @@ namespace SharpKit.PrototypeJs.Form
         /// Serializes form data to a string suitable for Ajax requests (default behavior) or, if the hash option evaluates to true,
         /// an object hash where keys are form control names and values are data.
         /// Depending of whether or not the hash option evaluates to true,
-        /// the result is either an object of the form {name: "johnny", color: "blue"} or a String of the form "name=johnny&color=blue",
+        /// the result is either an object of the form {name: "johnny", color: "blue"} or a String of the form "name=johnny&amp;color=blue",
         /// suitable for parameters in an Ajax request. This method mimics the way browsers serialize forms natively so that form data can be sent without refreshing the page.
         /// See Form.serializeElements for more details on the options.
         /// This method can be called either as an instance method or as a generic method. If calling as a generic, pass the instance in as the first argument.

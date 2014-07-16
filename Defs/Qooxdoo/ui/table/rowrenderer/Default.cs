@@ -108,7 +108,7 @@ namespace qx.ui.table.rowrenderer
 		/// <item>selected (boolean): whether a cell in this row is selected.</item>
 		/// <item>focusedRow (boolean): whether the focused cell is in this row.</item>
 		/// <item>table (qx.ui.table.Table): the table the row belongs to.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <param name="rowInfo">A map containing the information about the row to update.</param>
 		/// <param name="rowElement">the DOM element that renders the data row.</param>

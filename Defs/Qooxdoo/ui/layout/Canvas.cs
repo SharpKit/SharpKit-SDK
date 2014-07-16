@@ -22,7 +22,7 @@ namespace qx.ui.layout
 	/// <item>Children are automatically shrunk to their minimum dimensions if not enough space is available</item>
 	/// <item>Auto sizing (ignoring percent values)</item>
 	/// <item>Margins (also negative ones)</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <list type="bullet">
 	/// <item>left (Integer|String): The left coordinate in pixel or as a percent string e.g. 20 or 30%.</item>
@@ -31,14 +31,14 @@ namespace qx.ui.layout
 	/// <item>bottom (Integer|String): The bottom coordinate in pixel or as a percent string e.g. 20 or 30%.</item>
 	/// <item>width (String): A percent width e.g. 40%.</item>
 	/// <item>height (String): A percent height e.g. 60%.</item>
-	/// </list
+	/// </list>
 	/// <para>Notes</para>
 	/// <list type="bullet">
 	/// <item>Stretching (left->right or top->bottom)
 	/// has a higher priority than the preferred dimensions</item>
 	/// <item>Stretching has a lower priority than the min/max dimensions.</item>
 	/// <item>Percent values have no influence on the size hint of the layout.</item>
-	/// </list
+	/// </list>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the canvas layout.</para>
 	/// <code>

@@ -23,13 +23,13 @@ namespace qx.ui.layout
 	/// <item> Horizontal and vertical spacing </item>
 	/// <item> Height for width calculations </item>
 	/// <item> Auto-sizing </item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <list type="bullet">
 	/// <item>lineBreak (Boolean): If set to true
 	/// a forced line break will happen after this child widget.
 	/// </item>
-	/// </list
+	/// </list>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the Flow layout.</para>
 	/// <code>

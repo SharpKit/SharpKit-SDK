@@ -88,7 +88,7 @@ namespace qx.ui.form.validation
 		/// <item><see cref="qx.ui.form.IDateForm"/></item>
 		/// <item><see cref="qx.ui.form.INumberForm"/></item>
 		/// <item><see cref="qx.ui.form.IStringForm"/></item>
-		/// </list
+		/// </list>
 		/// </item>
 		/// 
 		/// The validator can be a synchronous or asynchronous validator. In

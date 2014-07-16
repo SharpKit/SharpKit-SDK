@@ -16,7 +16,7 @@ namespace qx.log
 	/// <item>Supports buffering of the last 50 messages (configurable)</item>
 	/// <item>Supports different debug levels (&#8220;debug&#8221;, &#8220;info&#8221;, &#8220;warn&#8221; or &#8220;error&#8221;)</item>
 	/// <item>Simple data serialization for incoming messages</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.log.Logger", OmitOptionalParameters = true, Export = false)]
     public partial class Logger 

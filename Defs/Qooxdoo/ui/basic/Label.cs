@@ -92,7 +92,7 @@ namespace qx.ui.basic
 		/// </item>
 		/// <item>A click on the label will focus the buddy widget.
 		/// </item>
-		/// </list
+		/// </list>
 		/// This is the behavior of the for attribute of HTML:
 		/// http://www.w3.org/TR/html401/interact/forms.html#adef-for</para>
 		/// </summary>

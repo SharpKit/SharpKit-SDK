@@ -99,7 +99,7 @@ namespace SharpKit.Arshaw.FullCalendar
 
         /// <summary>
         /// The initial date-of-month when the calendar loads.
-        /// This option only matters for the week & day views. Month view does not need this option, because month view always displays the entire month from start to finish.
+        /// This option only matters for the week &amp; day views. Month view does not need this option, because month view always displays the entire month from start to finish.
         /// If date is unspecified, and year/month are set to the current year/month, then the calendar will start on the current date.
         /// If date is unspecified, and year/month are not set to the current year/month, then the calendar will start on the first of the month.
         /// </summary>
@@ -273,10 +273,10 @@ namespace SharpKit.Arshaw.FullCalendar
         /// Text that will be displayed on buttons of the header.
         /// default:
         /// {
-        ///     prev:     '&nbsp;&#9668;&nbsp;',  // left triangle
-        ///     next:     '&nbsp;&#9658;&nbsp;',  // right triangle
-        ///     prevYear: '&nbsp;&lt;&lt;&nbsp;', // &lt;&lt;
-        ///     nextYear: '&nbsp;&gt;&gt;&nbsp;', // >>
+        ///     prev:     ' &#9668; ',  // left triangle
+        ///     next:     ' &#9658; ',  // right triangle
+        ///     prevYear: ' &lt;&lt; ', // &lt;&lt;
+        ///     nextYear: ' &gt;&gt; ', // >>
         ///     today:    'today',
         ///     month:    'month',
         ///     week:     'week',
@@ -286,11 +286,11 @@ namespace SharpKit.Arshaw.FullCalendar
         ///<example>
         ///usage
         ///<code>
-        /// //If you wanted to change the prev/next buttons to use < and > characters, here is what you would do:
+        /// //If you wanted to change the prev/next buttons to use &lt; and > characters, here is what you would do:
         /// $('#calendar').fullCalendar({
         ///    buttonText: {
-        ///        prev: '&lt;',
-        ///        next: '&gt;'
+        ///        prev: '&amp;lt;',
+        ///        next: '&amp;gt;'
         ///    }
         ///});
         ///</code>
@@ -685,7 +685,7 @@ namespace SharpKit.Arshaw.FullCalendar
         /// idOrFilter may also be a filter function that accepts one Event Object argument and returns true if it should be included in the result set.
         /// In versions 1.2 and 1.2.1, this option was known as getEventsByID
         /// </summary>
-        /// <param name="idOrFilter"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         public JsArray<Event> clientEvents(JsString id) { return null; }
 
@@ -697,7 +697,7 @@ namespace SharpKit.Arshaw.FullCalendar
         /// idOrFilter may also be a filter function that accepts one Event Object argument and returns true if it should be included in the result set.
         /// In versions 1.2 and 1.2.1, this option was known as getEventsByID
         /// </summary>
-        /// <param name="idOrFilter"></param>
+        /// <param name="filter"></param>
         /// <returns></returns>
         public JsArray<Event> clientEvents(JsFunc<Event, bool> filter) { return null; }
 
@@ -709,7 +709,6 @@ namespace SharpKit.Arshaw.FullCalendar
         /// idOrFilter may also be a filter function that accepts one Event Object argument and returns true if it should be included in the result set.
         /// In versions 1.2 and 1.2.1, this option was known as getEventsByID
         /// </summary>
-        /// <param name="idOrFilter"></param>
         /// <returns></returns>
         public JsArray<Event> clientEvents() { return null; }
 
@@ -783,7 +782,7 @@ namespace SharpKit.Arshaw.FullCalendar
         /// Triggered while an event is being rendered.
         /// function( event, element, view ) { }
         /// event is the Event Object that is attempting to be rendered.
-        /// element is a newly created jQuery <div> that will be used for rendering. It has already been populated with the correct time/title.
+        /// element is a newly created jQuery &lt;div> that will be used for rendering. It has already been populated with the correct time/title.
         /// The eventRender callback function can modify element, return a brand new DOM element that will be used for rendering instead, or it can return false, which will prevent the event from being rendered at all.
         /// </summary>
         ///<example>
@@ -825,7 +824,6 @@ namespace SharpKit.Arshaw.FullCalendar
         /// Renders a new event on the calendar.
         /// </summary>
         /// <param name="event">event must be an Event Object with a title and start at the very least.</param>
-        /// <param name="stick">Normally, the event will disappear once the calendar refetches its event sources (example: when prev/next is clicked). However, specifying stick as true will cause the event to be permanently fixed to the calendar.</param>
         public void renderEvent(Event @event) { }
 
         /// <summary>
@@ -1125,7 +1123,7 @@ namespace SharpKit.Arshaw.FullCalendar
 
         /// <summary>
         /// default: false
-        /// Once you enable theming with true, you still need to include the CSS file for the theme you want. For example, if you just downloaded a theme from the jQuery UI Themeroller, you need to put a <link> tag in your page's <head>.
+        /// Once you enable theming with true, you still need to include the CSS file for the theme you want. For example, if you just downloaded a theme from the jQuery UI Themeroller, you need to put a &lt;link> tag in your page's &lt;head>.
         /// </summary>
         public bool theme { get; set; }
 
@@ -1531,16 +1529,16 @@ namespace SharpKit.Arshaw.FullCalendar
         public EventSource source { get; set; }
 
         //TODO:
-        //color	
+        //color
         //Sets an event's background and border color just like the calendar-wide eventColor option.
         //
-        //backgroundColor	
+        //backgroundColor
         //Sets an event's background color just like the calendar-wide eventBackgroundColor option.
         //
-        //borderColor	
+        //borderColor
         //Sets an event's border color just like the the calendar-wide eventBorderColor option.
         //
-        //textColor	
+        //textColor
         //Sets an event's text color just like the calendar-wide eventTextColor option.
         //
         //Non-standard Fields

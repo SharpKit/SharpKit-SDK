@@ -19,7 +19,7 @@ namespace qx.ui.layout
 	/// <item>Horizontal and vertical spacing</item>
 	/// <item>Column and row spans</item>
 	/// <item>Auto-sizing</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <list type="bullet">
 	/// <item>row (Integer): The row of the cell the
@@ -38,7 +38,7 @@ namespace qx.ui.layout
 	/// widget should span, starting from the column specified in the column
 	/// property. The cells in the spanned columns must be empty as well.
 	/// </item>
-	/// </list
+	/// </list>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the grid layout.</para>
 	/// <code>

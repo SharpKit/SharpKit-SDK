@@ -17,13 +17,13 @@ namespace qx.ui.layout
 	/// <item>Automatically middles/centers content to the available space</item>
 	/// <item>Auto-sizing</item>
 	/// <item>Supports more than two children (will be processed the same way like the previous ones)</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <para>None</para>
 	/// <para>Notes</para>
 	/// <list type="bullet">
 	/// <item>Does not support margins and alignment of <see cref="qx.ui.core.LayoutItem"/>.</item>
-	/// </list
+	/// </list>
 	/// <para>Alternative Names</para>
 	/// <para>None</para>
 	/// </summary>

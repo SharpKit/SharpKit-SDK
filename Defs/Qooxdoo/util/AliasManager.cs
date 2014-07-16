@@ -24,7 +24,7 @@ namespace qx.util
 	/// <item> imgserver -> http&#058;&#047;&#047;imgs03.myserver.com/my/app/
 	/// (resolves e.g. &#8220;imgserver/a/b/c.png&#8221; to
 	/// &#8220;http&#058;&#047;&#047;imgs03.myserver.com/my/app/a/b/c.png&#8221;)
-	/// </list</para>
+	/// </list></para>
 	/// <para>For resources, only aliases that resolve to proper resource id&#8217;s can be managed
 	/// resources, and will be considered unmanaged resources otherwise.</para>
 	/// </summary>

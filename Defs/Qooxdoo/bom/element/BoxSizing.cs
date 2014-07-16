@@ -12,7 +12,7 @@ namespace qx.bom.element
 	/// <list type="bullet">
 	/// <item>&#8220;content-box&#8221; = W3C model (dimensions are content specific)</item>
 	/// <item>&#8220;border-box&#8221; = Microsoft model (dimensions are box specific incl. border and padding)</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.bom.element.BoxSizing", OmitOptionalParameters = true, Export = false)]
     public partial class BoxSizing 

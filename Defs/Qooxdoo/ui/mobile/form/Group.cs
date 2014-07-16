@@ -48,6 +48,7 @@ namespace qx.ui.mobile.form
 
 		public Group() { throw new NotImplementedException(); }
 
+		/// <param name="widgets"></param>
 		/// <param name="showBorder">initial value of the property showBorder.</param>
 		public Group(qx.ui.mobile.core.Widget widgets, bool showBorder) { throw new NotImplementedException(); }
 

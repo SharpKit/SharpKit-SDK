@@ -14,7 +14,7 @@ namespace qx.ui.mobile.navigation
 	/// manually by calling the <see cref="ExecuteGet"/> method.</item>
 	/// <item>POST / DELETE / PUT has to be triggered manually right now (will be changed later)
 	/// by calling the <see cref="ExecutePost"/>, <see cref="ExecuteDelete"/>, <see cref="ExecutePut"/> method.</item>
-	/// </list
+	/// </list>
 	/// <para>This manager can also be used to provide browser history.</para>
 	/// <para>Example</para>
 	/// <para>Here is a little example of how to use the widget.</para>

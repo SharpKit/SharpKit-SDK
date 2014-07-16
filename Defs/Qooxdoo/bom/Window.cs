@@ -58,56 +58,56 @@ namespace qx.bom
 		/// <para>Modal windows can have the following options:</para>
 		/// <list type="bullet">
 		/// <item>top</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>left</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>width</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>height</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>scrollbars</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>resizable</item>
-		/// </list
+		/// </list>
 		/// <para>Modeless windows have the following options:</para>
 		/// <list type="bullet">
 		/// <item>top</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>left</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>width</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>height</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>dependent</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>resizable</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>status</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>location</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>menubar</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>scrollbars</item>
-		/// </list
+		/// </list>
 		/// <list type="bullet">
 		/// <item>toolbar</item>
-		/// </list
+		/// </list>
 		/// <para>Except of dimension and location options all other options are boolean
 		/// values.</para>
 		/// <para>Important infos for native modal windows</para>

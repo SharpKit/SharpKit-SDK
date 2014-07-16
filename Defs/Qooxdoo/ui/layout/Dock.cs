@@ -18,7 +18,7 @@ namespace qx.ui.layout
 	/// <item>Margins and Spacings</item>
 	/// <item>Alignment in orthogonal axis (e.g. alignX of north attached)</item>
 	/// <item>Different sort options for children</item>
-	/// </list
+	/// </list>
 	/// <para>Item Properties</para>
 	/// <list type="bullet">
 	/// <item>edge (String): The edge where the layout item
@@ -42,7 +42,7 @@ namespace qx.ui.layout
 	/// It has no influence on the layout's size hint. Percents are mainly useful for
 	/// widgets which are sized by the outer hierarchy.
 	/// </item>
-	/// </list
+	/// </list>
 	/// <para>Example</para>
 	/// <code>
 	/// var layout = new qx.ui.layout.Dock();

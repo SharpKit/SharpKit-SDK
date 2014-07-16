@@ -23,6 +23,11 @@
     <NoWarn>1591,0108,0114,1570</NoWarn>
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <NoWarn>1587,1591,108</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="custom.cs" />
     <Compile Include="custom\dom\TouchEvent.cs" />

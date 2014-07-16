@@ -21,7 +21,7 @@ namespace qx.ui.table
 		/// <item>lastRow: The index of the last row that has changed.</item>
 		/// <item>firstColumn: The model index of the first column that has changed.</item>
 		/// <item>lastColumn: The model index of the last column that has changed.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		event Action<qx.eventx.type.Data> OnDataChanged;
 

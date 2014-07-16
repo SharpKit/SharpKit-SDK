@@ -25,7 +25,7 @@ namespace qx.ui.embed
 		/// <item>relX &#8211; relative x coordinate</item>
 		/// <item>relY &#8211; relative y coordinate</item>
 		/// <item>target &#8211; DOM element target</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnContextmenu;
 
@@ -45,7 +45,7 @@ namespace qx.ui.embed
 		/// <item>justifyCenter</item>
 		/// <item>justifyRight</item>
 		/// <item>justifyFull</item>
-		/// </list
+		/// </list>
 		/// <para>This map can be used to control/update a toolbar states.</para>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnCursorContext;

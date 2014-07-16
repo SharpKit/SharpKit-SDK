@@ -18,7 +18,7 @@ namespace qx.data.controller
 	/// <item>Label and icon are bindable</item>
 	/// <item>Takes care of the selection</item>
 	/// <item>Passes on the options used by the bindings</item>
-	/// </list
+	/// </list>
 	/// <para>Usage</para>
 	/// <para>As model, you can use every qooxdoo widget structure having one property,
 	/// which is a data array holding the children of the current node. There can
@@ -30,7 +30,7 @@ namespace qx.data.controller
 	/// <item>If you want to bind single values, use <see cref="qx.data.controller.Object"/></item>
 	/// <item>If you want to bind a list like widget, use <see cref="qx.data.controller.List"/></item>
 	/// <item>If you want to bin a form widget, use <see cref="qx.data.controller.Form"/></item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.data.controller.Tree", OmitOptionalParameters = true, Export = false)]
     public partial class Tree : qx.core.Object, qx.data.controller.ISelection

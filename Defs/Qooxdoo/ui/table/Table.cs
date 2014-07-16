@@ -80,7 +80,7 @@ namespace qx.ui.table
 		/// <item>col</item>
 		/// <item>value</item>
 		/// <item>oldValue</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		public event Action<qx.eventx.type.Data> OnDataEdited;
 

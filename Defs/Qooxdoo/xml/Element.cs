@@ -12,7 +12,7 @@ namespace qx.xml
 	/// <para>Further information:</para>
 	/// <list type="bullet">
 	/// <item>MDN Parsing and Serializing XML</item>
-	/// </list
+	/// </list>
 	/// <para>Please note that nodes selected using the selectSingleNode() and
 	/// selectNodes() methods remain in their document context so
 	/// qx.xml.Element.selectNodes(foo, &#8221;//bar&#8221;);

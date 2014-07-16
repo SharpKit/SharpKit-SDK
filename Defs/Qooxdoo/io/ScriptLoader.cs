@@ -12,7 +12,7 @@ namespace qx.io
 	/// <list type="bullet">
 	/// <item>Supports cross-domain communication</item>
 	/// <item>Automatically &#8220;embeds&#8221; script so when the loaded event occurs the new features are usable as well</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.io.ScriptLoader", OmitOptionalParameters = true, Export = false)]
     public partial class ScriptLoader 

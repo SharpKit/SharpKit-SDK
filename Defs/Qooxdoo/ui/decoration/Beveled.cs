@@ -13,7 +13,7 @@ namespace qx.ui.decoration
 	/// <item>One pixel rounded border</item>
 	/// <item>Inner glow color with optional transparency</item>
 	/// <item>Repeated or scaled background image</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.ui.decoration.Beveled", OmitOptionalParameters = true, Export = false)]
     public partial class Beveled : qx.ui.decoration.Abstract

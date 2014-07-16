@@ -23,7 +23,7 @@ namespace qx.ui.table
 		/// <item>editable (boolean): whether the column is editable.</item>
 		/// <item>sorted (boolean): whether the column is sorted.</item>
 		/// <item>sortedAscending (boolean): whether sorting is ascending.</item>
-		/// </list</para>
+		/// </list></para>
 		/// </summary>
 		/// <param name="cellInfo">A map containing the information about the cell to create.</param>
 		/// <returns>the widget that renders the header cell.</returns>

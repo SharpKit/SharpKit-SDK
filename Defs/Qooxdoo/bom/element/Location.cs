@@ -14,7 +14,7 @@ namespace qx.bom.element
 	/// <item>Internet Explorer 6.0 + 7.0 (both standard &amp; quirks mode)</item>
 	/// <item>Opera 9.2</item>
 	/// <item>Safari 3.0 beta</item>
-	/// </list
+	/// </list>
 	/// </summary>
 	[JsType(JsMode.Prototype, Name = "qx.bom.element.Location", OmitOptionalParameters = true, Export = false)]
     public partial class Location 
@@ -33,7 +33,7 @@ namespace qx.bom.element
 		/// <item>border: Calculate the border box (useful to align to border edges of two elements).</item>
 		/// <item>scroll: Calculate the scroll box (relevant for absolute positioned content).</item>
 		/// <item>padding: Calculate the padding box (relevant for static/relative positioned content).</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="elem">DOM element to query</param>
 		/// <param name="mode">A supported option. See comment above.</param>

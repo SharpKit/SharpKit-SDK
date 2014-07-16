@@ -25,7 +25,7 @@ namespace qx.bom
 		/// <item>HTML 4.0 Character entity references</item>
 		/// <item>HTML 4.01 Character References</item>
 		/// <item>HTML 4.01 Code positions</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="str">the String to escape</param>
 		/// <returns>a new escaped String</returns>
@@ -48,7 +48,7 @@ namespace qx.bom
 		/// <item>Strips all HTML tags</item>
 		/// <item>converts &amp;lt:br&amp;gt: to new line</item>
 		/// <item>unescapes HTML entities</item>
-		/// </list
+		/// </list>
 		/// </summary>
 		/// <param name="str">HTML string to converts</param>
 		/// <returns>plain text representation of the HTML string</returns>
