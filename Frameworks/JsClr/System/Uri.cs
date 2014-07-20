@@ -96,6 +96,29 @@ namespace SharpKit.JavaScript.Private
             }
         }
 
+        private string _Query;
+        public string Query
+        {
+            get
+            {
+                if (_Query == null)
+                {
+                    var idx = _OriginalString.IndexOf("?");
+                    if (idx == -1)
+                        _Query = "";
+                    else
+                    {
+                        var idx2 = _OriginalString.IndexOf("#");
+                        if (idx2 == -1)
+                            _Query = _OriginalString.Substring(idx);
+                        else
+                            _Query = _OriginalString.Substring(idx, idx2 - idx);
+                    }
+                }
+                return _Query;
+            }
+        }
+
     }
 }
 

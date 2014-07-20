@@ -3609,12 +3609,14 @@ var System$Uri = {
         ctor: function (){
             this._OriginalString = null;
             this._Fragment = null;
+            this._Query = null;
             System.Object.ctor.call(this);
             this._OriginalString = null;
         },
         ctor$$String: function (uri){
             this._OriginalString = null;
             this._Fragment = null;
+            this._Query = null;
             System.Object.ctor.call(this);
             this._OriginalString = uri;
         },
@@ -3645,6 +3647,22 @@ var System$Uri = {
                     this._Fragment = this._OriginalString.substr(idx);
             }
             return this._Fragment;
+        },
+        Query$$: "System.String",
+        get_Query: function (){
+            if (this._Query == null){
+                var idx = this._OriginalString.indexOf("?");
+                if (idx == -1)
+                    this._Query = "";
+                else {
+                    var idx2 = this._OriginalString.indexOf("#");
+                    if (idx2 == -1)
+                        this._Query = this._OriginalString.substr(idx);
+                    else
+                        this._Query = this._OriginalString.substr(idx, idx2 - idx);
+                }
+            }
+            return this._Query;
         }
     }
 };
