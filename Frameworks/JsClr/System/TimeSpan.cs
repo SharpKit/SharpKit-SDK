@@ -79,14 +79,14 @@
         {
             get
             {
-                return _ticks / MillisPerDay;// 1.1574074074074074E-12;
+                return _TotalMilliseconds / MillisPerDay;
             }
         }
         public double TotalHours
         {
             get
             {
-                return _TotalMilliseconds / MillisPerHour;// *2.7777777777777777E-11;
+                return _TotalMilliseconds / MillisPerHour;
             }
         }
         public double TotalMilliseconds
@@ -100,14 +100,14 @@
         {
             get
             {
-                return _TotalMilliseconds / MillisPerMinute;// _ticks / TicksPerMillisecond.As<double>() / 1000D / 60D; //* 1.6666666666666667E-09;
+                return _TotalMilliseconds / MillisPerMinute;
             }
         }
         public double TotalSeconds
         {
             get
             {
-                return _TotalMilliseconds / MillisPerSecond;// 1000;// _ticks * 1E-07;
+                return _TotalMilliseconds / MillisPerSecond;
             }
         }
 
@@ -118,12 +118,13 @@
         {
             _TotalMilliseconds = ticks / 10000;
         }
-        
+
         public JsImplTimeSpan(int hours, int minutes, int seconds)
         {
             _TotalMilliseconds = TimeToMs(hours, minutes, seconds);
         }
-        public JsImplTimeSpan(int days, int hours, int minutes, int seconds) : this(days, hours, minutes, seconds, 0)
+        public JsImplTimeSpan(int days, int hours, int minutes, int seconds)
+            : this(days, hours, minutes, seconds, 0)
         {
 
         }

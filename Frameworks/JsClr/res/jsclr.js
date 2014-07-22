@@ -3128,7 +3128,7 @@ var System$TimeSpan = {
         },
         TotalDays$$: "System.Double",
         get_TotalDays: function (){
-            return this.get__ticks() / 86400000;
+            return this._TotalMilliseconds / 86400000;
         },
         TotalHours$$: "System.Double",
         get_TotalHours: function (){
