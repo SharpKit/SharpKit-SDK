@@ -6,75 +6,75 @@ using System.Text;
 
 namespace SharpKit.JavaScript.Private
 {
-	[JsType(Name = "System.Text.StringBuilder", Filename="~/res/System.Text.js")]
-	class JsImplStringBuilder
-	{
-		JsExtendedArray array;
-		int length;
+    [JsType(Name = "System.Text.StringBuilder", Filename = "~/res/System.Text.js")]
+    class JsImplStringBuilder
+    {
+        JsExtendedArray array;
+        int length;
 
-		public JsImplStringBuilder()
-		{
-			this.array = new string[0].As<JsExtendedArray>();
-			this.length = 0;
+        public JsImplStringBuilder()
+        {
+            this.array = new string[0].As<JsExtendedArray>();
+            this.length = 0;
 
-		}
+        }
 
-		public JsImplStringBuilder(int len)
-		{
-			this.array = new string[0].As<JsExtendedArray>();
-			this.length = 0;
+        public JsImplStringBuilder(int len)
+        {
+            this.array = new string[0].As<JsExtendedArray>();
+            this.length = 0;
 
-		}
+        }
 
-		public JsImplStringBuilder(string s)
-		{
-			this.array = new string[] { s }.As<JsExtendedArray>();
-			this.length = s == null ? 0 : s.Length;
-		}
+        public JsImplStringBuilder(string s)
+        {
+            this.array = new string[] { s }.As<JsExtendedArray>();
+            this.length = s == null ? 0 : s.Length;
+        }
 
 
-		public void Append(char s)
-		{
-			this.array.push(s);
-			this.length += 1;
-		}
+        public void Append(char s)
+        {
+            this.array.push(s);
+            this.length += 1;
+        }
 
-		public void Append(string s)
-		{
-			this.array.push(s);
-			this.length += s.Length;
-		}
+        public void Append(string s)
+        {
+            this.array.push(s);
+            this.length += s.Length;
+        }
 
-		public void AppendFormat(string s, object arg0)
-		{
-			string ss = String.Format(s, arg0);
-			this.array.push(ss);
-			this.length += ss.Length;
-		}
+        public void AppendFormat(string s, object arg0)
+        {
+            string ss = String.Format(s, arg0);
+            this.array.push(ss);
+            this.length += ss.Length;
+        }
 
-		public void AppendFormat(string s, object arg0, object arg1)
-		{
-			string ss = String.Format(s, arg0, arg1);
-			this.array.push(ss);
-			this.length += ss.Length;
-		}
+        public void AppendFormat(string s, object arg0, object arg1)
+        {
+            string ss = String.Format(s, arg0, arg1);
+            this.array.push(ss);
+            this.length += ss.Length;
+        }
 
-		public void AppendFormat(string s, object arg0, object arg1, object arg2)
-		{
-			string ss = String.Format(s, arg0, arg1, arg2);
-			this.array.push(ss);
-			this.length += ss.Length;
-		}
+        public void AppendFormat(string s, object arg0, object arg1, object arg2)
+        {
+            string ss = String.Format(s, arg0, arg1, arg2);
+            this.array.push(ss);
+            this.length += ss.Length;
+        }
 
-		public void Append(object obj)
-		{
-			if (obj != null)
-			{
-				var s = obj.ToString();
-				this.array.push(s);
-				this.length += s.Length;
-			}
-		}
+        public void Append(object obj)
+        {
+            if (obj != null)
+            {
+                var s = obj.ToString();
+                this.array.push(s);
+                this.length += s.Length;
+            }
+        }
 
         /// <summary>
         /// Inserts the string representation of a specified Unicode character into this instance at the specified character position.
@@ -346,7 +346,7 @@ namespace SharpKit.JavaScript.Private
             if (index < 0 || index > this.array.length)
                 throw new ArgumentOutOfRangeException();
 
-            for (int i = 0; i < count; i++ )
+            for (int i = 0; i < count; i++)
                 this.array.insert(index, value);
             return this;
         }
@@ -374,62 +374,73 @@ namespace SharpKit.JavaScript.Private
         /// </summary>
         /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
-		{
-			return this.array.join("");
-		}
+        {
+            return this.array.join("");
+        }
 
         /// <summary>
         /// Gets or sets the length.
         /// </summary>
         /// <value>The length.</value>
         /// <exception cref="System.Exception">Not Implemented</exception>
-		public int Length
-		{
-			get
-			{
-				return this.array.length;
-			}
-			set
-			{
-				if (value < 0)
-                    throw new ArgumentOutOfRangeException();
-
-                // Setting the length in Javascript will truncate the array.
-                if (value < this.array.length)
-                    this.array.length = value;
+        public int Length
+        {
+            get
+            {
+                //return this.array.length;
+                return length;
+            }
+            set
+            {
+                if (value == length) return;
+                if (value > length)
+                    Append(new JsArray(value + 1).join("\x00"));
                 else
                 {
-                    for(int i = this.array.length; i<length; i++)
-                        this.array.push('\x00');
+                    Remove(value, length - value);
                 }
-			}
-		}
-		[JsMethod(NativeOverloads = true)]
-		public JsImplStringBuilder Remove(int start, int count)
-		{
-			var s = this.array.join("");
-			s = s.As<string>().Remove(start, count);
-			this.array = new object[] { s }.As<JsExtendedArray>();
-			this.length = s.length;
-			return this;
-		}
-	}
+
+                //---
+
+                //if (value < 0)
+                //    throw new ArgumentOutOfRangeException();
+
+                //// Setting the length in Javascript will truncate the array.
+                //if (value < this.array.length)
+                //    this.array.length = value;
+                //else
+                //{
+                //    for(int i = this.array.length; i<length; i++)
+                //        this.array.push('\x00');
+                //}
+            }
+        }
+        [JsMethod(NativeOverloads = true)]
+        public JsImplStringBuilder Remove(int start, int count)
+        {
+            var s = this.array.join("");
+            s = s.As<string>().Remove(start, count);
+            this.array = new object[] { s }.As<JsExtendedArray>();
+            this.length = s.length;
+            return this;
+        }
+    }
 
 
     [JsType(Name = "System.StringComparison", Filename = "~/Internal/Core.js")]
-	public enum JsImplStringComparison
-	{
-		CurrentCulture,
-		CurrentCultureIgnoreCase,
-		InvariantCulture,
-		InvariantCultureIgnoreCase,
-		Ordinal,
-		OrdinalIgnoreCase
-	}
+    public enum JsImplStringComparison
+    {
+        CurrentCulture,
+        CurrentCultureIgnoreCase,
+        InvariantCulture,
+        InvariantCultureIgnoreCase,
+        Ordinal,
+        OrdinalIgnoreCase
+    }
 
 
 
 
- 
+
 
 }
