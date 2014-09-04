@@ -212,6 +212,9 @@ namespace SharpKit.JavaScript
         /// Treats the class as a native "Error" object and prevents smart exception throwing
         /// </summary>
         public bool NativeError { get { return _NativeError.GetValueOrDefault(); } set { _NativeError = value; } } public bool? _NativeError;
+
+        public bool ForceMethodSuffix { get { return _ForceMethodSuffix.GetValueOrDefault(); } set { _ForceMethodSuffix = value; } } public bool? _ForceMethodSuffix;
+
         private void GoNative()
         {
             if (_NativeOverloads == null)
@@ -595,6 +598,7 @@ namespace SharpKit.JavaScript
         /// </summary>
         public string InlineCodeExpression { get; set; }
 
+        public bool ForceMethodSuffix { get { return _ForceMethodSuffix.GetValueOrDefault(); } set { _ForceMethodSuffix = value; } } public bool? _ForceMethodSuffix;
     }
     #endregion
 
