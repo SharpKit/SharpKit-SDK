@@ -590,6 +590,187 @@ var System$Linq$Enumerable = {
     }
 };
 JsTypes.push(System$Linq$Enumerable);
+var System$Linq$_Error = {
+    fullname: "System.Linq._Error",
+    baseTypeName: "System.Object",
+    staticDefinition: {
+        ArgumentArrayHasTooManyElements: function (p0){
+            return new System.ArgumentException.ctor$$String("ArgumentArrayHasTooManyElements(p0");
+        },
+        ArgumentNotIEnumerableGeneric: function (p0){
+            return new System.ArgumentException.ctor$$String("ArgumentNotIEnumerableGeneric(p0");
+        },
+        ArgumentNotSequence: function (p0){
+            return new System.ArgumentException.ctor$$String("ArgumentNotSequence(p0");
+        },
+        ArgumentNotValid: function (p0){
+            return new System.ArgumentException.ctor$$String("ArgumentNotValid(p0");
+        },
+        IncompatibleElementTypes: function (){
+            return new System.ArgumentException.ctor$$String("IncompatibleElementTypes");
+        },
+        ArgumentNotLambda: function (p0){
+            return new System.ArgumentException.ctor$$String("ArgumentNotLambda(p0");
+        },
+        MoreThanOneElement: function (){
+            return new System.InvalidOperationException.ctor$$String("MoreThanOneElement");
+        },
+        MoreThanOneMatch: function (){
+            return new System.InvalidOperationException.ctor$$String("MoreThanOneMatch");
+        },
+        NoArgumentMatchingMethodsInQueryable: function (p0){
+            return new System.InvalidOperationException.ctor$$String("NoArgumentMatchingMethodsInQueryable(p0");
+        },
+        NoElements: function (){
+            return new System.InvalidOperationException.ctor$$String("NoElements");
+        },
+        NoMatch: function (){
+            return new System.InvalidOperationException.ctor$$String("NoMatch");
+        },
+        NoMethodOnType: function (p0, p1){
+            return new System.InvalidOperationException.ctor$$String("NoMethodOnType(p0, p1");
+        },
+        NoMethodOnTypeMatchingArguments: function (p0, p1){
+            return new System.InvalidOperationException.ctor$$String("NoMethodOnTypeMatchingArguments(p0, p1");
+        },
+        NoNameMatchingMethodsInQueryable: function (p0){
+            return new System.InvalidOperationException.ctor$$String("NoNameMatchingMethodsInQueryable(p0");
+        },
+        ArgumentNull: function (paramName){
+            return new System.ArgumentNullException.ctor$$String(paramName);
+        },
+        ArgumentOutOfRange: function (paramName){
+            return new System.ArgumentOutOfRangeException.ctor$$String(paramName);
+        },
+        NotImplemented: function (){
+            return new System.NotImplementedException.ctor();
+        },
+        NotSupported: function (){
+            return new System.NotSupportedException.ctor();
+        }
+    },
+    assemblyName: "SharpKit.JsClr",
+    Kind: "Class",
+    definition: {
+        ctor: function (){
+            System.Object.ctor.call(this);
+        }
+    }
+};
+JsTypes.push(System$Linq$_Error);
+var System$Linq$IGrouping$2 = {
+    fullname: "System.Linq.IGrouping$2",
+    baseTypeName: "System.Object",
+    assemblyName: "SharpKit.JsClr",
+    interfaceNames: ["System.Collections.Generic.IEnumerable$1", "System.Collections.IEnumerable"],
+    Kind: "Interface"
+};
+JsTypes.push(System$Linq$IGrouping$2);
+var System$Linq$IOrderedEnumerable$1 = {
+    fullname: "System.Linq.IOrderedEnumerable$1",
+    baseTypeName: "System.Object",
+    assemblyName: "SharpKit.JsClr",
+    interfaceNames: ["System.Collections.Generic.IEnumerable$1", "System.Collections.IEnumerable"],
+    Kind: "Interface"
+};
+JsTypes.push(System$Linq$IOrderedEnumerable$1);
+var System$Linq$Error = {
+    fullname: "System.Linq.Error",
+    baseTypeName: "System.Object",
+    staticDefinition: {
+        ArgumentNull: function (p){
+            return new System.Exception.ctor$$String("ArgumentNull " + p);
+        },
+        NoElements: function (){
+            return new System.Exception.ctor$$String("NoElements");
+        },
+        NoMatch: function (){
+            return new System.Exception.ctor$$String("NoMatch");
+        }
+    },
+    assemblyName: "SharpKit.JsClr",
+    Kind: "Class",
+    definition: {
+        ctor: function (){
+            System.Object.ctor.call(this);
+        }
+    }
+};
+JsTypes.push(System$Linq$Error);
+var System$Linq$_OrderedEnumerable$1 = {
+    fullname: "System.Linq._OrderedEnumerable$1",
+    baseTypeName: "System.Object",
+    assemblyName: "SharpKit.JsClr",
+    interfaceNames: ["System.Linq.IOrderedEnumerable$1", "System.Collections.Generic.IEnumerable$1", "System.Collections.IEnumerable"],
+    Kind: "Class",
+    definition: {
+        ctor: function (TElement){
+            this.TElement = TElement;
+            this.source = null;
+            this.sorted = null;
+            System.Object.ctor.call(this);
+        },
+        GetEnumerator: function (){
+            if (this.sorted == null)
+                this.sorted = this.SortSource();
+            return this.sorted.GetEnumerator();
+        },
+        SortSource: function (){
+            var list = System.Linq.Enumerable.ToArray$1(this.TElement, this.source);
+            list.sort($CreateDelegate(this, this.Compare));
+            return list;
+        },
+        CreateOrderedEnumerable$1: function (TKey, keySelector, comparer, descending){
+            return (function (){
+                var $v1 = new System.Linq._OrderedEnumerable$2.ctor(this.TElement, TKey, this.source, keySelector, comparer, descending);
+                $v1.parent = this;
+                return $v1;
+            }).call(this);
+        }
+    }
+};
+JsTypes.push(System$Linq$_OrderedEnumerable$1);
+var System$Linq$_OrderedEnumerable$2 = {
+    fullname: "System.Linq._OrderedEnumerable$2",
+    baseTypeName: "System.Linq._OrderedEnumerable$1",
+    assemblyName: "SharpKit.JsClr",
+    Kind: "Class",
+    definition: {
+        ctor: function (TElement, TKey, source, keySelector, comparer, descending){
+            this.TElement = TElement;
+            this.TKey = TKey;
+            this.parent = null;
+            this.keySelector = null;
+            this.comparer = null;
+            this.descending = false;
+            System.Linq._OrderedEnumerable$1.ctor.call(this, this.TElement);
+            if (source == null){
+                throw $CreateException(System.Linq._Error.ArgumentNull("source"), new Error());
+            }
+            if (keySelector == null){
+                throw $CreateException(System.Linq._Error.ArgumentNull("keySelector"), new Error());
+            }
+            this.source = source;
+            this.keySelector = keySelector;
+            this.comparer = ((comparer != null) ? comparer : System.Collections.Generic.Comparer$1.get_Default());
+            this.descending = descending;
+        },
+        Compare: function (x, y){
+            if (this.parent != null){
+                var z = this.parent.Compare(x, y);
+                if (z != 0)
+                    return z;
+            }
+            var xx = this.keySelector(x);
+            var yy = this.keySelector(y);
+            var zz = this.comparer.Compare(xx, yy);
+            if (this.descending)
+                zz *= -1;
+            return zz;
+        }
+    }
+};
+JsTypes.push(System$Linq$_OrderedEnumerable$2);
 var System$Linq$Enumerable$Iterator = {
     fullname: "System.Linq.Enumerable.Iterator",
     baseTypeName: "System.Object",
@@ -1331,185 +1512,4 @@ var System$Linq$Enumerable$SelectManyArrayIterator = {
     }
 };
 JsTypes.push(System$Linq$Enumerable$SelectManyArrayIterator);
-var System$Linq$_Error = {
-    fullname: "System.Linq._Error",
-    baseTypeName: "System.Object",
-    staticDefinition: {
-        ArgumentArrayHasTooManyElements: function (p0){
-            return new System.ArgumentException.ctor$$String("ArgumentArrayHasTooManyElements(p0");
-        },
-        ArgumentNotIEnumerableGeneric: function (p0){
-            return new System.ArgumentException.ctor$$String("ArgumentNotIEnumerableGeneric(p0");
-        },
-        ArgumentNotSequence: function (p0){
-            return new System.ArgumentException.ctor$$String("ArgumentNotSequence(p0");
-        },
-        ArgumentNotValid: function (p0){
-            return new System.ArgumentException.ctor$$String("ArgumentNotValid(p0");
-        },
-        IncompatibleElementTypes: function (){
-            return new System.ArgumentException.ctor$$String("IncompatibleElementTypes");
-        },
-        ArgumentNotLambda: function (p0){
-            return new System.ArgumentException.ctor$$String("ArgumentNotLambda(p0");
-        },
-        MoreThanOneElement: function (){
-            return new System.InvalidOperationException.ctor$$String("MoreThanOneElement");
-        },
-        MoreThanOneMatch: function (){
-            return new System.InvalidOperationException.ctor$$String("MoreThanOneMatch");
-        },
-        NoArgumentMatchingMethodsInQueryable: function (p0){
-            return new System.InvalidOperationException.ctor$$String("NoArgumentMatchingMethodsInQueryable(p0");
-        },
-        NoElements: function (){
-            return new System.InvalidOperationException.ctor$$String("NoElements");
-        },
-        NoMatch: function (){
-            return new System.InvalidOperationException.ctor$$String("NoMatch");
-        },
-        NoMethodOnType: function (p0, p1){
-            return new System.InvalidOperationException.ctor$$String("NoMethodOnType(p0, p1");
-        },
-        NoMethodOnTypeMatchingArguments: function (p0, p1){
-            return new System.InvalidOperationException.ctor$$String("NoMethodOnTypeMatchingArguments(p0, p1");
-        },
-        NoNameMatchingMethodsInQueryable: function (p0){
-            return new System.InvalidOperationException.ctor$$String("NoNameMatchingMethodsInQueryable(p0");
-        },
-        ArgumentNull: function (paramName){
-            return new System.ArgumentNullException.ctor$$String(paramName);
-        },
-        ArgumentOutOfRange: function (paramName){
-            return new System.ArgumentOutOfRangeException.ctor$$String(paramName);
-        },
-        NotImplemented: function (){
-            return new System.NotImplementedException.ctor();
-        },
-        NotSupported: function (){
-            return new System.NotSupportedException.ctor();
-        }
-    },
-    assemblyName: "SharpKit.JsClr",
-    Kind: "Class",
-    definition: {
-        ctor: function (){
-            System.Object.ctor.call(this);
-        }
-    }
-};
-JsTypes.push(System$Linq$_Error);
-var System$Linq$IGrouping$2 = {
-    fullname: "System.Linq.IGrouping$2",
-    baseTypeName: "System.Object",
-    assemblyName: "SharpKit.JsClr",
-    interfaceNames: ["System.Collections.Generic.IEnumerable$1", "System.Collections.IEnumerable"],
-    Kind: "Interface"
-};
-JsTypes.push(System$Linq$IGrouping$2);
-var System$Linq$IOrderedEnumerable$1 = {
-    fullname: "System.Linq.IOrderedEnumerable$1",
-    baseTypeName: "System.Object",
-    assemblyName: "SharpKit.JsClr",
-    interfaceNames: ["System.Collections.Generic.IEnumerable$1", "System.Collections.IEnumerable"],
-    Kind: "Interface"
-};
-JsTypes.push(System$Linq$IOrderedEnumerable$1);
-var System$Linq$Error = {
-    fullname: "System.Linq.Error",
-    baseTypeName: "System.Object",
-    staticDefinition: {
-        ArgumentNull: function (p){
-            return new System.Exception.ctor$$String("ArgumentNull " + p);
-        },
-        NoElements: function (){
-            return new System.Exception.ctor$$String("NoElements");
-        },
-        NoMatch: function (){
-            return new System.Exception.ctor$$String("NoMatch");
-        }
-    },
-    assemblyName: "SharpKit.JsClr",
-    Kind: "Class",
-    definition: {
-        ctor: function (){
-            System.Object.ctor.call(this);
-        }
-    }
-};
-JsTypes.push(System$Linq$Error);
-var System$Linq$_OrderedEnumerable$1 = {
-    fullname: "System.Linq._OrderedEnumerable$1",
-    baseTypeName: "System.Object",
-    assemblyName: "SharpKit.JsClr",
-    interfaceNames: ["System.Linq.IOrderedEnumerable$1", "System.Collections.Generic.IEnumerable$1", "System.Collections.IEnumerable"],
-    Kind: "Class",
-    definition: {
-        ctor: function (TElement){
-            this.TElement = TElement;
-            this.source = null;
-            this.sorted = null;
-            System.Object.ctor.call(this);
-        },
-        GetEnumerator: function (){
-            if (this.sorted == null)
-                this.sorted = this.SortSource();
-            return this.sorted.GetEnumerator();
-        },
-        SortSource: function (){
-            var list = System.Linq.Enumerable.ToArray$1(this.TElement, this.source);
-            list.sort($CreateDelegate(this, this.Compare));
-            return list;
-        },
-        CreateOrderedEnumerable$1: function (TKey, keySelector, comparer, descending){
-            return (function (){
-                var $v1 = new System.Linq._OrderedEnumerable$2.ctor(this.TElement, TKey, this.source, keySelector, comparer, descending);
-                $v1.parent = this;
-                return $v1;
-            }).call(this);
-        }
-    }
-};
-JsTypes.push(System$Linq$_OrderedEnumerable$1);
-var System$Linq$_OrderedEnumerable$2 = {
-    fullname: "System.Linq._OrderedEnumerable$2",
-    baseTypeName: "System.Linq._OrderedEnumerable$1",
-    assemblyName: "SharpKit.JsClr",
-    Kind: "Class",
-    definition: {
-        ctor: function (TElement, TKey, source, keySelector, comparer, descending){
-            this.TElement = TElement;
-            this.TKey = TKey;
-            this.parent = null;
-            this.keySelector = null;
-            this.comparer = null;
-            this.descending = false;
-            System.Linq._OrderedEnumerable$1.ctor.call(this, this.TElement);
-            if (source == null){
-                throw $CreateException(System.Linq._Error.ArgumentNull("source"), new Error());
-            }
-            if (keySelector == null){
-                throw $CreateException(System.Linq._Error.ArgumentNull("keySelector"), new Error());
-            }
-            this.source = source;
-            this.keySelector = keySelector;
-            this.comparer = ((comparer != null) ? comparer : System.Collections.Generic.Comparer$1.get_Default());
-            this.descending = descending;
-        },
-        Compare: function (x, y){
-            if (this.parent != null){
-                var z = this.parent.Compare(x, y);
-                if (z != 0)
-                    return z;
-            }
-            var xx = this.keySelector(x);
-            var yy = this.keySelector(y);
-            var zz = this.comparer.Compare(xx, yy);
-            if (this.descending)
-                zz *= -1;
-            return zz;
-        }
-    }
-};
-JsTypes.push(System$Linq$_OrderedEnumerable$2);
 

@@ -956,31 +956,6 @@ var System$Collections$ObjectModel$ObservableCollection$1 = {
     }
 };
 JsTypes.push(System$Collections$ObjectModel$ObservableCollection$1);
-var System$Collections$ObjectModel$ObservableCollection$1$Reentrant = {
-    fullname: "System.Collections.ObjectModel.ObservableCollection$1.Reentrant",
-    baseTypeName: "System.Object",
-    assemblyName: "SharpKit.JsClr",
-    interfaceNames: ["System.IDisposable"],
-    Kind: "Class",
-    definition: {
-        ctor: function (T){
-            this.T = T;
-            this.count = 0;
-            System.Object.ctor.call(this);
-        },
-        Enter: function (){
-            this.count++;
-        },
-        Dispose: function (){
-            this.count--;
-        },
-        Busy$$: "System.Boolean",
-        get_Busy: function (){
-            return this.count > 0;
-        }
-    }
-};
-JsTypes.push(System$Collections$ObjectModel$ObservableCollection$1$Reentrant);
 var System$Collections$ObjectModel$ReadOnlyCollection$1 = {
     fullname: "System.Collections.ObjectModel.ReadOnlyCollection$1",
     baseTypeName: "System.Object",
@@ -1105,4 +1080,29 @@ var System$Collections$IListEnumerator$1 = {
     }
 };
 JsTypes.push(System$Collections$IListEnumerator$1);
+var System$Collections$ObjectModel$ObservableCollection$1$Reentrant = {
+    fullname: "System.Collections.ObjectModel.ObservableCollection$1.Reentrant",
+    baseTypeName: "System.Object",
+    assemblyName: "SharpKit.JsClr",
+    interfaceNames: ["System.IDisposable"],
+    Kind: "Class",
+    definition: {
+        ctor: function (T){
+            this.T = T;
+            this.count = 0;
+            System.Object.ctor.call(this);
+        },
+        Enter: function (){
+            this.count++;
+        },
+        Dispose: function (){
+            this.count--;
+        },
+        Busy$$: "System.Boolean",
+        get_Busy: function (){
+            return this.count > 0;
+        }
+    }
+};
+JsTypes.push(System$Collections$ObjectModel$ObservableCollection$1$Reentrant);
 

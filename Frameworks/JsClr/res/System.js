@@ -3991,7 +3991,7 @@ JsTypes.push({ fullname: "System.String", baseTypeName: "System.Object", definit
 {
 	ctor: String,
 	GetEnumerator: function () {
-		return new System.CharEnumerator.ctor$$String(this);
+		return new System.CharEnumerator.ctor(this);
 	},
 	GetType: function () {
 		return Typeof(System.String);
