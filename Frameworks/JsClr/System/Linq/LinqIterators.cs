@@ -276,20 +276,55 @@ namespace SharpKit.JavaScript.Private
 
         }
 
-        [JsType(Name = "System.Linq.Enumerable.ConcatIterator", Filename = "~/res/System.Linq.js")]
-        class ConcatIterator<T> : IEnumerator<T>, IEnumerable<T>
+        [JsType(Filename = "~/res/System.Linq.js")]
+        class ConcatEnumerable<T> : IEnumerable<T>
         {
-            public ConcatIterator(IEnumerable first, IEnumerable second)
+
+            IEnumerable First;
+            IEnumerable Second;
+
+            public ConcatEnumerable(IEnumerable first, IEnumerable second)
             {
                 this.First = first;
                 this.Second = second;
             }
+
+            #region IEnumerable<T> Members
+
+            public IEnumerator<T> GetEnumerator()
+            {
+                return new ConcatEnumerator<T>(First, Second);
+            }
+
+            #endregion
+
+            #region IEnumerable Members
+
+            System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+            {
+                return GetEnumerator();
+            }
+
+            #endregion
+
+        }
+
+        [JsType(Filename = "~/res/System.Linq.js")]
+        class ConcatEnumerator<T> : IEnumerator<T>, IEnumerable<T>
+        {
+
             IEnumerable First;
             IEnumerable Second;
             IEnumerator FirstEnumerator;
             IEnumerator SecondEnumerator;
             int State;
             bool onFirst = true;
+
+            public ConcatEnumerator(IEnumerable first, IEnumerable second)
+            {
+                this.First = first;
+                this.Second = second;
+            }
 
             public void Reset()
             {
@@ -299,6 +334,7 @@ namespace SharpKit.JavaScript.Private
                     this.SecondEnumerator.Reset();
                 onFirst = true;
             }
+
             public T Current
             {
                 get
@@ -314,7 +350,7 @@ namespace SharpKit.JavaScript.Private
                     throw new InvalidOperationException();
                 }
             }
-            
+
             public bool MoveNext()
             {
                 if (State == 0)
@@ -378,7 +414,7 @@ namespace SharpKit.JavaScript.Private
             {
                 if (State == 0)
                     return this;
-                return new ConcatIterator<T>(First, Second);
+                return new ConcatEnumerator<T>(First, Second);
             }
 
             #endregion
@@ -393,6 +429,7 @@ namespace SharpKit.JavaScript.Private
             #endregion
 
         }
+
     }
 
 }

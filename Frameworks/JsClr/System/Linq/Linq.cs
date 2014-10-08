@@ -174,7 +174,7 @@ namespace SharpKit.JavaScript.Private
             {
                 if (list.Count == 1)
                     return list[0];
-                else 
+                else
                     throw new InvalidOperationException();
             }
             else
@@ -820,7 +820,7 @@ namespace SharpKit.JavaScript.Private
             {
                 throw Error.ArgumentNull("second");
             }
-            return new ConcatIterator<TSource>(first, second);
+            return new ConcatEnumerable<TSource>(first, second);
         }
 
         //private static IEnumerable<TSource> ConcatIterator<TSource>(IEnumerable<TSource> first, IEnumerable<TSource> second)
@@ -2164,42 +2164,42 @@ namespace SharpKit.JavaScript.Private
 
         public static IEnumerable<TResult> SelectMany<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TResult>> selector)
         {
-          if (source == null)
-          {
-            throw Error.ArgumentNull("source");
-          }
-          if (selector == null)
-          {
-            throw Error.ArgumentNull("selector");
-          }
-          /*if (source is Enumerable.Iterator<TSource>)
-          {
-              return ((Enumerable.Iterator<TSource>)source).SelectMany(selector);
-          }*/
-          if (source is TSource[])
-          {
-              return new Enumerable.SelectManyArrayIterator<TSource, TResult>((TSource[])source, selector);
-          }
-          if (source is List<TSource>)
-          {
-              return new Enumerable.SelectManyListIterator<TSource, TResult>((List<TSource>)source, selector);
-          }
-          return new Enumerable.SelectManyEnumerableIterator<TSource, TResult>(source, selector);
+            if (source == null)
+            {
+                throw Error.ArgumentNull("source");
+            }
+            if (selector == null)
+            {
+                throw Error.ArgumentNull("selector");
+            }
+            /*if (source is Enumerable.Iterator<TSource>)
+            {
+                return ((Enumerable.Iterator<TSource>)source).SelectMany(selector);
+            }*/
+            if (source is TSource[])
+            {
+                return new Enumerable.SelectManyArrayIterator<TSource, TResult>((TSource[])source, selector);
+            }
+            if (source is List<TSource>)
+            {
+                return new Enumerable.SelectManyListIterator<TSource, TResult>((List<TSource>)source, selector);
+            }
+            return new Enumerable.SelectManyEnumerableIterator<TSource, TResult>(source, selector);
         }
 
         public static IEnumerable<TResult> SelectMany<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, int, IEnumerable<TResult>> selector)
         {
-          throw new NotImplementedException();
+            throw new NotImplementedException();
 
-          /*if (source == null)
-          {
-            throw Error.ArgumentNull("source");
-          }
-          if (selector == null)
-          {
-            throw Error.ArgumentNull("selector");
-          }
-          return SelectManyIterator<TSource, TResult>(source, selector);*/
+            /*if (source == null)
+            {
+              throw Error.ArgumentNull("source");
+            }
+            if (selector == null)
+            {
+              throw Error.ArgumentNull("selector");
+            }
+            return SelectManyIterator<TSource, TResult>(source, selector);*/
         }
 
         public static IEnumerable<TResult> SelectMany<TSource, TCollection, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)

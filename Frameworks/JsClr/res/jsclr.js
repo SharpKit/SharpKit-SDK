@@ -5182,7 +5182,7 @@ var System$Linq$Enumerable = {
             if (second == null){
                 throw $CreateException(System.Linq.Error.ArgumentNull("second"), new Error());
             }
-            return new System.Linq.Enumerable.ConcatIterator.ctor(TSource, first, second);
+            return new SharpKit.JavaScript.Private.Enumerable.ConcatEnumerable$1.ctor(TSource, first, second);
         },
         Count$1$$IEnumerable$1: function (TSource, source){
             if (source == null){
@@ -5965,8 +5965,29 @@ var System$Linq$Enumerable$TakeIterator = {
     }
 };
 JsTypes.push(System$Linq$Enumerable$TakeIterator);
-var System$Linq$Enumerable$ConcatIterator = {
-    fullname: "System.Linq.Enumerable.ConcatIterator",
+var SharpKit$JavaScript$Private$Enumerable$ConcatEnumerable$1 = {
+    fullname: "SharpKit.JavaScript.Private.Enumerable.ConcatEnumerable$1",
+    baseTypeName: "System.Object",
+    assemblyName: "SharpKit.JsClr",
+    interfaceNames: ["System.Collections.Generic.IEnumerable$1"],
+    Kind: "Class",
+    definition: {
+        ctor: function (T, first, second){
+            this.T = T;
+            this.First = null;
+            this.Second = null;
+            System.Object.ctor.call(this);
+            this.First = first;
+            this.Second = second;
+        },
+        GetEnumerator: function (){
+            return new SharpKit.JavaScript.Private.Enumerable.ConcatEnumerator$1.ctor(this.T, this.First, this.Second);
+        }
+    }
+};
+JsTypes.push(SharpKit$JavaScript$Private$Enumerable$ConcatEnumerable$1);
+var SharpKit$JavaScript$Private$Enumerable$ConcatEnumerator$1 = {
+    fullname: "SharpKit.JavaScript.Private.Enumerable.ConcatEnumerator$1",
     baseTypeName: "System.Object",
     assemblyName: "SharpKit.JsClr",
     interfaceNames: ["System.Collections.Generic.IEnumerator$1", "System.Collections.Generic.IEnumerable$1"],
@@ -6033,11 +6054,11 @@ var System$Linq$Enumerable$ConcatIterator = {
         GetEnumerator: function (){
             if (this.State == 0)
                 return this;
-            return new System.Linq.Enumerable.ConcatIterator.ctor(this.T, this.First, this.Second);
+            return new SharpKit.JavaScript.Private.Enumerable.ConcatEnumerator$1.ctor(this.T, this.First, this.Second);
         }
     }
 };
-JsTypes.push(System$Linq$Enumerable$ConcatIterator);
+JsTypes.push(SharpKit$JavaScript$Private$Enumerable$ConcatEnumerator$1);
 var System$Linq$Enumerable$SelectManyArrayIterator = {
     fullname: "System.Linq.Enumerable.SelectManyArrayIterator",
     baseTypeName: "System.Linq.Enumerable.Iterator",
@@ -6334,13 +6355,12 @@ var System$Collections$Generic$Dictionary$2 = {
         Remove: function (key){
             if (key == null)
                 throw $CreateException(new System.ArgumentNullException.ctor$$String("key"), new Error());
-            if (!this.ContainsKey(key))
-                throw $CreateException(new System.ArgumentException.ctor$$String$$String$$Exception("The specified key does not exist.", "key", null), new Error());
+            var result = this.ContainsKey(key);
             var hashKey = this.GetHashKey(key);
             delete this._table[hashKey];
             delete this._keys[hashKey];
             this._version++;
-            return true;
+            return result;
         },
         Item$$: "`1",
         get_Item$$TKey: function (key){

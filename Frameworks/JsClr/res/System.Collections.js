@@ -193,13 +193,12 @@ var System$Collections$Generic$Dictionary$2 = {
         Remove: function (key){
             if (key == null)
                 throw $CreateException(new System.ArgumentNullException.ctor$$String("key"), new Error());
-            if (!this.ContainsKey(key))
-                throw $CreateException(new System.ArgumentException.ctor$$String$$String$$Exception("The specified key does not exist.", "key", null), new Error());
+            var result = this.ContainsKey(key);
             var hashKey = this.GetHashKey(key);
             delete this._table[hashKey];
             delete this._keys[hashKey];
             this._version++;
-            return true;
+            return result;
         },
         Item$$: "`1",
         get_Item$$TKey: function (key){
