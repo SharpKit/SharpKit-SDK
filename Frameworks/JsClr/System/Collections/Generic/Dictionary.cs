@@ -4,18 +4,18 @@ using SharpKit.JavaScript.Utils;
 
 namespace SharpKit.JavaScript.Private
 {
-	[JsType(Name = "System.Collections.Generic.Dictionary$2", Filename = "~/res/System.Collections.js")]
-	class JsImplDictionary<TKey, TValue> : IDictionary<TKey, TValue>
-	{
-		JsObject _table;
-		JsObject _keys;
-		int _version;
-		public JsImplDictionary()
-		{
-			this._table = new JsObject();
-			this._keys = new JsObject();
-			this._version = 0;
-		}
+    [JsType(Name = "System.Collections.Generic.Dictionary$2", Filename = "~/res/System.Collections.js")]
+    class JsImplDictionary<TKey, TValue> : IDictionary<TKey, TValue>
+    {
+        JsObject _table;
+        JsObject _keys;
+        int _version;
+        public JsImplDictionary()
+        {
+            this._table = new JsObject();
+            this._keys = new JsObject();
+            this._version = 0;
+        }
 
         public JsImplDictionary(IEqualityComparer<TKey> comparer)
         {
@@ -26,174 +26,178 @@ namespace SharpKit.JavaScript.Private
         }
 
         IEqualityComparer<TKey> Comparer;
-		protected virtual string GetHashKey(TKey key)
-		{
+        protected virtual string GetHashKey(TKey key)
+        {
             if (Comparer != null)
                 return Comparer.GetHashCode(key).As<string>();
-			return Js.GetHashKey(key);
-		}
-		public void Add(TKey key, TValue value)
-		{
+            return Js.GetHashKey(key);
+        }
+        public void Add(TKey key, TValue value)
+        {
             // If TKey is default(ValueType), it's a valid key.
             if (key == null)
                 throw new ArgumentNullException("key");
-            if(this.ContainsKey(key))
+            if (this.ContainsKey(key))
                 throw new ArgumentException("The specified key already exists.", "key", null);
 
-			var hashKey = GetHashKey(key);
-			this._table[hashKey] = value;
-			this._keys[hashKey] = key;
-			this._version++;
-		}
-		public bool Remove(TKey key)
-		{
+            var hashKey = GetHashKey(key);
+            this._table[hashKey] = value;
+            this._keys[hashKey] = key;
+            this._version++;
+        }
+
+        public bool Remove(TKey key)
+        {
             // If TKey is default(ValueType), it's a valid key.
             if (key == null)
                 throw new ArgumentNullException("key");
-            if (!this.ContainsKey(key))
-                throw new ArgumentException("The specified key does not exist.", "key", null);
+            var result = this.ContainsKey(key);
             var hashKey = GetHashKey(key);
             JsContext.delete(this._table[hashKey]);
             JsContext.delete(this._keys[hashKey]);
-			this._version++;
-			return true;//TODO:
-		}
-		public TValue this[TKey key]
-		{
-			get
-			{
-                if(!this.ContainsKey(key))
+            this._version++;
+            return result;
+        }
+
+        public TValue this[TKey key]
+        {
+            get
+            {
+                if (!this.ContainsKey(key))
                     throw new KeyNotFoundException("The specified key does not exist.");
-				var hashKey = GetHashKey(key);
-				return this._table[hashKey].As<TValue>();
-			}
-			set
-			{
+                var hashKey = GetHashKey(key);
+                return this._table[hashKey].As<TValue>();
+            }
+            set
+            {
                 //if (!this.ContainsKey(key))
                 //    throw new KeyNotFoundException("The specified key does not exist.");
                 var hashKey = GetHashKey(key);
-				this._table[hashKey] = value;
-				this._keys[hashKey] = key;
-				this._version++;
-			}
-		}
-		public bool ContainsKey(TKey key)
-		{
-			var hashKey = GetHashKey(key);
+                this._table[hashKey] = value;
+                this._keys[hashKey] = key;
+                this._version++;
+            }
+        }
+        public bool ContainsKey(TKey key)
+        {
+            var hashKey = GetHashKey(key);
             return JsContext.@typeof(this._table[hashKey]) != "undefined";
-		}
-		public ICollection<TKey> Keys
-		{
-			get
-			{
-				var keys = new JsArray();
-				foreach (var p in this._keys)
-				{
-					keys.push(this._keys[p]);
-				}
-				return keys.As<ICollection<TKey>>();
-			}
-		}
+        }
+        public ICollection<TKey> Keys
+        {
+            get
+            {
+                var keys = new JsArray();
+                foreach (var p in this._keys)
+                {
+                    keys.push(this._keys[p]);
+                }
+                return keys.As<ICollection<TKey>>();
+            }
+        }
 
-		public ICollection<TValue> Values
-		{
-			get
-			{
-				var values = new JsArray();
-				foreach (var p in this._table)
-				{
-					values.push(this._table[p]);
-				}
-				return values.As<ICollection<TValue>>();
-			}
-		}
-		public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
-		{
-			var array = new JsArray(); //TODO:
-			foreach (var hashKey in this._table)
-			{
-				array.push(new KeyValuePair<TKey, TValue>(this._keys[hashKey].As<TKey>(), this._table[hashKey].As<TValue>()));
-			}
-			return array.As<JsExtendedArray>().GetEnumerator().As<IEnumerator<KeyValuePair<TKey, TValue>>>();
-		}
-		public void Clear()
-		{
-			foreach (var hashKey in this._table)
-			{
-				this._keys = new JsObject();
-				this._table = new JsObject();
-				this._version++;
-				return;
-			}
-		}
+        public ICollection<TValue> Values
+        {
+            get
+            {
+                var values = new JsArray();
+                foreach (var p in this._table)
+                {
+                    values.push(this._table[p]);
+                }
+                return values.As<ICollection<TValue>>();
+            }
+        }
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+        {
+            var array = new JsArray(); //TODO:
+            foreach (var hashKey in this._table)
+            {
+                array.push(new KeyValuePair<TKey, TValue>(this._keys[hashKey].As<TKey>(), this._table[hashKey].As<TValue>()));
+            }
+            return array.As<JsExtendedArray>().GetEnumerator().As<IEnumerator<KeyValuePair<TKey, TValue>>>();
+        }
+        public void Clear()
+        {
+            foreach (var hashKey in this._table)
+            {
+                this._keys = new JsObject();
+                this._table = new JsObject();
+                this._version++;
+                return;
+            }
+        }
 
-		#region IDictionary<TKey,TValue> Members
-		public bool TryGetValue(TKey key, out TValue value)
-		{
+        #region IDictionary<TKey,TValue> Members
+        public bool TryGetValue(TKey key, out TValue value)
+        {
             var hashKey = GetHashKey(key);
             var v = this._table[hashKey];
             value = v.As<TValue>();
             return JsContext.@typeof(v) != "undefined";
-		}
+        }
 
 
-		#endregion
+        #endregion
 
-		#region ICollection<KeyValuePair<TKey,TValue>> Members
+        #region ICollection<KeyValuePair<TKey,TValue>> Members
 
         void ICollection<KeyValuePair<TKey, TValue>>.Add(KeyValuePair<TKey, TValue> item)
-		{
-			throw new NotImplementedException();
-		}
+        {
+            throw new NotImplementedException();
+        }
 
         bool ICollection<KeyValuePair<TKey, TValue>>.Contains(KeyValuePair<TKey, TValue> item)
-		{
-			throw new NotImplementedException();
-		}
+        {
+            throw new NotImplementedException();
+        }
 
         void ICollection<KeyValuePair<TKey, TValue>>.CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
-		{
-			throw new NotImplementedException();
-		}
+        {
+            throw new NotImplementedException();
+        }
 
-		public int Count
-		{
-			get { throw new NotImplementedException(); }
-		}
+        public int Count
+        {
+            get { throw new NotImplementedException(); }
+        }
 
-		public bool IsReadOnly
-		{
-			get { throw new NotImplementedException(); }
-		}
+        public bool IsReadOnly
+        {
+            get { throw new NotImplementedException(); }
+        }
 
         bool ICollection<KeyValuePair<TKey, TValue>>.Remove(KeyValuePair<TKey, TValue> item)
-		{
-			throw new NotImplementedException();
-		}
+        {
+            throw new NotImplementedException();
+        }
 
-		#endregion
+        #endregion
 
-		#region IEnumerable Members
+        #region IEnumerable Members
 
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-		{
-			throw new NotImplementedException();
-		}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
 
-		#endregion
+        #endregion
 
-	}
+    }
 
     [JsType(Name = "System.Collections.Generic.KeyNotFoundException", Filename = "~/Internal/Core.js")]
     internal class JsImplKeyNotFoundException : JsImplException
     {
-        public JsImplKeyNotFoundException() : base("JsImplKeyNotFoundException")
+        public JsImplKeyNotFoundException()
+            : base("JsImplKeyNotFoundException")
         {
         }
-        public JsImplKeyNotFoundException(string s) : base("JsImplKeyNotFoundException: " + s)
+        public JsImplKeyNotFoundException(string s)
+            : base("JsImplKeyNotFoundException: " + s)
         {
         }
-        public JsImplKeyNotFoundException(string s, Exception innerException) : base("JsImplKeyNotFoundException: " + s, innerException)
+        public JsImplKeyNotFoundException(string s, Exception innerException)
+            : base("JsImplKeyNotFoundException: " + s, innerException)
         {
         }
     }
