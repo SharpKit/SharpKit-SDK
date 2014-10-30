@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SharpKit.JsClr</id>
+    <title></title>
+    <description>Javascript implementation for the .NET class implementation</description>
+    <summary></summary>
+    <version>5.4.7</version>
+    <authors>Sharpkit Ltd</authors>
+    <owners>Dan-el</owners>
+    <projectUrl>http://sharpkit.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="SharpKit.JavaScript" version="5.4.7" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\SharpKit.JsClr.dll" target="lib\" />
+    <file src="res\jsclr.js" target="content\res\" />
+    <file src="res\jsclr.min.js" target="content\res\" />
+  </files>
+</package>

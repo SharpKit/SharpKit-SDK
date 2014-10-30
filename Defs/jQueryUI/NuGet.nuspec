@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SharpKit.jQueryUI</id>
+    <title></title>
+    <description>API library for jQueryUI</description>
+    <summary></summary>
+    <version>5.4.7</version>
+    <authors>Sharpkit Ltd</authors>
+    <owners>Dan-el</owners>
+    <projectUrl>http://sharpkit.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="SharpKit.jQuery" version="5.4.7" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\SharpKit.jQueryUI.dll" target="lib\" />
+  </files>
+</package>
