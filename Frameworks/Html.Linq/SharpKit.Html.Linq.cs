@@ -98,7 +98,7 @@ namespace SharpKit.Html
                 if (node != null)
                 {
                     node = node.nextSibling;
-                    while (node != null && _Current.nodeType != 1)
+                    while (node != null && node.nodeType != 1)
                         node = node.nextSibling;
                 }
                 while (node == null && Stack.length > 0)
