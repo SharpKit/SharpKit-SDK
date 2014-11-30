@@ -38,6 +38,20 @@ namespace WebIDLParser
 
         public static TParsedFileList parsedFiles = new TParsedFileList();
 
+        public static void extractIdlFiles(string sourceDir, string destDir)
+        {
+            var sDir = new DirectoryInfo(sourceDir);
+            foreach (var f in sDir.GetFiles("*.idl"))
+            {
+                if (!Directory.Exists(destDir))
+                    Directory.CreateDirectory(destDir);
+                f.CopyTo(Path.Combine(destDir, f.Name), true);
+            }
+
+            foreach (var d in sDir.GetDirectories())
+                extractIdlFiles(d.FullName, Path.Combine(destDir, d.Name));
+        }
+
         public static void start()
         {
             if (!Directory.Exists(Program.idlOutTempDirectory)) Directory.CreateDirectory(Program.idlOutTempDirectory);

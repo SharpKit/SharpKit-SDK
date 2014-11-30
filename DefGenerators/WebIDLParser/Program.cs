@@ -45,8 +45,9 @@ namespace WebIDLParser
 
         public static void Main(string[] args)
         {
-            setTransformations();
-            Generator.start();
+            Generator.extractIdlFiles(idlInDirectory, @"D:\IdlOriginal\");
+            //setTransformations();
+            //Generator.start();
         }
 
         private static void setTransformations()
