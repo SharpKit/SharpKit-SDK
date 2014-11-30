@@ -69,26 +69,10 @@ using SharpKit.Html.svg;
 using SharpKit.Html.workers;
 
 [JsType(JsMode.Prototype, NativeEnumerator = false, NativeArrayEnumerator = true, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "HTMLFormControlsCollection")]
-public partial class HtmlFormControlsCollection : HtmlCollection, IJsArrayEnumerable<Node>
+public partial class HtmlFormControlsCollection : HtmlCollection
 {
 	[JsProperty(NativeIndexer = true)]
 	public  Node this[string name] {get { return default(Node); } set {}}
-
-	Node IJsArrayEnumerable<Node>.this[JsNumber index] {
-		get { throw new NotImplementedException(); }
-	}
-
-	JsNumber IJsArrayEnumerable<Node>.length {
-		get { throw new NotImplementedException(); }
-	}
-
-	System.Collections.Generic.IEnumerator<Node> System.Collections.Generic.IEnumerable<Node>.GetEnumerator() {
-		throw new NotImplementedException();
-	}
-
-	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-		throw new NotImplementedException();
-	}
 }
 
 }

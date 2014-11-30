@@ -313,7 +313,7 @@ namespace WebIDLParser
                 if (attr is TNameAttribute)
                 {
                     var nameAttr = attr as TNameAttribute;
-                    if (nameAttr.name == "IndexedGetter")
+                    if (nameAttr.name == "IndexedGetter" || nameAttr.name == "NamedGetter")
                     {
 
                         var typeName = "";
@@ -330,7 +330,11 @@ namespace WebIDLParser
                         jsAttributes.Add("NativeEnumerator", "false");
                         jsAttributes.Add("NativeArrayEnumerator", "true");
 
-                        baseType.Add(new TType() { name = "IJsArrayEnumerable", genericType = new TType() { name = typeName }, canCorrect = false });
+                        var iface = new TType() { name = "IJsArrayEnumerable", genericType = new TType() { name = typeName }, canCorrect = false };
+                        if (parentHasNamedAttribute("IndexedGetter") || parentHasNamedAttribute("NamedGetter"))
+                            break;
+
+                        baseType.Add(iface);
                         var str = @"
 	{TYPE} IJsArrayEnumerable<{TYPE}>.this[JsNumber index] {
 		get { throw new NotImplementedException(); }
@@ -350,9 +354,46 @@ namespace WebIDLParser
 ";
                         str = str.Replace("{TYPE}", typeName);
                         members.Add(new TFragmentMember(this) { text = str });
+
+                        break;
                     }
                 }
             }
+        }
+
+        //public bool hasBaseType(TType t)
+        //{
+        //    foreach (var bt in baseType) {
+        //        if (bt.isSameType(t))
+        //        {
+        //            return true;
+        //        }
+        //        var ft = Generator.findType(bt.name);
+        //        if (ft != null)
+        //            if (ft.hasBaseType(t))
+        //                return true;
+        //    }
+        //    return false;
+        //}
+
+        public bool parentHasNamedAttribute(string name)
+        {
+            foreach (var bt in baseType)
+            {
+                var ft = Generator.findType(bt.name);
+                if (ft != null)
+                {
+                    foreach (var attr in ft.attributes)
+                        if (attr is TNameAttribute)
+                        {
+                            if ((attr as TNameAttribute).name == name)
+                                return true;
+                        }
+                    if (ft.parentHasNamedAttribute(name))
+                        return true;
+                }
+            }
+            return false;
         }
 
         public void createSubConstructors()
@@ -471,7 +512,9 @@ namespace WebIDLParser
 
     public class TMethod : TMember
     {
-        public TMethod(TFileType parentType) : base(parentType) {
+        public TMethod(TFileType parentType)
+            : base(parentType)
+        {
             //if (parentType == null) throw new ArgumentException("parentType");
         }
 
@@ -764,6 +807,19 @@ namespace WebIDLParser
             {
                 name = "object";
             }
+        }
+
+        public bool isSameType(TType t)
+        {
+            if (t == null) return false;
+            if (t.name == name) return false;
+            if (t.genericType != null || genericType != null)
+            {
+                if (t.genericType == null && genericType == null) return false;
+                if (t.genericType != null && genericType != null) return false;
+                if (!t.genericType.isSameType(genericType)) return false;
+            }
+            return true;
         }
 
         private void trySetNewTypes()

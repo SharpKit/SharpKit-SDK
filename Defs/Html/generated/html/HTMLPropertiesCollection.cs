@@ -69,7 +69,7 @@ using SharpKit.Html.svg;
 using SharpKit.Html.workers;
 
 [JsType(JsMode.Prototype, NativeEnumerator = false, NativeArrayEnumerator = true, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "HTMLPropertiesCollection")]
-public partial class HtmlPropertiesCollection : HtmlCollection, IJsArrayEnumerable<Node>
+public partial class HtmlPropertiesCollection : HtmlCollection
 {
 	public  int length {get; set; }
 	[JsProperty(NativeIndexer = true)]
@@ -77,22 +77,6 @@ public partial class HtmlPropertiesCollection : HtmlCollection, IJsArrayEnumerab
 	public  DOMStringList names {get; set; }
 	[JsProperty(NativeIndexer = true)]
 	public  PropertyNodeList this[string name] {get { return default(PropertyNodeList); } set {}}
-
-	Node IJsArrayEnumerable<Node>.this[JsNumber index] {
-		get { throw new NotImplementedException(); }
-	}
-
-	JsNumber IJsArrayEnumerable<Node>.length {
-		get { throw new NotImplementedException(); }
-	}
-
-	System.Collections.Generic.IEnumerator<Node> System.Collections.Generic.IEnumerable<Node>.GetEnumerator() {
-		throw new NotImplementedException();
-	}
-
-	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-		throw new NotImplementedException();
-	}
 }
 
 }

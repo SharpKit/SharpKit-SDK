@@ -68,7 +68,7 @@ using SharpKit.Html.storage;
 using SharpKit.Html.svg;
 using SharpKit.Html.workers;
 
-[JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "HTMLOptionsCollection")]
+[JsType(JsMode.Prototype, NativeEnumerator = false, NativeArrayEnumerator = true, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "HTMLOptionsCollection")]
 public partial class HtmlOptionsCollection : HtmlCollection
 {
 	public  int selectedIndex {get; set; }
