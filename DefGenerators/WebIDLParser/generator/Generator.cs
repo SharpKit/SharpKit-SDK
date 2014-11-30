@@ -253,8 +253,8 @@ namespace WebIDLParser
         public static void convertDirectory(string InDir, string OutDir)
         {
             var exclude = new TStringList();
-            exclude.Add("WebCore\\bindings");
-            exclude.Add("WebCore\\testing");
+            exclude.Add( Path.Combine(Program.idlInDirectory, "bindings"));
+            exclude.Add(Path.Combine(Program.idlInDirectory, "testing"));
 
             foreach (var excl in exclude)
                 if (InDir.EndsWith(excl)) return;

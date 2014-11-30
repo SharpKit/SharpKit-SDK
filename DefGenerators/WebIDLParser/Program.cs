@@ -29,10 +29,12 @@ namespace WebIDLParser
     {
 
         //Path to the existing project SharpKit.Html project
-        public static string csOutDirectory = @"D:\dotnet\sharpkit\sdk\sharpkit\SharpKit.Html\generated\";
+        //public static string csOutDirectory = @"D:\dotnet\sharpkit\sdk\sharpkit\SharpKit.Html\generated\";
+        public static string csOutDirectory = @"D:\IdlCsOut\";
 
         //Path to the WebKit(--> WebCore) sources. ( http://trac.webkit.org/browser/trunk/Source/WebCore/ )
-        public static string idlInDirectory = @"D:\dotnet\webkit\Source\WebCore\";
+        //public static string idlInDirectory = @"D:\dotnet\webkit\Source\WebCore\";
+        public static string idlInDirectory = @"D:\github\SharpKit\SDK\DefGenerators\WebIDLDefinitions\";
 
         //An temporary directory, where the preprocessed IDL files will be stored.
         public static string idlOutTempDirectory = @"D:\IdlCs\idl\";
@@ -45,9 +47,9 @@ namespace WebIDLParser
 
         public static void Main(string[] args)
         {
-            Generator.extractIdlFiles(idlInDirectory, @"D:\IdlOriginal\");
-            //setTransformations();
-            //Generator.start();
+            //Generator.extractIdlFiles(idlInDirectory, @"D:\IdlOriginal\");
+            setTransformations();
+            Generator.start();
         }
 
         private static void setTransformations()
