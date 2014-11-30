@@ -13,7 +13,7 @@
 
 ********************************************************************************************************
 
-  Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
+  Copyright (C) 2014 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
   MIT License:

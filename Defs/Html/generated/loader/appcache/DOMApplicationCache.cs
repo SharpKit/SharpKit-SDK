@@ -13,7 +13,7 @@
 
 ********************************************************************************************************
 
-  Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
+  Copyright (C) 2014 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
   MIT License:
@@ -71,12 +71,12 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "DOMApplicationCache")]
 public partial class DOMApplicationCache
 {
-	public  const int UNCACHED = 0;
-	public  const int IDLE = 1;
-	public  const int CHECKING = 2;
-	public  const int DOWNLOADING = 3;
-	public  const int UPDATEREADY = 4;
-	public  const int OBSOLETE = 5;
+	public  static int UNCACHED = 0;
+	public  static int IDLE = 1;
+	public  static int CHECKING = 2;
+	public  static int DOWNLOADING = 3;
+	public  static int UPDATEREADY = 4;
+	public  static int OBSOLETE = 5;
 	public  int status {get; set; }
 	public  void update() {}
 	public  void swapCache() {}
