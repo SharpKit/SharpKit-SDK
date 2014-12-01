@@ -8,14 +8,20 @@ using SharpKit.JavaScript;
 
 namespace THREE
 {
-    [JsType(JsMode.Prototype, Export = false)]
+    [JsType(JsMode.Prototype, Export = false, NativeCasts = true, NativeOperatorOverloads = true)]
     public class Color
     {
-        public Color(JsNumber hex) { }
+        public Color(int hex) { }
+        public Color(string style) { }
+        public Color(Color color) { }
 
         public JsNumber r { get; set; }
         public JsNumber g { get; set; }
         public JsNumber b { get; set; }
+
+        public static implicit operator Color(string d) { return default(Color); }
+        public static implicit operator Color(JsNumber d) { return default(Color); }
+        public static implicit operator Color(int d) { return default(Color); }
 
         public Color copy(Color color) { return this; }
         public Color copyGammaToLinea(Color color) { return this; }

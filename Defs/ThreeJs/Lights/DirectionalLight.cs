@@ -9,11 +9,10 @@ using SharpKit.JavaScript;
 namespace THREE
 {
     [JsType(JsMode.Prototype, Export = false)]
-    public class MeshLambertMaterial : Material
+    public class DirectionalLight : Light
     {
-        public MeshLambertMaterial(MeshLambertMaterialOptions parameters) { }
-
-        public Color color { get; set; }
-    
+        public DirectionalLight(Color color) { }
+        public DirectionalLight(Color color, JsNumber intensity) { }
     }
+
 }

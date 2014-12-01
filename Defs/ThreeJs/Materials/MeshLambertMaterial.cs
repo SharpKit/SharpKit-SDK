@@ -8,10 +8,20 @@ using SharpKit.JavaScript;
 
 namespace THREE
 {
+    [JsType(JsMode.Prototype, Export = false)]
+    public class MeshLambertMaterial : Material
+    {
+        public MeshLambertMaterial(MeshLambertMaterialOptions parameters) { }
+
+        public Color color { get; set; }
+    
+    }
+
     [JsType(JsMode.Json, Export = false)]
     public class MeshLambertMaterialOptions
     {
         public JsNumber color { get; set; }
         public JsNumber emissive { get; set; }
     }
+
 }

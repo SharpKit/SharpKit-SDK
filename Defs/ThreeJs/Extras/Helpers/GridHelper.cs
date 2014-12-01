@@ -9,7 +9,7 @@ namespace THREE
     [JsType(JsMode.Prototype, Export = false)]
     public class GridHelper : Line
     {
-        public GridHelper(int size, int step)
+        public GridHelper(JsNumber size, JsNumber step)
         {
             throw new NotImplementedException();
         }
