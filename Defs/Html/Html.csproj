@@ -16,7 +16,6 @@
     <WarningLevel>4</WarningLevel>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
@@ -649,6 +648,16 @@
     <Compile Include="custom\modules\indexeddb\IDBRequest.cs" />
     <Compile Include="custom\modules\indexeddb\IDBTransaction.cs" />
     <Compile Include="custom\modules\indexeddb\ObjectStoreOptions.cs" />
+    <Compile Include="custom\modules\u2f\U2F.cs" />
+    <Compile Include="custom\modules\u2f\DOMWindow.cs" />
+    <Compile Include="custom\modules\u2f\Request.cs" />
+    <Compile Include="custom\modules\u2f\Response.cs" />
+    <Compile Include="custom\modules\u2f\SignRequest.cs" />
+    <Compile Include="custom\modules\u2f\RegisterRequest.cs" />
+    <Compile Include="custom\modules\u2f\ErrorCode.cs" />
+    <Compile Include="custom\modules\u2f\SignResponse.cs" />
+    <Compile Include="custom\modules\u2f\RegisterResponse.cs" />
+    <Compile Include="custom\modules\u2f\ResponseData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpKit.snk" />
@@ -679,4 +688,7 @@
   </Target>
   -->
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="custom\modules\u2f\" />
+  </ItemGroup>
 </Project>
