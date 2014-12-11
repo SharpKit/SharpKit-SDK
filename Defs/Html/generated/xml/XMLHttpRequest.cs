@@ -80,11 +80,11 @@ public partial class XMLHttpRequest
 	public  EventListener<ProgressEvent> onprogress {get; set; }
 	public  EventListener ontimeout {get; set; }
 	public  EventListener onreadystatechange {get; set; }
-	public  static int UNSENT = 0;
-	public  static int OPENED = 1;
-	public  static int HEADERS_RECEIVED = 2;
-	public  static int LOADING = 3;
-	public  static int DONE = 4;
+	public  const int UNSENT = 0;
+	public  const int OPENED = 1;
+	public  const int HEADERS_RECEIVED = 2;
+	public  const int LOADING = 3;
+	public  const int DONE = 4;
 	public  int timeout {get; set; }
 	public  int readyState {get; set; }
 	public  bool withCredentials {get; set; }

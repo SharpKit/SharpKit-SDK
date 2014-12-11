@@ -76,10 +76,10 @@ public partial class WebSocket
 	public   WebSocket(string url) {}
 	public  JsString URL {get; set; }
 	public  JsString url {get; set; }
-	public  static int CONNECTING = 0;
-	public  static int OPEN = 1;
-	public  static int CLOSING = 2;
-	public  static int CLOSED = 3;
+	public  const int CONNECTING = 0;
+	public  const int OPEN = 1;
+	public  const int CLOSING = 2;
+	public  const int CLOSED = 3;
 	public  int readyState {get; set; }
 	public  int bufferedAmount {get; set; }
 	public  EventListener onopen {get; set; }

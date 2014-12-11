@@ -76,20 +76,20 @@ public partial class HtmlMediaElement : HtmlElement
 	public  MediaError error {get; set; }
 	public  JsString src {get; set; }
 	public  JsString currentSrc {get; set; }
-	public  static int NETWORK_EMPTY = 0;
-	public  static int NETWORK_IDLE = 1;
-	public  static int NETWORK_LOADING = 2;
-	public  static int NETWORK_NO_SOURCE = 3;
+	public  const int NETWORK_EMPTY = 0;
+	public  const int NETWORK_IDLE = 1;
+	public  const int NETWORK_LOADING = 2;
+	public  const int NETWORK_NO_SOURCE = 3;
 	public  int networkState {get; set; }
 	public  JsString preload {get; set; }
 	public  TimeRanges buffered {get; set; }
 	public  void load() {}
 	public  JsString canPlayType(string type) { return default(JsString); }
-	public  static int HAVE_NOTHING = 0;
-	public  static int HAVE_METADATA = 1;
-	public  static int HAVE_CURRENT_DATA = 2;
-	public  static int HAVE_FUTURE_DATA = 3;
-	public  static int HAVE_ENOUGH_DATA = 4;
+	public  const int HAVE_NOTHING = 0;
+	public  const int HAVE_METADATA = 1;
+	public  const int HAVE_CURRENT_DATA = 2;
+	public  const int HAVE_FUTURE_DATA = 3;
+	public  const int HAVE_ENOUGH_DATA = 4;
 	public  int readyState {get; set; }
 	public  bool seeking {get; set; }
 	public  double currentTime {get; set; }

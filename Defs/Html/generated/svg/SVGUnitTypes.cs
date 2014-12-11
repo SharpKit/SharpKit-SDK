@@ -71,9 +71,9 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGUnitTypes")]
 public partial class SvgUnitTypes
 {
-	public  static int SVG_UNIT_TYPE_UNKNOWN = 0;
-	public  static int SVG_UNIT_TYPE_USERSPACEONUSE = 1;
-	public  static int SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
+	public  const int SVG_UNIT_TYPE_UNKNOWN = 0;
+	public  const int SVG_UNIT_TYPE_USERSPACEONUSE = 1;
+	public  const int SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
 }
 
 }

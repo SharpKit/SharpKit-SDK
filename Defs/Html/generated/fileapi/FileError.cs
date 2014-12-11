@@ -71,18 +71,18 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "FileError")]
 public partial class FileError
 {
-	public  static int NOT_FOUND_ERR = 1;
-	public  static int SECURITY_ERR = 2;
-	public  static int ABORT_ERR = 3;
-	public  static int NOT_READABLE_ERR = 4;
-	public  static int ENCODING_ERR = 5;
-	public  static int NO_MODIFICATION_ALLOWED_ERR = 6;
-	public  static int INVALID_STATE_ERR = 7;
-	public  static int SYNTAX_ERR = 8;
-	public  static int INVALID_MODIFICATION_ERR = 9;
-	public  static int QUOTA_EXCEEDED_ERR = 10;
-	public  static int TYPE_MISMATCH_ERR = 11;
-	public  static int PATH_EXISTS_ERR = 12;
+	public  const int NOT_FOUND_ERR = 1;
+	public  const int SECURITY_ERR = 2;
+	public  const int ABORT_ERR = 3;
+	public  const int NOT_READABLE_ERR = 4;
+	public  const int ENCODING_ERR = 5;
+	public  const int NO_MODIFICATION_ALLOWED_ERR = 6;
+	public  const int INVALID_STATE_ERR = 7;
+	public  const int SYNTAX_ERR = 8;
+	public  const int INVALID_MODIFICATION_ERR = 9;
+	public  const int QUOTA_EXCEEDED_ERR = 10;
+	public  const int TYPE_MISMATCH_ERR = 11;
+	public  const int PATH_EXISTS_ERR = 12;
 	public  int code {get; set; }
 }
 

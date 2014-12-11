@@ -664,7 +664,7 @@ namespace WebIDLParser
         {
             var modifier = "public ";
             if (parentType.isInterface && !impl) modifier = "";
-            sb.Append("\t" + modifier + " static " + resultType + " " + name);
+            sb.Append("\t" + modifier + " const " + resultType + " " + name);
             if (value != null)
             {
                 sb.Append(" = " + value);

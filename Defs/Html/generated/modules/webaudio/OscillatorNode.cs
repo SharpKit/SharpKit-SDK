@@ -71,16 +71,16 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "OscillatorNode")]
 public partial class OscillatorNode : AudioSourceNode
 {
-	public  static int SINE = 0;
-	public  static int SQUARE = 1;
-	public  static int SAWTOOTH = 2;
-	public  static int TRIANGLE = 3;
-	public  static int CUSTOM = 4;
+	public  const int SINE = 0;
+	public  const int SQUARE = 1;
+	public  const int SAWTOOTH = 2;
+	public  const int TRIANGLE = 3;
+	public  const int CUSTOM = 4;
 	public  JsString type {get; set; }
-	public  static int UNSCHEDULED_STATE = 0;
-	public  static int SCHEDULED_STATE = 1;
-	public  static int PLAYING_STATE = 2;
-	public  static int FINISHED_STATE = 3;
+	public  const int UNSCHEDULED_STATE = 0;
+	public  const int SCHEDULED_STATE = 1;
+	public  const int PLAYING_STATE = 2;
+	public  const int FINISHED_STATE = 3;
 	public  int playbackState {get; set; }
 	public  AudioParam frequency {get; set; }
 	public  AudioParam detune {get; set; }

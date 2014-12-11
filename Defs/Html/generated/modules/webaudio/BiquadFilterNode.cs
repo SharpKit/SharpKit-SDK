@@ -71,14 +71,14 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "BiquadFilterNode")]
 public partial class BiquadFilterNode : AudioNode
 {
-	public  static int LOWPASS = 0;
-	public  static int HIGHPASS = 1;
-	public  static int BANDPASS = 2;
-	public  static int LOWSHELF = 3;
-	public  static int HIGHSHELF = 4;
-	public  static int PEAKING = 5;
-	public  static int NOTCH = 6;
-	public  static int ALLPASS = 7;
+	public  const int LOWPASS = 0;
+	public  const int HIGHPASS = 1;
+	public  const int BANDPASS = 2;
+	public  const int LOWSHELF = 3;
+	public  const int HIGHSHELF = 4;
+	public  const int PEAKING = 5;
+	public  const int NOTCH = 6;
+	public  const int ALLPASS = 7;
 	public  int type {get; set; }
 	public  AudioParam frequency {get; set; }
 	public  AudioParam detune {get; set; }

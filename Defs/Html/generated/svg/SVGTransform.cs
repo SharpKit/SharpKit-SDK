@@ -71,13 +71,13 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGTransform")]
 public partial class SvgTransform
 {
-	public  static int SVG_TRANSFORM_UNKNOWN = 0;
-	public  static int SVG_TRANSFORM_MATRIX = 1;
-	public  static int SVG_TRANSFORM_TRANSLATE = 2;
-	public  static int SVG_TRANSFORM_SCALE = 3;
-	public  static int SVG_TRANSFORM_ROTATE = 4;
-	public  static int SVG_TRANSFORM_SKEWX = 5;
-	public  static int SVG_TRANSFORM_SKEWY = 6;
+	public  const int SVG_TRANSFORM_UNKNOWN = 0;
+	public  const int SVG_TRANSFORM_MATRIX = 1;
+	public  const int SVG_TRANSFORM_TRANSLATE = 2;
+	public  const int SVG_TRANSFORM_SCALE = 3;
+	public  const int SVG_TRANSFORM_ROTATE = 4;
+	public  const int SVG_TRANSFORM_SKEWX = 5;
+	public  const int SVG_TRANSFORM_SKEWY = 6;
 	public  int type {get; set; }
 	public  SvgMatrix matrix {get; set; }
 	public  double angle {get; set; }

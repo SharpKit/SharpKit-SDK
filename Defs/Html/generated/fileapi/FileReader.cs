@@ -72,9 +72,9 @@ using SharpKit.Html.workers;
 public partial class FileReader
 {
 	public   FileReader() {}
-	public  static int EMPTY = 0;
-	public  static int LOADING = 1;
-	public  static int DONE = 2;
+	public  const int EMPTY = 0;
+	public  const int LOADING = 1;
+	public  const int DONE = 2;
 	public  int readyState {get; set; }
 	public  void readAsArrayBuffer(Blob blob) {}
 	public  void readAsBinaryString(Blob blob) {}

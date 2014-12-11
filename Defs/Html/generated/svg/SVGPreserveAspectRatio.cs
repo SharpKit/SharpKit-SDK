@@ -71,20 +71,20 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGPreserveAspectRatio")]
 public partial class SvgPreserveAspectRatio
 {
-	public  static int SVG_PRESERVEASPECTRATIO_UNKNOWN = 0;
-	public  static int SVG_PRESERVEASPECTRATIO_NONE = 1;
-	public  static int SVG_PRESERVEASPECTRATIO_XMINYMIN = 2;
-	public  static int SVG_PRESERVEASPECTRATIO_XMIDYMIN = 3;
-	public  static int SVG_PRESERVEASPECTRATIO_XMAXYMIN = 4;
-	public  static int SVG_PRESERVEASPECTRATIO_XMINYMID = 5;
-	public  static int SVG_PRESERVEASPECTRATIO_XMIDYMID = 6;
-	public  static int SVG_PRESERVEASPECTRATIO_XMAXYMID = 7;
-	public  static int SVG_PRESERVEASPECTRATIO_XMINYMAX = 8;
-	public  static int SVG_PRESERVEASPECTRATIO_XMIDYMAX = 9;
-	public  static int SVG_PRESERVEASPECTRATIO_XMAXYMAX = 10;
-	public  static int SVG_MEETORSLICE_UNKNOWN = 0;
-	public  static int SVG_MEETORSLICE_MEET = 1;
-	public  static int SVG_MEETORSLICE_SLICE = 2;
+	public  const int SVG_PRESERVEASPECTRATIO_UNKNOWN = 0;
+	public  const int SVG_PRESERVEASPECTRATIO_NONE = 1;
+	public  const int SVG_PRESERVEASPECTRATIO_XMINYMIN = 2;
+	public  const int SVG_PRESERVEASPECTRATIO_XMIDYMIN = 3;
+	public  const int SVG_PRESERVEASPECTRATIO_XMAXYMIN = 4;
+	public  const int SVG_PRESERVEASPECTRATIO_XMINYMID = 5;
+	public  const int SVG_PRESERVEASPECTRATIO_XMIDYMID = 6;
+	public  const int SVG_PRESERVEASPECTRATIO_XMAXYMID = 7;
+	public  const int SVG_PRESERVEASPECTRATIO_XMINYMAX = 8;
+	public  const int SVG_PRESERVEASPECTRATIO_XMIDYMAX = 9;
+	public  const int SVG_PRESERVEASPECTRATIO_XMAXYMAX = 10;
+	public  const int SVG_MEETORSLICE_UNKNOWN = 0;
+	public  const int SVG_MEETORSLICE_MEET = 1;
+	public  const int SVG_MEETORSLICE_SLICE = 2;
 	public  int align {get; set; }
 	public  int meetOrSlice {get; set; }
 }

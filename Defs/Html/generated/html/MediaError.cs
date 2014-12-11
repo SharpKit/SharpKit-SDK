@@ -71,10 +71,10 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "MediaError")]
 public partial class MediaError
 {
-	public  static int MEDIA_ERR_ABORTED = 1;
-	public  static int MEDIA_ERR_NETWORK = 2;
-	public  static int MEDIA_ERR_DECODE = 3;
-	public  static int MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
+	public  const int MEDIA_ERR_ABORTED = 1;
+	public  const int MEDIA_ERR_NETWORK = 2;
+	public  const int MEDIA_ERR_DECODE = 3;
+	public  const int MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
 	public  int code {get; set; }
 }
 

@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "Uint8ClampedArray")]
 public partial class Uint8ClampedArray : Uint8Array
 {
-	public  static int BYTES_PER_ELEMENT = 1;
+	public  const int BYTES_PER_ELEMENT = 1;
 	public  int length {get; set; }
 	public  Uint8ClampedArray subarray(int start) { return default(Uint8ClampedArray); }
 	public  Uint8ClampedArray subarray(int start, int end) { return default(Uint8ClampedArray); }

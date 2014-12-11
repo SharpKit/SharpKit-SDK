@@ -71,8 +71,8 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "EXTTextureFilterAnisotropic")]
 public partial class EXTTextureFilterAnisotropic
 {
-	public  static int TEXTURE_MAX_ANISOTROPY_EXT = 0x84FE;
-	public  static int MAX_TEXTURE_MAX_ANISOTROPY_EXT = 0x84FF;
+	public  const int TEXTURE_MAX_ANISOTROPY_EXT = 0x84FE;
+	public  const int MAX_TEXTURE_MAX_ANISOTROPY_EXT = 0x84FF;
 }
 
 }

@@ -73,14 +73,14 @@ public partial class SQLError
 {
 	public  int code {get; set; }
 	public  JsString message {get; set; }
-	public  static int UNKNOWN_ERR = 0;
-	public  static int DATABASE_ERR = 1;
-	public  static int VERSION_ERR = 2;
-	public  static int TOO_LARGE_ERR = 3;
-	public  static int QUOTA_ERR = 4;
-	public  static int SYNTAX_ERR = 5;
-	public  static int CONSTRAINT_ERR = 6;
-	public  static int TIMEOUT_ERR = 7;
+	public  const int UNKNOWN_ERR = 0;
+	public  const int DATABASE_ERR = 1;
+	public  const int VERSION_ERR = 2;
+	public  const int TOO_LARGE_ERR = 3;
+	public  const int QUOTA_ERR = 4;
+	public  const int SYNTAX_ERR = 5;
+	public  const int CONSTRAINT_ERR = 6;
+	public  const int TIMEOUT_ERR = 7;
 }
 
 }

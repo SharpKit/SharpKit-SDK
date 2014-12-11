@@ -72,10 +72,10 @@ using SharpKit.Html.workers;
 public partial class AudioBufferSourceNode : AudioSourceNode
 {
 	public  AudioBuffer buffer {get; set; }
-	public  static int UNSCHEDULED_STATE = 0;
-	public  static int SCHEDULED_STATE = 1;
-	public  static int PLAYING_STATE = 2;
-	public  static int FINISHED_STATE = 3;
+	public  const int UNSCHEDULED_STATE = 0;
+	public  const int SCHEDULED_STATE = 1;
+	public  const int PLAYING_STATE = 2;
+	public  const int FINISHED_STATE = 3;
 	public  int playbackState {get; set; }
 	public  AudioGain gain {get; set; }
 	public  AudioParam playbackRate {get; set; }

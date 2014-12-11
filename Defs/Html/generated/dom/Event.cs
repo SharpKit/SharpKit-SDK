@@ -71,26 +71,26 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "Event")]
 public partial class DOMEvent
 {
-	public  static int NONE = 0;
-	public  static int CAPTURING_PHASE = 1;
-	public  static int AT_TARGET = 2;
-	public  static int BUBBLING_PHASE = 3;
-	public  static int MOUSEDOWN = 1;
-	public  static int MOUSEUP = 2;
-	public  static int MOUSEOVER = 4;
-	public  static int MOUSEOUT = 8;
-	public  static int MOUSEMOVE = 16;
-	public  static int MOUSEDRAG = 32;
-	public  static int CLICK = 64;
-	public  static int DBLCLICK = 128;
-	public  static int KEYDOWN = 256;
-	public  static int KEYUP = 512;
-	public  static int KEYPRESS = 1024;
-	public  static int DRAGDROP = 2048;
-	public  static int FOCUS = 4096;
-	public  static int BLUR = 8192;
-	public  static int SELECT = 16384;
-	public  static int CHANGE = 32768;
+	public  const int NONE = 0;
+	public  const int CAPTURING_PHASE = 1;
+	public  const int AT_TARGET = 2;
+	public  const int BUBBLING_PHASE = 3;
+	public  const int MOUSEDOWN = 1;
+	public  const int MOUSEUP = 2;
+	public  const int MOUSEOVER = 4;
+	public  const int MOUSEOUT = 8;
+	public  const int MOUSEMOVE = 16;
+	public  const int MOUSEDRAG = 32;
+	public  const int CLICK = 64;
+	public  const int DBLCLICK = 128;
+	public  const int KEYDOWN = 256;
+	public  const int KEYUP = 512;
+	public  const int KEYPRESS = 1024;
+	public  const int DRAGDROP = 2048;
+	public  const int FOCUS = 4096;
+	public  const int BLUR = 8192;
+	public  const int SELECT = 16384;
+	public  const int CHANGE = 32768;
 	public  JsString type {get; set; }
 	public  EventTarget target {get; set; }
 	public  EventTarget currentTarget {get; set; }

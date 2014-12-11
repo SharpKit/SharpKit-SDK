@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "Float32Array")]
 public partial class Float32Array : ArrayBufferView
 {
-	public  static int BYTES_PER_ELEMENT = 4;
+	public  const int BYTES_PER_ELEMENT = 4;
 	public  int length {get; set; }
 	public  Float32Array subarray(int start) { return default(Float32Array); }
 	public  Float32Array subarray(int start, int end) { return default(Float32Array); }

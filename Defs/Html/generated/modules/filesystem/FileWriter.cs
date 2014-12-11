@@ -71,9 +71,9 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "FileWriter")]
 public partial class FileWriter
 {
-	public  static int INIT = 0;
-	public  static int WRITING = 1;
-	public  static int DONE = 2;
+	public  const int INIT = 0;
+	public  const int WRITING = 1;
+	public  const int DONE = 2;
 	public  int readyState {get; set; }
 	public  void write(Blob data) {}
 	public  void seek(int position) {}

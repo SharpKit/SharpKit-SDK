@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "Int8Array")]
 public partial class Int8Array : ArrayBufferView
 {
-	public  static int BYTES_PER_ELEMENT = 1;
+	public  const int BYTES_PER_ELEMENT = 1;
 	public  int length {get; set; }
 	public  Int8Array subarray(int start) { return default(Int8Array); }
 	public  Int8Array subarray(int start, int end) { return default(Int8Array); }

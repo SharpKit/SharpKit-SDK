@@ -73,9 +73,9 @@ public partial class SvgTextContentElement : SvgElement, SvgTests, SvgLangSpace,
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('textcontent')")]
 	public   SvgTextContentElement() {}
-	public  static int LENGTHADJUST_UNKNOWN = 0;
-	public  static int LENGTHADJUST_SPACING = 1;
-	public  static int LENGTHADJUST_SPACINGANDGLYPHS = 2;
+	public  const int LENGTHADJUST_UNKNOWN = 0;
+	public  const int LENGTHADJUST_SPACING = 1;
+	public  const int LENGTHADJUST_SPACINGANDGLYPHS = 2;
 	public  SvgAnimatedLength textLength {get; set; }
 	public  SvgAnimatedEnumeration lengthAdjust {get; set; }
 	public  int getNumberOfChars() { return default(int); }

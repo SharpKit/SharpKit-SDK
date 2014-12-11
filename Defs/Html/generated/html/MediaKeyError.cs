@@ -71,12 +71,12 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "MediaKeyError")]
 public partial class MediaKeyError
 {
-	public  static int MEDIA_KEYERR_UNKNOWN = 1;
-	public  static int MEDIA_KEYERR_CLIENT = 2;
-	public  static int MEDIA_KEYERR_SERVICE = 3;
-	public  static int MEDIA_KEYERR_OUTPUT = 4;
-	public  static int MEDIA_KEYERR_HARDWARECHANGE = 5;
-	public  static int MEDIA_KEYERR_DOMAIN = 6;
+	public  const int MEDIA_KEYERR_UNKNOWN = 1;
+	public  const int MEDIA_KEYERR_CLIENT = 2;
+	public  const int MEDIA_KEYERR_SERVICE = 3;
+	public  const int MEDIA_KEYERR_OUTPUT = 4;
+	public  const int MEDIA_KEYERR_HARDWARECHANGE = 5;
+	public  const int MEDIA_KEYERR_DOMAIN = 6;
 	public  int code {get; set; }
 }
 

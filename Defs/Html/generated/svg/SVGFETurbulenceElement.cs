@@ -73,12 +73,12 @@ public partial class SvgFETurbulenceElement : SvgElement, SvgFilterPrimitiveStan
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('feturbulence')")]
 	public   SvgFETurbulenceElement() {}
-	public  static int SVG_TURBULENCE_TYPE_UNKNOWN = 0;
-	public  static int SVG_TURBULENCE_TYPE_FRACTALNOISE = 1;
-	public  static int SVG_TURBULENCE_TYPE_TURBULENCE = 2;
-	public  static int SVG_STITCHTYPE_UNKNOWN = 0;
-	public  static int SVG_STITCHTYPE_STITCH = 1;
-	public  static int SVG_STITCHTYPE_NOSTITCH = 2;
+	public  const int SVG_TURBULENCE_TYPE_UNKNOWN = 0;
+	public  const int SVG_TURBULENCE_TYPE_FRACTALNOISE = 1;
+	public  const int SVG_TURBULENCE_TYPE_TURBULENCE = 2;
+	public  const int SVG_STITCHTYPE_UNKNOWN = 0;
+	public  const int SVG_STITCHTYPE_STITCH = 1;
+	public  const int SVG_STITCHTYPE_NOSTITCH = 2;
 	public  SvgAnimatedNumber baseFrequencyX {get; set; }
 	public  SvgAnimatedNumber baseFrequencyY {get; set; }
 	public  SvgAnimatedInteger numOctaves {get; set; }

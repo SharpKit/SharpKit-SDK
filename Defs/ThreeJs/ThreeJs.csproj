@@ -32,9 +32,13 @@
     <Compile Include="AxisHelper.cs" />
     <Compile Include="BoxHelper.cs" />
     <Compile Include="Cameras\Camera.cs" />
+    <Compile Include="Core\BufferGeometry.cs" />
     <Compile Include="Extras\Geometry\CircleGeometry.cs" />
+    <Compile Include="Extras\Helpers\EdgesHelper.cs" />
+    <Compile Include="Extras\Helpers\WireframeHelper.cs" />
     <Compile Include="Lights\DirectionalLight.cs" />
     <Compile Include="Lights\AmbientLight.cs" />
+    <Compile Include="Materials\LineBasicMaterial.cs" />
     <Compile Include="Materials\MeshPhongMaterial.cs" />
     <Compile Include="Materials\MeshNormalMaterial.cs" />
     <Compile Include="Materials\MeshBasicMaterial.cs" />

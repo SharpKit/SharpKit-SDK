@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "WebGLDepthTexture")]
 public partial class WebGLDepthTexture
 {
-	public  static int UNSIGNED_INT_24_8_WEBGL = 0x84FA;
+	public  const int UNSIGNED_INT_24_8_WEBGL = 0x84FA;
 }
 
 }

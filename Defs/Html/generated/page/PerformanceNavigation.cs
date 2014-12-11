@@ -71,10 +71,10 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "PerformanceNavigation")]
 public partial class PerformanceNavigation
 {
-	public  static int TYPE_NAVIGATE = 0;
-	public  static int TYPE_RELOAD = 1;
-	public  static int TYPE_BACK_FORWARD = 2;
-	public  static int TYPE_RESERVED = 255;
+	public  const int TYPE_NAVIGATE = 0;
+	public  const int TYPE_RELOAD = 1;
+	public  const int TYPE_BACK_FORWARD = 2;
+	public  const int TYPE_RESERVED = 255;
 	public  int type {get; set; }
 	public  int redirectCount {get; set; }
 }

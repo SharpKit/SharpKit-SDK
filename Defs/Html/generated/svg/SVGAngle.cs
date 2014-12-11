@@ -71,11 +71,11 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGAngle")]
 public partial class SvgAngle
 {
-	public  static int SVG_ANGLETYPE_UNKNOWN = 0;
-	public  static int SVG_ANGLETYPE_UNSPECIFIED = 1;
-	public  static int SVG_ANGLETYPE_DEG = 2;
-	public  static int SVG_ANGLETYPE_RAD = 3;
-	public  static int SVG_ANGLETYPE_GRAD = 4;
+	public  const int SVG_ANGLETYPE_UNKNOWN = 0;
+	public  const int SVG_ANGLETYPE_UNSPECIFIED = 1;
+	public  const int SVG_ANGLETYPE_DEG = 2;
+	public  const int SVG_ANGLETYPE_RAD = 3;
+	public  const int SVG_ANGLETYPE_GRAD = 4;
 	public  int unitType {get; set; }
 	public  double value {get; set; }
 	public  double valueInSpecifiedUnits {get; set; }

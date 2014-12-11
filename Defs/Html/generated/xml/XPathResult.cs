@@ -71,16 +71,16 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "XPathResult")]
 public partial class XPathResult
 {
-	public  static int ANY_TYPE = 0;
-	public  static int NUMBER_TYPE = 1;
-	public  static int STRING_TYPE = 2;
-	public  static int BOOLEAN_TYPE = 3;
-	public  static int UNORDERED_NODE_ITERATOR_TYPE = 4;
-	public  static int ORDERED_NODE_ITERATOR_TYPE = 5;
-	public  static int UNORDERED_NODE_SNAPSHOT_TYPE = 6;
-	public  static int ORDERED_NODE_SNAPSHOT_TYPE = 7;
-	public  static int ANY_UNORDERED_NODE_TYPE = 8;
-	public  static int FIRST_ORDERED_NODE_TYPE = 9;
+	public  const int ANY_TYPE = 0;
+	public  const int NUMBER_TYPE = 1;
+	public  const int STRING_TYPE = 2;
+	public  const int BOOLEAN_TYPE = 3;
+	public  const int UNORDERED_NODE_ITERATOR_TYPE = 4;
+	public  const int ORDERED_NODE_ITERATOR_TYPE = 5;
+	public  const int UNORDERED_NODE_SNAPSHOT_TYPE = 6;
+	public  const int ORDERED_NODE_SNAPSHOT_TYPE = 7;
+	public  const int ANY_UNORDERED_NODE_TYPE = 8;
+	public  const int FIRST_ORDERED_NODE_TYPE = 9;
 	public  int resultType {get; set; }
 	public  double numberValue {get; set; }
 	public  JsString stringValue {get; set; }

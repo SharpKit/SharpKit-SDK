@@ -86,10 +86,10 @@ public partial class Range
 	public  void collapse(bool toStart) {}
 	public  void selectNode(Node refNode) {}
 	public  void selectNodeContents(Node refNode) {}
-	public  static int START_TO_START = 0;
-	public  static int START_TO_END = 1;
-	public  static int END_TO_END = 2;
-	public  static int END_TO_START = 3;
+	public  const int START_TO_START = 0;
+	public  const int START_TO_END = 1;
+	public  const int END_TO_END = 2;
+	public  const int END_TO_START = 3;
 	public  short compareBoundaryPoints(object how, Range sourceRange) { return default(short); }
 	public  void deleteContents() {}
 	public  DocumentFragment extractContents() { return default(DocumentFragment); }
@@ -104,10 +104,10 @@ public partial class Range
 	public  DocumentFragment createContextualFragment(string html) { return default(DocumentFragment); }
 	public  bool intersectsNode(Node refNode) { return default(bool); }
 	public  short compareNode(Node refNode) { return default(short); }
-	public  static int NODE_BEFORE = 0;
-	public  static int NODE_AFTER = 1;
-	public  static int NODE_BEFORE_AND_AFTER = 2;
-	public  static int NODE_INSIDE = 3;
+	public  const int NODE_BEFORE = 0;
+	public  const int NODE_AFTER = 1;
+	public  const int NODE_BEFORE_AND_AFTER = 2;
+	public  const int NODE_INSIDE = 3;
 	public  short comparePoint(Node refNode, int offset) { return default(short); }
 	public  bool isPointInRange(Node refNode, int offset) { return default(bool); }
 	public  void expand(string unit) {}

@@ -71,8 +71,8 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "WebGLDebugRendererInfo")]
 public partial class WebGLDebugRendererInfo
 {
-	public  static int UNMASKED_VENDOR_WEBGL = 0x9245;
-	public  static int UNMASKED_RENDERER_WEBGL = 0x9246;
+	public  const int UNMASKED_VENDOR_WEBGL = 0x9245;
+	public  const int UNMASKED_RENDERER_WEBGL = 0x9246;
 }
 
 }

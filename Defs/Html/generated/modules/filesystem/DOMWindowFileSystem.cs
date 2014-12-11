@@ -70,8 +70,8 @@ using SharpKit.Html.workers;
 
 public partial class DOMWindow
 {
-	public  static int TEMPORARY = 0;
-	public  static int PERSISTENT = 1;
+	public  const int TEMPORARY = 0;
+	public  const int PERSISTENT = 1;
 }
 
 }

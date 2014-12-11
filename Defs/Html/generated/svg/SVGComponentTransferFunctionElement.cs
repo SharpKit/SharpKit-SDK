@@ -73,12 +73,12 @@ public partial class SvgComponentTransferFunctionElement : SvgElement
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('componenttransferfunction')")]
 	public   SvgComponentTransferFunctionElement() {}
-	public  static int SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
-	public  static int SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY = 1;
-	public  static int SVG_FECOMPONENTTRANSFER_TYPE_TABLE = 2;
-	public  static int SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
-	public  static int SVG_FECOMPONENTTRANSFER_TYPE_LINEAR = 4;
-	public  static int SVG_FECOMPONENTTRANSFER_TYPE_GAMMA = 5;
+	public  const int SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
+	public  const int SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY = 1;
+	public  const int SVG_FECOMPONENTTRANSFER_TYPE_TABLE = 2;
+	public  const int SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
+	public  const int SVG_FECOMPONENTTRANSFER_TYPE_LINEAR = 4;
+	public  const int SVG_FECOMPONENTTRANSFER_TYPE_GAMMA = 5;
 	public  SvgAnimatedEnumeration type {get; set; }
 	public  SvgAnimatedNumberList tableValues {get; set; }
 	public  SvgAnimatedNumber slope {get; set; }

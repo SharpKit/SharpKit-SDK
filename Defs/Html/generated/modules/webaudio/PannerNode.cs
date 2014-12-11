@@ -71,12 +71,12 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "PannerNode")]
 public partial class PannerNode : AudioNode
 {
-	public  static int EQUALPOWER = 0;
-	public  static int HRTF = 1;
-	public  static int SOUNDFIELD = 2;
-	public  static int LINEAR_DISTANCE = 0;
-	public  static int INVERSE_DISTANCE = 1;
-	public  static int EXPONENTIAL_DISTANCE = 2;
+	public  const int EQUALPOWER = 0;
+	public  const int HRTF = 1;
+	public  const int SOUNDFIELD = 2;
+	public  const int LINEAR_DISTANCE = 0;
+	public  const int INVERSE_DISTANCE = 1;
+	public  const int EXPONENTIAL_DISTANCE = 2;
 	public  int panningModel {get; set; }
 	public  void setPosition(double x, double y, double z) {}
 	public  void setOrientation(double x, double y, double z) {}

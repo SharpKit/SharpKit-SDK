@@ -73,12 +73,12 @@ public partial class SvgMarkerElement : SvgElement, SvgLangSpace, SvgExternalRes
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('marker')")]
 	public   SvgMarkerElement() {}
-	public  static int SVG_MARKERUNITS_UNKNOWN = 0;
-	public  static int SVG_MARKERUNITS_USERSPACEONUSE = 1;
-	public  static int SVG_MARKERUNITS_STROKEWIDTH = 2;
-	public  static int SVG_MARKER_ORIENT_UNKNOWN = 0;
-	public  static int SVG_MARKER_ORIENT_AUTO = 1;
-	public  static int SVG_MARKER_ORIENT_ANGLE = 2;
+	public  const int SVG_MARKERUNITS_UNKNOWN = 0;
+	public  const int SVG_MARKERUNITS_USERSPACEONUSE = 1;
+	public  const int SVG_MARKERUNITS_STROKEWIDTH = 2;
+	public  const int SVG_MARKER_ORIENT_UNKNOWN = 0;
+	public  const int SVG_MARKER_ORIENT_AUTO = 1;
+	public  const int SVG_MARKER_ORIENT_ANGLE = 2;
 	public  SvgAnimatedLength refX {get; set; }
 	public  SvgAnimatedLength refY {get; set; }
 	public  SvgAnimatedEnumeration markerUnits {get; set; }

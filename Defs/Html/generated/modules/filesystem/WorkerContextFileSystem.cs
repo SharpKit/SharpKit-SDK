@@ -70,8 +70,8 @@ using SharpKit.Html.workers;
 
 public partial class WorkerContext
 {
-	public  static int TEMPORARY = 0;
-	public  static int PERSISTENT = 1;
+	public  const int TEMPORARY = 0;
+	public  const int PERSISTENT = 1;
 	public  FileError FileError {get; set; }
 	public  object FileException {get; set; }
 }

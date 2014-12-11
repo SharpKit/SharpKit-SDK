@@ -73,12 +73,12 @@ public partial class SvgTextPathElement : SvgTextContentElement, SvgURIReference
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('textpath')")]
 	public   SvgTextPathElement() {}
-	public  static int TEXTPATH_METHODTYPE_UNKNOWN = 0;
-	public  static int TEXTPATH_METHODTYPE_ALIGN = 1;
-	public  static int TEXTPATH_METHODTYPE_STRETCH = 2;
-	public  static int TEXTPATH_SPACINGTYPE_UNKNOWN = 0;
-	public  static int TEXTPATH_SPACINGTYPE_AUTO = 1;
-	public  static int TEXTPATH_SPACINGTYPE_EXACT = 2;
+	public  const int TEXTPATH_METHODTYPE_UNKNOWN = 0;
+	public  const int TEXTPATH_METHODTYPE_ALIGN = 1;
+	public  const int TEXTPATH_METHODTYPE_STRETCH = 2;
+	public  const int TEXTPATH_SPACINGTYPE_UNKNOWN = 0;
+	public  const int TEXTPATH_SPACINGTYPE_AUTO = 1;
+	public  const int TEXTPATH_SPACINGTYPE_EXACT = 2;
 	public  SvgAnimatedLength startOffset {get; set; }
 	public  SvgAnimatedEnumeration method {get; set; }
 	public  SvgAnimatedEnumeration spacing {get; set; }

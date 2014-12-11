@@ -71,35 +71,35 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "CSSPrimitiveValue")]
 public partial class CssPrimitiveValue : CssValue
 {
-	public  static int CSS_UNKNOWN = 0;
-	public  static int CSS_NUMBER = 1;
-	public  static int CSS_PERCENTAGE = 2;
-	public  static int CSS_EMS = 3;
-	public  static int CSS_EXS = 4;
-	public  static int CSS_PX = 5;
-	public  static int CSS_CM = 6;
-	public  static int CSS_MM = 7;
-	public  static int CSS_IN = 8;
-	public  static int CSS_PT = 9;
-	public  static int CSS_PC = 10;
-	public  static int CSS_DEG = 11;
-	public  static int CSS_RAD = 12;
-	public  static int CSS_GRAD = 13;
-	public  static int CSS_MS = 14;
-	public  static int CSS_S = 15;
-	public  static int CSS_HZ = 16;
-	public  static int CSS_KHZ = 17;
-	public  static int CSS_DIMENSION = 18;
-	public  static int CSS_STRING = 19;
-	public  static int CSS_URI = 20;
-	public  static int CSS_IDENT = 21;
-	public  static int CSS_ATTR = 22;
-	public  static int CSS_COUNTER = 23;
-	public  static int CSS_RECT = 24;
-	public  static int CSS_RGBCOLOR = 25;
-	public  static int CSS_VW = 26;
-	public  static int CSS_VH = 27;
-	public  static int CSS_VMIN = 28;
+	public  const int CSS_UNKNOWN = 0;
+	public  const int CSS_NUMBER = 1;
+	public  const int CSS_PERCENTAGE = 2;
+	public  const int CSS_EMS = 3;
+	public  const int CSS_EXS = 4;
+	public  const int CSS_PX = 5;
+	public  const int CSS_CM = 6;
+	public  const int CSS_MM = 7;
+	public  const int CSS_IN = 8;
+	public  const int CSS_PT = 9;
+	public  const int CSS_PC = 10;
+	public  const int CSS_DEG = 11;
+	public  const int CSS_RAD = 12;
+	public  const int CSS_GRAD = 13;
+	public  const int CSS_MS = 14;
+	public  const int CSS_S = 15;
+	public  const int CSS_HZ = 16;
+	public  const int CSS_KHZ = 17;
+	public  const int CSS_DIMENSION = 18;
+	public  const int CSS_STRING = 19;
+	public  const int CSS_URI = 20;
+	public  const int CSS_IDENT = 21;
+	public  const int CSS_ATTR = 22;
+	public  const int CSS_COUNTER = 23;
+	public  const int CSS_RECT = 24;
+	public  const int CSS_RGBCOLOR = 25;
+	public  const int CSS_VW = 26;
+	public  const int CSS_VH = 27;
+	public  const int CSS_VMIN = 28;
 	public  int primitiveType {get; set; }
 	public  void setFloatValue(int unitType, double floatValue) {}
 	public  double getFloatValue(int unitType) { return default(double); }

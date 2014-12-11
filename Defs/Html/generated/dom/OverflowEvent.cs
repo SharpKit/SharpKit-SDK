@@ -71,9 +71,9 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "OverflowEvent")]
 public partial class OverflowEvent : DOMEvent
 {
-	public  static int HORIZONTAL = 0;
-	public  static int VERTICAL = 1;
-	public  static int BOTH = 2;
+	public  const int HORIZONTAL = 0;
+	public  const int VERTICAL = 1;
+	public  const int BOTH = 2;
 	public  int orient {get; set; }
 	public  bool horizontalOverflow {get; set; }
 	public  bool verticalOverflow {get; set; }

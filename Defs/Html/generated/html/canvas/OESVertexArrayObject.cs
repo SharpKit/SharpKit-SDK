@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "OESVertexArrayObject")]
 public partial class OESVertexArrayObject
 {
-	public  static int VERTEX_ARRAY_BINDING_OES = 0x85B5;
+	public  const int VERTEX_ARRAY_BINDING_OES = 0x85B5;
 	public  WebGLVertexArrayObjectOES createVertexArrayOES() { return default(WebGLVertexArrayObjectOES); }
 	public  void deleteVertexArrayOES(WebGLVertexArrayObjectOES arrayObject) {}
 	public  bool isVertexArrayOES(WebGLVertexArrayObjectOES arrayObject) { return default(bool); }

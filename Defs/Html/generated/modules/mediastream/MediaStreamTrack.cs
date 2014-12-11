@@ -74,9 +74,9 @@ public partial class MediaStreamTrack
 	public  JsString kind {get; set; }
 	public  JsString label {get; set; }
 	public  bool enabled {get; set; }
-	public  static int LIVE = 0;
-	public  static int MUTED = 1;
-	public  static int ENDED = 2;
+	public  const int LIVE = 0;
+	public  const int MUTED = 1;
+	public  const int ENDED = 2;
 	public  int readyState {get; set; }
 	public  EventListener onmute {get; set; }
 	public  EventListener onunmute {get; set; }

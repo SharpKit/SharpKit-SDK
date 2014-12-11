@@ -71,18 +71,18 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "Node")]
 public partial class Node
 {
-	public  static int ELEMENT_NODE = 1;
-	public  static int ATTRIBUTE_NODE = 2;
-	public  static int TEXT_NODE = 3;
-	public  static int CDATA_SECTION_NODE = 4;
-	public  static int ENTITY_REFERENCE_NODE = 5;
-	public  static int ENTITY_NODE = 6;
-	public  static int PROCESSING_INSTRUCTION_NODE = 7;
-	public  static int COMMENT_NODE = 8;
-	public  static int DOCUMENT_NODE = 9;
-	public  static int DOCUMENT_TYPE_NODE = 10;
-	public  static int DOCUMENT_FRAGMENT_NODE = 11;
-	public  static int NOTATION_NODE = 12;
+	public  const int ELEMENT_NODE = 1;
+	public  const int ATTRIBUTE_NODE = 2;
+	public  const int TEXT_NODE = 3;
+	public  const int CDATA_SECTION_NODE = 4;
+	public  const int ENTITY_REFERENCE_NODE = 5;
+	public  const int ENTITY_NODE = 6;
+	public  const int PROCESSING_INSTRUCTION_NODE = 7;
+	public  const int COMMENT_NODE = 8;
+	public  const int DOCUMENT_NODE = 9;
+	public  const int DOCUMENT_TYPE_NODE = 10;
+	public  const int DOCUMENT_FRAGMENT_NODE = 11;
+	public  const int NOTATION_NODE = 12;
 	public  JsString nodeName {get; set; }
 	public  JsString nodeValue {get; set; }
 	public  int nodeType {get; set; }
@@ -113,12 +113,12 @@ public partial class Node
 	public  JsString lookupPrefix(string namespaceURI) { return default(JsString); }
 	public  bool isDefaultNamespace(string namespaceURI) { return default(bool); }
 	public  JsString lookupNamespaceURI(string prefix) { return default(JsString); }
-	public  static int DOCUMENT_POSITION_DISCONNECTED = 0x01;
-	public  static int DOCUMENT_POSITION_PRECEDING = 0x02;
-	public  static int DOCUMENT_POSITION_FOLLOWING = 0x04;
-	public  static int DOCUMENT_POSITION_CONTAINS = 0x08;
-	public  static int DOCUMENT_POSITION_CONTAINED_BY = 0x10;
-	public  static int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20;
+	public  const int DOCUMENT_POSITION_DISCONNECTED = 0x01;
+	public  const int DOCUMENT_POSITION_PRECEDING = 0x02;
+	public  const int DOCUMENT_POSITION_FOLLOWING = 0x04;
+	public  const int DOCUMENT_POSITION_CONTAINS = 0x08;
+	public  const int DOCUMENT_POSITION_CONTAINED_BY = 0x10;
+	public  const int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20;
 	public  int compareDocumentPosition(Node other) { return default(int); }
 	public  bool contains(Node other) { return default(bool); }
 	public  Element parentElement {get; set; }

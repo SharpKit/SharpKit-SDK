@@ -77,8 +77,8 @@ public partial class MediaStream
 	public  JsString label {get; set; }
 	public  MediaStreamTrackList audioTracks {get; set; }
 	public  MediaStreamTrackList videoTracks {get; set; }
-	public  static int LIVE = 1;
-	public  static int ENDED = 2;
+	public  const int LIVE = 1;
+	public  const int ENDED = 2;
 	public  int readyState {get; set; }
 	public  EventListener onended {get; set; }
 	public  void addEventListener(string type, EventListener listener) {}

@@ -71,10 +71,10 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "CSSValue")]
 public partial class CssValue
 {
-	public  static int CSS_INHERIT = 0;
-	public  static int CSS_PRIMITIVE_VALUE = 1;
-	public  static int CSS_VALUE_LIST = 2;
-	public  static int CSS_CUSTOM = 3;
+	public  const int CSS_INHERIT = 0;
+	public  const int CSS_PRIMITIVE_VALUE = 1;
+	public  const int CSS_VALUE_LIST = 2;
+	public  const int CSS_CUSTOM = 3;
 	public  JsString cssText {get; set; }
 	public  int cssValueType {get; set; }
 }

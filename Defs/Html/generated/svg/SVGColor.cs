@@ -71,10 +71,10 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGColor")]
 public partial class SvgColor : CssValue
 {
-	public  static int SVG_COLORTYPE_UNKNOWN = 0;
-	public  static int SVG_COLORTYPE_RGBCOLOR = 1;
-	public  static int SVG_COLORTYPE_RGBCOLOR_ICCCOLOR = 2;
-	public  static int SVG_COLORTYPE_CURRENTCOLOR = 3;
+	public  const int SVG_COLORTYPE_UNKNOWN = 0;
+	public  const int SVG_COLORTYPE_RGBCOLOR = 1;
+	public  const int SVG_COLORTYPE_RGBCOLOR_ICCCOLOR = 2;
+	public  const int SVG_COLORTYPE_CURRENTCOLOR = 3;
 	public  int colorType {get; set; }
 	public  RGBColor rgbColor {get; set; }
 	public  void setRGBColor(string rgbColor) {}

@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "OESStandardDerivatives")]
 public partial class OESStandardDerivatives
 {
-	public  static int FRAGMENT_SHADER_DERIVATIVE_HINT_OES = 0x8B8B;
+	public  const int FRAGMENT_SHADER_DERIVATIVE_HINT_OES = 0x8B8B;
 }
 
 }

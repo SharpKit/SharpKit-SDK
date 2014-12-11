@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "NavigatorUserMediaError")]
 public partial class NavigatorUserMediaError
 {
-	public  static int PERMISSION_DENIED = 1;
+	public  const int PERMISSION_DENIED = 1;
 	public  int code {get; set; }
 }
 

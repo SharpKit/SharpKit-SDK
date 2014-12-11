@@ -73,11 +73,11 @@ public partial class SvgFEDisplacementMapElement : SvgElement, SvgFilterPrimitiv
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('fedisplacementmap')")]
 	public   SvgFEDisplacementMapElement() {}
-	public  static int SVG_CHANNEL_UNKNOWN = 0;
-	public  static int SVG_CHANNEL_R = 1;
-	public  static int SVG_CHANNEL_G = 2;
-	public  static int SVG_CHANNEL_B = 3;
-	public  static int SVG_CHANNEL_A = 4;
+	public  const int SVG_CHANNEL_UNKNOWN = 0;
+	public  const int SVG_CHANNEL_R = 1;
+	public  const int SVG_CHANNEL_G = 2;
+	public  const int SVG_CHANNEL_B = 3;
+	public  const int SVG_CHANNEL_A = 4;
 	public  SvgAnimatedString in1 {get; set; }
 	public  SvgAnimatedString in2 {get; set; }
 	public  SvgAnimatedNumber scale {get; set; }

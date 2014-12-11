@@ -73,9 +73,9 @@ public partial class SvgFEMorphologyElement : SvgElement, SvgFilterPrimitiveStan
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('femorphology')")]
 	public   SvgFEMorphologyElement() {}
-	public  static int SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
-	public  static int SVG_MORPHOLOGY_OPERATOR_ERODE = 1;
-	public  static int SVG_MORPHOLOGY_OPERATOR_DILATE = 2;
+	public  const int SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
+	public  const int SVG_MORPHOLOGY_OPERATOR_ERODE = 1;
+	public  const int SVG_MORPHOLOGY_OPERATOR_DILATE = 2;
 	public  SvgAnimatedString in1 {get; set; }
 	public  SvgAnimatedEnumeration @operator {get; set; }
 	public  SvgAnimatedNumber radiusX {get; set; }

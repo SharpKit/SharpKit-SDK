@@ -73,10 +73,10 @@ public partial class SvgGradientElement : SvgElement, SvgURIReference, SvgExtern
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('gradient')")]
 	public   SvgGradientElement() {}
-	public  static int SVG_SPREADMETHOD_UNKNOWN = 0;
-	public  static int SVG_SPREADMETHOD_PAD = 1;
-	public  static int SVG_SPREADMETHOD_REFLECT = 2;
-	public  static int SVG_SPREADMETHOD_REPEAT = 3;
+	public  const int SVG_SPREADMETHOD_UNKNOWN = 0;
+	public  const int SVG_SPREADMETHOD_PAD = 1;
+	public  const int SVG_SPREADMETHOD_REFLECT = 2;
+	public  const int SVG_SPREADMETHOD_REPEAT = 3;
 	public  SvgAnimatedEnumeration gradientUnits {get; set; }
 	public  SvgAnimatedTransformList gradientTransform {get; set; }
 	public  SvgAnimatedEnumeration spreadMethod {get; set; }

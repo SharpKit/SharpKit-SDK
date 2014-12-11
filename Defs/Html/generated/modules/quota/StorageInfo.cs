@@ -71,8 +71,8 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "StorageInfo")]
 public partial class StorageInfo
 {
-	public  static int TEMPORARY = 0;
-	public  static int PERSISTENT = 1;
+	public  const int TEMPORARY = 0;
+	public  const int PERSISTENT = 1;
 	public  void queryUsageAndQuota(int storageType) {}
 	public  void queryUsageAndQuota(int storageType, StorageInfoUsageCallback usageCallback) {}
 	public  void queryUsageAndQuota(int storageType, StorageInfoUsageCallback usageCallback, StorageInfoErrorCallback errorCallback) {}

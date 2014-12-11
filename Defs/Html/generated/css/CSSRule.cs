@@ -71,13 +71,13 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "CSSRule")]
 public partial class CssRule
 {
-	public  static int UNKNOWN_RULE = 0;
-	public  static int STYLE_RULE = 1;
-	public  static int CHARSET_RULE = 2;
-	public  static int IMPORT_RULE = 3;
-	public  static int MEDIA_RULE = 4;
-	public  static int FONT_FACE_RULE = 5;
-	public  static int PAGE_RULE = 6;
+	public  const int UNKNOWN_RULE = 0;
+	public  const int STYLE_RULE = 1;
+	public  const int CHARSET_RULE = 2;
+	public  const int IMPORT_RULE = 3;
+	public  const int MEDIA_RULE = 4;
+	public  const int FONT_FACE_RULE = 5;
+	public  const int PAGE_RULE = 6;
 	public  int type {get; set; }
 	public  JsString cssText {get; set; }
 	public  CssStyleSheet parentStyleSheet {get; set; }

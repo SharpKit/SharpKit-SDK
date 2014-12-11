@@ -71,22 +71,22 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "NodeFilter")]
 public partial class NodeFilter
 {
-	public  static short FILTER_ACCEPT = 1;
-	public  static short FILTER_REJECT = 2;
-	public  static short FILTER_SKIP = 3;
-	public  static int SHOW_ALL = 0xFFFFFFF;
-	public  static int SHOW_ELEMENT = 0x00000001;
-	public  static int SHOW_ATTRIBUTE = 0x00000002;
-	public  static int SHOW_TEXT = 0x00000004;
-	public  static int SHOW_CDATA_SECTION = 0x00000008;
-	public  static int SHOW_ENTITY_REFERENCE = 0x00000010;
-	public  static int SHOW_ENTITY = 0x00000020;
-	public  static int SHOW_PROCESSING_INSTRUCTION = 0x00000040;
-	public  static int SHOW_COMMENT = 0x00000080;
-	public  static int SHOW_DOCUMENT = 0x00000100;
-	public  static int SHOW_DOCUMENT_TYPE = 0x00000200;
-	public  static int SHOW_DOCUMENT_FRAGMENT = 0x00000400;
-	public  static int SHOW_NOTATION = 0x00000800;
+	public  const short FILTER_ACCEPT = 1;
+	public  const short FILTER_REJECT = 2;
+	public  const short FILTER_SKIP = 3;
+	public  const int SHOW_ALL = 0xFFFFFFF;
+	public  const int SHOW_ELEMENT = 0x00000001;
+	public  const int SHOW_ATTRIBUTE = 0x00000002;
+	public  const int SHOW_TEXT = 0x00000004;
+	public  const int SHOW_CDATA_SECTION = 0x00000008;
+	public  const int SHOW_ENTITY_REFERENCE = 0x00000010;
+	public  const int SHOW_ENTITY = 0x00000020;
+	public  const int SHOW_PROCESSING_INSTRUCTION = 0x00000040;
+	public  const int SHOW_COMMENT = 0x00000080;
+	public  const int SHOW_DOCUMENT = 0x00000100;
+	public  const int SHOW_DOCUMENT_TYPE = 0x00000200;
+	public  const int SHOW_DOCUMENT_FRAGMENT = 0x00000400;
+	public  const int SHOW_NOTATION = 0x00000800;
 	public  short acceptNode(Node n) { return default(short); }
 }
 

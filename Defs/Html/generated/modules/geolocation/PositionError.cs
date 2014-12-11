@@ -73,9 +73,9 @@ public partial class PositionError
 {
 	public  int code {get; set; }
 	public  JsString message {get; set; }
-	public  static int PERMISSION_DENIED = 1;
-	public  static int POSITION_UNAVAILABLE = 2;
-	public  static int TIMEOUT = 3;
+	public  const int PERMISSION_DENIED = 1;
+	public  const int POSITION_UNAVAILABLE = 2;
+	public  const int TIMEOUT = 3;
 }
 
 }

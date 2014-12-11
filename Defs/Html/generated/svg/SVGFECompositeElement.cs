@@ -73,13 +73,13 @@ public partial class SvgFECompositeElement : SvgElement, SvgFilterPrimitiveStand
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('fecomposite')")]
 	public   SvgFECompositeElement() {}
-	public  static int SVG_FECOMPOSITE_OPERATOR_UNKNOWN = 0;
-	public  static int SVG_FECOMPOSITE_OPERATOR_OVER = 1;
-	public  static int SVG_FECOMPOSITE_OPERATOR_IN = 2;
-	public  static int SVG_FECOMPOSITE_OPERATOR_OUT = 3;
-	public  static int SVG_FECOMPOSITE_OPERATOR_ATOP = 4;
-	public  static int SVG_FECOMPOSITE_OPERATOR_XOR = 5;
-	public  static int SVG_FECOMPOSITE_OPERATOR_ARITHMETIC = 6;
+	public  const int SVG_FECOMPOSITE_OPERATOR_UNKNOWN = 0;
+	public  const int SVG_FECOMPOSITE_OPERATOR_OVER = 1;
+	public  const int SVG_FECOMPOSITE_OPERATOR_IN = 2;
+	public  const int SVG_FECOMPOSITE_OPERATOR_OUT = 3;
+	public  const int SVG_FECOMPOSITE_OPERATOR_ATOP = 4;
+	public  const int SVG_FECOMPOSITE_OPERATOR_XOR = 5;
+	public  const int SVG_FECOMPOSITE_OPERATOR_ARITHMETIC = 6;
 	public  SvgAnimatedString in1 {get; set; }
 	public  SvgAnimatedString in2 {get; set; }
 	public  SvgAnimatedEnumeration @operator {get; set; }

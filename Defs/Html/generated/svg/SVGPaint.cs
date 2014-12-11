@@ -71,16 +71,16 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGPaint")]
 public partial class SvgPaint : SvgColor
 {
-	public  static int SVG_PAINTTYPE_UNKNOWN = 0;
-	public  static int SVG_PAINTTYPE_RGBCOLOR = 1;
-	public  static int SVG_PAINTTYPE_RGBCOLOR_ICCCOLOR = 2;
-	public  static int SVG_PAINTTYPE_NONE = 101;
-	public  static int SVG_PAINTTYPE_CURRENTCOLOR = 102;
-	public  static int SVG_PAINTTYPE_URI_NONE = 103;
-	public  static int SVG_PAINTTYPE_URI_CURRENTCOLOR = 104;
-	public  static int SVG_PAINTTYPE_URI_RGBCOLOR = 105;
-	public  static int SVG_PAINTTYPE_URI_RGBCOLOR_ICCCOLOR = 106;
-	public  static int SVG_PAINTTYPE_URI = 107;
+	public  const int SVG_PAINTTYPE_UNKNOWN = 0;
+	public  const int SVG_PAINTTYPE_RGBCOLOR = 1;
+	public  const int SVG_PAINTTYPE_RGBCOLOR_ICCCOLOR = 2;
+	public  const int SVG_PAINTTYPE_NONE = 101;
+	public  const int SVG_PAINTTYPE_CURRENTCOLOR = 102;
+	public  const int SVG_PAINTTYPE_URI_NONE = 103;
+	public  const int SVG_PAINTTYPE_URI_CURRENTCOLOR = 104;
+	public  const int SVG_PAINTTYPE_URI_RGBCOLOR = 105;
+	public  const int SVG_PAINTTYPE_URI_RGBCOLOR_ICCCOLOR = 106;
+	public  const int SVG_PAINTTYPE_URI = 107;
 	public  int paintType {get; set; }
 	public  JsString uri {get; set; }
 	public  void setUri(string uri) {}

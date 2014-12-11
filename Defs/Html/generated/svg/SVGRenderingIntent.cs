@@ -71,12 +71,12 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "SVGRenderingIntent")]
 public partial class SvgRenderingIntent
 {
-	public  static int RENDERING_INTENT_UNKNOWN = 0;
-	public  static int RENDERING_INTENT_AUTO = 1;
-	public  static int RENDERING_INTENT_PERCEPTUAL = 2;
-	public  static int RENDERING_INTENT_RELATIVE_COLORIMETRIC = 3;
-	public  static int RENDERING_INTENT_SATURATION = 4;
-	public  static int RENDERING_INTENT_ABSOLUTE_COLORIMETRIC = 5;
+	public  const int RENDERING_INTENT_UNKNOWN = 0;
+	public  const int RENDERING_INTENT_AUTO = 1;
+	public  const int RENDERING_INTENT_PERCEPTUAL = 2;
+	public  const int RENDERING_INTENT_RELATIVE_COLORIMETRIC = 3;
+	public  const int RENDERING_INTENT_SATURATION = 4;
+	public  const int RENDERING_INTENT_ABSOLUTE_COLORIMETRIC = 5;
 }
 
 }

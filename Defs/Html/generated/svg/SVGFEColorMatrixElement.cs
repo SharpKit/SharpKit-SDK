@@ -73,11 +73,11 @@ public partial class SvgFEColorMatrixElement : SvgElement, SvgFilterPrimitiveSta
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('fecolormatrix')")]
 	public   SvgFEColorMatrixElement() {}
-	public  static int SVG_FECOLORMATRIX_TYPE_UNKNOWN = 0;
-	public  static int SVG_FECOLORMATRIX_TYPE_MATRIX = 1;
-	public  static int SVG_FECOLORMATRIX_TYPE_SATURATE = 2;
-	public  static int SVG_FECOLORMATRIX_TYPE_HUEROTATE = 3;
-	public  static int SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA = 4;
+	public  const int SVG_FECOLORMATRIX_TYPE_UNKNOWN = 0;
+	public  const int SVG_FECOLORMATRIX_TYPE_MATRIX = 1;
+	public  const int SVG_FECOLORMATRIX_TYPE_SATURATE = 2;
+	public  const int SVG_FECOLORMATRIX_TYPE_HUEROTATE = 3;
+	public  const int SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA = 4;
 	public  SvgAnimatedString in1 {get; set; }
 	public  SvgAnimatedEnumeration type {get; set; }
 	public  SvgAnimatedNumberList values {get; set; }

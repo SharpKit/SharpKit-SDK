@@ -78,10 +78,10 @@ public partial class HtmlTrackElement : HtmlElement
 	public  JsString srclang {get; set; }
 	public  JsString label {get; set; }
 	public  bool @default {get; set; }
-	public  static int NONE = 0;
-	public  static int LOADING = 1;
-	public  static int LOADED = 2;
-	public  static int ERROR = 3;
+	public  const int NONE = 0;
+	public  const int LOADING = 1;
+	public  const int LOADED = 2;
+	public  const int ERROR = 3;
 	public  int readyState {get; set; }
 	public  TextTrack track {get; set; }
 }

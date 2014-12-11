@@ -73,10 +73,10 @@ public partial class SvgFEConvolveMatrixElement : SvgElement, SvgFilterPrimitive
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('feconvolvematrix')")]
 	public   SvgFEConvolveMatrixElement() {}
-	public  static int SVG_EDGEMODE_UNKNOWN = 0;
-	public  static int SVG_EDGEMODE_DUPLICATE = 1;
-	public  static int SVG_EDGEMODE_WRAP = 2;
-	public  static int SVG_EDGEMODE_NONE = 3;
+	public  const int SVG_EDGEMODE_UNKNOWN = 0;
+	public  const int SVG_EDGEMODE_DUPLICATE = 1;
+	public  const int SVG_EDGEMODE_WRAP = 2;
+	public  const int SVG_EDGEMODE_NONE = 3;
 	public  SvgAnimatedString in1 {get; set; }
 	public  SvgAnimatedInteger orderX {get; set; }
 	public  SvgAnimatedInteger orderY {get; set; }

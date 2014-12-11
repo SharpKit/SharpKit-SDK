@@ -71,9 +71,9 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "MutationEvent")]
 public partial class MutationEvent : DOMEvent
 {
-	public  static int MODIFICATION = 1;
-	public  static int ADDITION = 2;
-	public  static int REMOVAL = 3;
+	public  const int MODIFICATION = 1;
+	public  const int ADDITION = 2;
+	public  const int REMOVAL = 3;
 	public  Node relatedNode {get; set; }
 	public  JsString prevValue {get; set; }
 	public  JsString newValue {get; set; }

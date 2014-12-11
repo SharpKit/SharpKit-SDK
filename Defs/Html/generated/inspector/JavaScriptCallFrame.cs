@@ -71,11 +71,11 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "JavaScriptCallFrame")]
 public partial class JavaScriptCallFrame
 {
-	public  static int GLOBAL_SCOPE = 0;
-	public  static int LOCAL_SCOPE = 1;
-	public  static int WITH_SCOPE = 2;
-	public  static int CLOSURE_SCOPE = 3;
-	public  static int CATCH_SCOPE = 4;
+	public  const int GLOBAL_SCOPE = 0;
+	public  const int LOCAL_SCOPE = 1;
+	public  const int WITH_SCOPE = 2;
+	public  const int CLOSURE_SCOPE = 3;
+	public  const int CATCH_SCOPE = 4;
 	public  void evaluate(string script) {}
 	public  object restart() { return default(object); }
 	public  JavaScriptCallFrame caller {get; set; }

@@ -73,12 +73,12 @@ public partial class SvgFEBlendElement : SvgElement, SvgFilterPrimitiveStandardA
 {
 	[JsMethod(OmitParanthesis = true, OmitNewOperator = true, Name = "document.createElement('feblend')")]
 	public   SvgFEBlendElement() {}
-	public  static int SVG_FEBLEND_MODE_UNKNOWN = 0;
-	public  static int SVG_FEBLEND_MODE_NORMAL = 1;
-	public  static int SVG_FEBLEND_MODE_MULTIPLY = 2;
-	public  static int SVG_FEBLEND_MODE_SCREEN = 3;
-	public  static int SVG_FEBLEND_MODE_DARKEN = 4;
-	public  static int SVG_FEBLEND_MODE_LIGHTEN = 5;
+	public  const int SVG_FEBLEND_MODE_UNKNOWN = 0;
+	public  const int SVG_FEBLEND_MODE_NORMAL = 1;
+	public  const int SVG_FEBLEND_MODE_MULTIPLY = 2;
+	public  const int SVG_FEBLEND_MODE_SCREEN = 3;
+	public  const int SVG_FEBLEND_MODE_DARKEN = 4;
+	public  const int SVG_FEBLEND_MODE_LIGHTEN = 5;
 	public  SvgAnimatedString in1 {get; set; }
 	public  SvgAnimatedString in2 {get; set; }
 	public  SvgAnimatedEnumeration mode {get; set; }

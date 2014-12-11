@@ -71,10 +71,10 @@ using SharpKit.Html.workers;
 [JsType(JsMode.Prototype, Export = false, PropertiesAsFields = true, NativeCasts = true, Name = "WebGLCompressedTextureS3TC")]
 public partial class WebGLCompressedTextureS3TC
 {
-	public  static int COMPRESSED_RGB_S3TC_DXT1_EXT = 0x83F0;
-	public  static int COMPRESSED_RGBA_S3TC_DXT1_EXT = 0x83F1;
-	public  static int COMPRESSED_RGBA_S3TC_DXT3_EXT = 0x83F2;
-	public  static int COMPRESSED_RGBA_S3TC_DXT5_EXT = 0x83F3;
+	public  const int COMPRESSED_RGB_S3TC_DXT1_EXT = 0x83F0;
+	public  const int COMPRESSED_RGBA_S3TC_DXT1_EXT = 0x83F1;
+	public  const int COMPRESSED_RGBA_S3TC_DXT3_EXT = 0x83F2;
+	public  const int COMPRESSED_RGBA_S3TC_DXT5_EXT = 0x83F3;
 }
 
 }
