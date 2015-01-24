@@ -71,7 +71,7 @@ using SharpKit.Html.workers;
 public partial class Navigator
 {
 	public  void vibrate(int pattern) {}
-	public  void vibrate(int time) {}
+	//public  void vibrate(int time) {}
 }
 
 }
