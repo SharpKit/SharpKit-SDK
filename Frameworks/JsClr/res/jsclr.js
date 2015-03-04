@@ -6637,6 +6637,12 @@ var System$Collections$Generic$List$1 = {
             this._list = new Array();
             this.AddRange(collection);
         },
+        ctor$$Int32: function (T, capacity){
+            this.T = T;
+            this._list = null;
+            System.Object.ctor.call(this);
+            this._list = new Array();
+        },
         RemoveRange: function (index, count){
             this._list.splice(index, count);
         },

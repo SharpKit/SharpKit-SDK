@@ -19,6 +19,12 @@ namespace SharpKit.JavaScript.Private
 			AddRange(collection);
 		}
 
+        public JsImplList(int capacity)
+        {
+            //Hint: in this js implementation, the capacity will not used. This overload is only for compatibility.
+            this._list = new JsExtendedArray();
+        }
+
 		public void RemoveRange(int index, int count)
 		{
 			_list.splice(index, count);
