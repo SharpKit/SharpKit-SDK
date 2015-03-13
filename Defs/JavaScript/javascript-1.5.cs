@@ -2533,79 +2533,79 @@ namespace SharpKit.JavaScript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate void JsAction<T>(T arg);
+    public delegate void JsAction<in T>(T arg);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate void JsAction<T1, T2>(T1 arg1, T2 arg2);
+    public delegate void JsAction<in T1, in T2>(T1 arg1, T2 arg2);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate void JsAction<T1, T2, T3>(T1 arg1, T2 arg2, T3 arg3);
+    public delegate void JsAction<in T1, in T2, in T3>(T1 arg1, T2 arg2, T3 arg3);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate void JsAction<T1, T2, T3, T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+    public delegate void JsAction<in T1, in T2, in T3, in T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate void JsAction<T1, T2, T3, T4, T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+    public delegate void JsAction<in T1, in T2, in T3, in T4, in T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate void JsAction<T1, T2, T3, T4, T5, T6>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
+    public delegate void JsAction<in T1, in T2, in T3, in T4, in T5, in T6>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate TResult JsFunc<TResult>();
+    public delegate TResult JsFunc<out TResult>();
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsDelegate(NativeDelegates = true)]
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
-    public delegate TResult JsFunc<T, TResult>(T arg);
+    public delegate TResult JsFunc<in T, out TResult>(T arg);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
     [JsDelegate(NativeDelegates = true)]
-    public delegate TResult JsFunc<T1, T2, TResult>(T1 arg1, T2 arg2);
+    public delegate TResult JsFunc<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
     [JsDelegate(NativeDelegates = true)]
-    public delegate TResult JsFunc<T1, T2, T3, TResult>(T1 arg1, T2 arg2, T3 arg3);
+    public delegate TResult JsFunc<in T1, in T2, in T3, out TResult>(T1 arg1, T2 arg2, T3 arg3);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
     [JsDelegate(NativeDelegates = true)]
-    public delegate TResult JsFunc<T1, T2, T3, T4, TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+    public delegate TResult JsFunc<in T1, in T2, in T3, in T4, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
     [JsDelegate(NativeDelegates = true)]
-    public delegate TResult JsFunc<T1, T2, T3, T4, T5, TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+    public delegate TResult JsFunc<in T1, in T2, in T3, in T4, in T5, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
     /// <summary>
     /// A delegate for native javascript
     /// </summary>
     [JsType(JsMode.Json, OmitCasts = true, Export = false)]
     [JsDelegate(NativeDelegates = true)]
-    public delegate TResult JsFunc<T1, T2, T3, T4, T5, T6, TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
+    public delegate TResult JsFunc<in T1, in T2, in T3, in T4, in T5, in T6, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
 
 
 
