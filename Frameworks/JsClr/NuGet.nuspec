@@ -5,13 +5,13 @@
     <title></title>
     <description>Javascript implementation for the .NET class implementation</description>
     <summary></summary>
-    <version>5.4.7</version>
+    <version>5.4.8</version>
     <authors>Sharpkit Ltd</authors>
     <owners>Dan-el</owners>
     <projectUrl>http://sharpkit.net/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="SharpKit" version="5.4.7" />
+      <dependency id="SharpKit" version="5.4.8" />
     </dependencies>
   </metadata>
   <files>

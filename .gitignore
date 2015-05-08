@@ -1,3 +1,6 @@
+# VS2015 hidden folder
+.vs
+
 bin
 obj
 *.suo
