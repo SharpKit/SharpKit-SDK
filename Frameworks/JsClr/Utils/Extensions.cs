@@ -17,7 +17,7 @@ internal delegate void JsImplHtmlDomEventHandler(object e);
 namespace SharpKit
 {
 
-    [JsType(JsMode.Prototype, Name = "Array", OmitDefaultConstructor = true, NativeOverloads = false)]
+    [JsType(JsMode.Prototype, Name = "Array", OmitDefaultConstructor = true, NativeOverloads = false, Filename = "~/Internal/Core.js")]
     class JsArrayExtensions<T> : JsArray<T>
     {
         public T this[int index]

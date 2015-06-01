@@ -15,6 +15,36 @@ if (typeof($CreateException)=='undefined')
     }
 }
 
+if (typeof ($Inherit) == 'undefined') {
+	var $Inherit = function (ce, ce2) {
+
+		if (typeof (Object.getOwnPropertyNames) == 'undefined') {
+
+			for (var p in ce2.prototype)
+				if (typeof (ce.prototype[p]) == 'undefined' || ce.prototype[p] == Object.prototype[p])
+					ce.prototype[p] = ce2.prototype[p];
+			for (var p in ce2)
+				if (typeof (ce[p]) == 'undefined')
+					ce[p] = ce2[p];
+			ce.$baseCtor = ce2;
+
+		} else {
+
+			var props = Object.getOwnPropertyNames(ce2.prototype);
+			for (var i = 0; i < props.length; i++)
+				if (typeof (Object.getOwnPropertyDescriptor(ce.prototype, props[i])) == 'undefined')
+					Object.defineProperty(ce.prototype, props[i], Object.getOwnPropertyDescriptor(ce2.prototype, props[i]));
+
+			for (var p in ce2)
+				if (typeof (ce[p]) == 'undefined')
+					ce[p] = ce2[p];
+			ce.$baseCtor = ce2;
+
+		}
+
+	}
+};
+
 if (typeof($CreateDelegate)=='undefined'){
     if(typeof($iKey)=='undefined') var $iKey = 0;
     if(typeof($pKey)=='undefined') var $pKey = String.fromCharCode(1);
@@ -3689,6 +3719,13 @@ var SharpKit$Html4$HtmlDomEventHandler = {
     }
 };
 JsTypes.push(SharpKit$Html4$HtmlDomEventHandler);
+Array.prototype.get_Item$$Int32 = function (index){
+    return this[index];
+};
+Array.prototype.set_Item$$Int32 = function (index, value){
+    this[index] = value;
+};
+$Inherit(Array, Array);
 var JsRuntime = function (){
 };
 JsRuntime.Start = function (){
