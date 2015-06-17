@@ -217,17 +217,17 @@ JsTypes.push({ fullname: "Array", baseTypeName: "Object", definition:
 			target.push(this[i]);
 		}
 	},
-	filter: function (pred) {
-		var item, i = 0;
-		for (var i = 0, j = this.length; i < j; i++) {
-			item = this[i];
-			if (!pred(item)) {
-				this.splice(i, 1);
-				i--; //prevent increase
-				j--; //length is decreased
-			}
-		}
-		return this;
+	filter: function (pred, thisArg) {
+	    var item, i = 0;
+	    for (var i = 0, j = this.length; i < j; i++) {
+	        item = this[i];
+	        if (!pred.call(thisArg, item)) {
+	            this.splice(i, 1);
+	            i--; //prevent increase
+	            j--; //length is decreased
+	        }
+	    }
+	    return this;
 	},
 	filterOut: function (pred) {
 		return this.filter(function (item) { return !pred(item); });
