@@ -114,7 +114,7 @@ namespace SharpKit.JavaScript
         public static implicit operator JsArray(Array array) { return default(JsArray); }
         public static implicit operator Array(JsArray array) { return default(Array); }
         public static implicit operator JsArray(object[] array) { return default(JsArray); }
-        public static implicit operator object[](JsArray array) { return default(object[]); }
+        public static implicit operator object[] (JsArray array) { return default(object[]); }
         ///<summary>
         ///Returns an integer value one higher than the highest element defined in an array.
         ///</summary>
@@ -308,7 +308,7 @@ namespace SharpKit.JavaScript
     public partial class JsArray<T> : IJsArrayEnumerable<T>
     {
         public static implicit operator JsArray(JsArray<T> x) { return null; }
-        public static implicit operator T[](JsArray<T> x) { return default(T[]); }
+        public static implicit operator T[] (JsArray<T> x) { return default(T[]); }
         public static implicit operator JsArray<T>(T[] array) { return default(JsArray<T>); }
         [JsMethod(IgnoreGenericArguments = true, JsonInitializers = true, OmitNewOperator = true, OmitParanthesis = true, Name = "", SharpKitVersion = "5+")]
         public JsArray() { }
@@ -526,7 +526,7 @@ namespace SharpKit.JavaScript
     {
         public JsBoolean(object boolValue) { }
         public JsBoolean() { }
-        public static implicit operator bool(JsBoolean x) { return default(bool); }
+        public static implicit operator bool (JsBoolean x) { return default(bool); }
         public static implicit operator JsBoolean(bool x) { return default(JsBoolean); }
     }
     #endregion
@@ -797,7 +797,7 @@ namespace SharpKit.JavaScript
         [JsMethod(OmitParanthesis = true, NativeOverloads = true)]
         public static bool delete(object obj) { return false; }
 
-        [JsMethod(OmitParanthesis = true, NativeOverloads = true, InsertArg1="()", OmitCommas=true)]
+        [JsMethod(OmitParanthesis = true, NativeOverloads = true, InsertArg1 = "()", OmitCommas = true)]
         public static bool @new(object obj) { return false; }
         ///<summary>
         ///Returns a floating-point number converted from a JsString.
@@ -1870,10 +1870,10 @@ namespace SharpKit.JavaScript
         {
             _Value = d;
         }
-        public static implicit operator double(JsNumber number) { return default(double); }
-        public static implicit operator decimal(JsNumber number) { return default(decimal); }
-        public static implicit operator int(JsNumber number) { return default(int); }
-        public static implicit operator float(JsNumber number) { return default(float); }
+        public static implicit operator double (JsNumber number) { return default(double); }
+        public static implicit operator decimal (JsNumber number) { return default(decimal); }
+        public static implicit operator int (JsNumber number) { return default(int); }
+        public static implicit operator float (JsNumber number) { return default(float); }
         public static implicit operator JsNumber(decimal d) { return default(JsNumber); }
         public static implicit operator JsNumber(double d) { return default(JsNumber); }
         public static implicit operator JsNumber(sbyte d) { return default(JsNumber); }
@@ -2199,7 +2199,7 @@ namespace SharpKit.JavaScript
         {
             return new JsString(s);
         }
-        public static implicit operator string(JsString s)
+        public static implicit operator string (JsString s)
         {
             return s._Value;
         }
@@ -2218,6 +2218,8 @@ namespace SharpKit.JavaScript
         public static JsString operator +(string x, JsString y) { return default(JsString); }
         public static bool operator >(JsString x, JsString y) { return false; }
         public static bool operator <(JsString x, JsString y) { return false; }
+        public static bool operator <=(JsString x, JsString y) { return false; }
+        public static bool operator >=(JsString x, JsString y) { return false; }
         ///<summary>
         ///Returns the last occurrence of a substring within a String object.
         ///</summary>
@@ -2743,14 +2745,14 @@ namespace SharpKit.JavaScript
         /// <returns></returns>
         [JsMethod(OmitDotOperator = true, OmitParanthesis = true, Export = false, NativeOverloads = true, Name = "in", ExtensionImplementedInInstance = true)]
         public static bool @in(this string propertyName, object obj) { return false; }
-        
+
         [JsMethod(InlineCodeExpression = "s in obj", Export = false)]
         public static bool HasProperty(this object obj, string s)
         {
             return false;
         }
 
-        [JsMethod(Export = false, ExtensionImplementedInInstance=true)]
+        [JsMethod(Export = false, ExtensionImplementedInInstance = true)]
         public static bool hasOwnProperty(this object obj, string s)
         {
             return false;
