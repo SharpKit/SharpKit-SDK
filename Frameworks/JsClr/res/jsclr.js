@@ -2853,7 +2853,7 @@ var System$Random = {
             Seed = 1;
         },
         Sample: function (){
-            return this.InternalSample() * 4.6566128752458E-10;
+            return this.InternalSample() * 4.656612875245797E-10;
         },
         InternalSample: function (){
             var num = this.inext;
@@ -3012,11 +3012,11 @@ var System$TimeSpan = {
             System.TimeSpan.TicksPerSecond = 10000000;
             System.TimeSpan.SecondsPerTick = 1E-07;
             System.TimeSpan.TicksPerMinute = 600000000;
-            System.TimeSpan.MinutesPerTick = 1.66666666666667E-09;
+            System.TimeSpan.MinutesPerTick = 1.6666666666666667E-09;
             System.TimeSpan.TicksPerHour = 36000000000;
-            System.TimeSpan.HoursPerTick = 2.77777777777778E-11;
+            System.TimeSpan.HoursPerTick = 2.7777777777777777E-11;
             System.TimeSpan.TicksPerDay = 864000000000;
-            System.TimeSpan.DaysPerTick = 1.15740740740741E-12;
+            System.TimeSpan.DaysPerTick = 1.1574074074074074E-12;
             System.TimeSpan.MillisPerSecond = 1000;
             System.TimeSpan.MillisPerMinute = 60000;
             System.TimeSpan.MillisPerHour = 3600000;
