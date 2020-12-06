@@ -1,23 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-	<SkcToolPath Condition=" '$(SkcToolPath)' == '' And Exists('$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\') ">$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\</SkcToolPath>
-	<SkcToolPath Condition=" '$(SkcToolPath)' == '' ">$(MSBuildToolsPath)\SharpKit\5</SkcToolPath>
-  </PropertyGroup>
-
-<!--
-	<ItemDefinitionGroup Condition="'$(DontCopyLocalReferences)' == 'true'">
-	  <Reference>
-		<Private>False</Private>
-	  </Reference>
-	  <ProjectReference>
-		<Private>False</Private>
-	  </ProjectReference>
-	</ItemDefinitionGroup>
--->
 	<PropertyGroup>
-		<OutputPath>bin\</OutputPath>
-		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
-        <UseVSHostingProcess>false</UseVSHostingProcess>
+		<SkcToolPath Condition=" '$(SkcToolPath)' == '' And Exists('$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\') ">$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\</SkcToolPath>
+		<SkcToolPath Condition=" '$(SkcToolPath)' == '' ">$(MSBuildToolsPath)\SharpKit\5</SkcToolPath>
 	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<OutputPath>bin\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>None</DebugType>
+		<WarningLevel>4</WarningLevel>
+		<NoWarn>1591,0108,0114,1570</NoWarn>
+	</PropertyGroup>
+
+	<Import Project="$(SkcToolPath)\SharpKit.CSharp.targets" />
 </Project>

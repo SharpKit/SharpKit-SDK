@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>SharpKit.JsClr</RootNamespace>
     <AssemblyName>SharpKit.JsClr</AssemblyName>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
-    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SharpKit.Html">
@@ -19,6 +14,5 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
-  <Import Project="$(SkcToolPath)\SharpKit.CSharp.targets" />
+  <Import Project="..\Common.targets" />
 </Project>
