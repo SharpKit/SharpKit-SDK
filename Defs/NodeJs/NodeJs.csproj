@@ -1,117 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{85D7E841-77BB-4AB9-8E64-DAB28FEAA657}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SharpKit.NodeJs</RootNamespace>
     <AssemblyName>SharpKit.NodeJs</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <NoWarn>1591,0108,0114,1570</NoWarn>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\Debug</OutputPath>
-    <NoWarn>1587,1591,108,1570,1572</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Buffer.cs" />
-    <Compile Include="ChildProcess.cs" />
-    <Compile Include="crypto\Cipher.cs" />
-    <Compile Include="cluster\Utils.cs" />
-    <Compile Include="cluster\Worker.cs" />
-    <Compile Include="console.cs" />
-    <Compile Include="crypto\Decipher.cs" />
-    <Compile Include="crypto\DiffieHellman.cs" />
-    <Compile Include="crypto\Utils.cs" />
-    <Compile Include="dns\utils.cs" />
-    <Compile Include="Domain.cs" />
-    <Compile Include="events\EventEmitter.cs" />
-    <Compile Include="fs\FSWatcher.cs" />
-    <Compile Include="fs\ReadStream.cs" />
-    <Compile Include="fs\Stats.cs" />
-    <Compile Include="fs\Utils.cs" />
-    <Compile Include="fs\WriteStream.cs" />
-    <Compile Include="crypto\Hash.cs" />
-    <Compile Include="crypto\Hmac.cs" />
-    <Compile Include="https\Agent.cs" />
-    <Compile Include="https\Server.cs" />
-    <Compile Include="https\Utils.cs" />
-    <Compile Include="http\Agent.cs" />
-    <Compile Include="http\ClientRequest.cs" />
-    <Compile Include="http\ClientResponse.cs" />
-    <Compile Include="http\IncomingMessage.cs" />
-    <Compile Include="http\Server.cs" />
-    <Compile Include="http\ServerRequest.cs" />
-    <Compile Include="http\ServerResponse.cs" />
-    <Compile Include="http\Utils.cs" />
-    <Compile Include="Module.cs" />
-    <Compile Include="NodeJsContext.cs" />
-    <Compile Include="Path.cs" />
-    <Compile Include="queryString\Utils.cs" />
-    <Compile Include="readlLine\Interface.cs" />
-    <Compile Include="net\Server.cs" />
-    <Compile Include="net\Socket.cs" />
-    <Compile Include="net\Utils.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="stream\Readable Stream.cs" />
-    <Compile Include="StringDecoder.cs" />
-    <Compile Include="Timers.cs" />
-    <Compile Include="Url.cs" />
-    <Compile Include="Utilities.cs" />
-    <Compile Include="vm\Script.cs" />
-    <Compile Include="SecurePair.cs" />
-    <Compile Include="crypto\Signer.cs" />
-    <Compile Include="SlowBuffer.cs" />
-    <Compile Include="Socket.cs" />
-    <Compile Include="tls\CleartextStream.cs" />
-    <Compile Include="tls\Server.cs" />
-    <Compile Include="tls\Utils.cs" />
-    <Compile Include="crypto\Verify.cs" />
-    <Compile Include="vm\Utils.cs" />
-    <Compile Include="stream\Writable Stream.cs" />
-    <Compile Include="zlib\Deflate.cs" />
-    <Compile Include="zlib\DeflateRaw.cs" />
-    <Compile Include="zlib\Gunzip.cs" />
-    <Compile Include="zlib\Gzip.cs" />
-    <Compile Include="zlib\Inflate.cs" />
-    <Compile Include="zlib\InflateRaw.cs" />
-    <Compile Include="zlib\Unzip.cs" />
-    <Compile Include="zlib\Utils.cs" />
-  </ItemGroup>
+  <Import Project="..\Common.targets" />
   <ItemGroup>
     <ProjectReference Include="..\JavaScript\JavaScript.csproj">
-      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>SharpKit.JavaScript</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="udp\" />
-  </ItemGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

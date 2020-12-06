@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>SharpKit.JavaScript</RootNamespace>
     <AssemblyName>SharpKit.JavaScript</AssemblyName>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
-    <NoWarn>1591,0108,0114,1570</NoWarn>
   </PropertyGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
+  <Import Project="..\Common.targets" />
 </Project>

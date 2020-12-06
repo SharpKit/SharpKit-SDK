@@ -1,139 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F876266E-971B-49D2-B848-0E357E52A230}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SharpKit.Three</RootNamespace>
     <AssemblyName>SharpKit.ThreeJs</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
-    <NoWarn>1591,0108,0114,1570</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <NoWarn>1587,1591,108,114</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="AxisHelper.cs" />
-    <Compile Include="BoxHelper.cs" />
-    <Compile Include="Cameras\Camera.cs" />
-    <Compile Include="Core\BufferGeometry.cs" />
-    <Compile Include="Extras\Geometry\CircleGeometry.cs" />
-    <Compile Include="Extras\Helpers\EdgesHelper.cs" />
-    <Compile Include="Extras\Helpers\WireframeHelper.cs" />
-    <Compile Include="Lights\DirectionalLight.cs" />
-    <Compile Include="Lights\AmbientLight.cs" />
-    <Compile Include="Materials\LineBasicMaterial.cs" />
-    <Compile Include="Materials\MeshPhongMaterial.cs" />
-    <Compile Include="Materials\MeshNormalMaterial.cs" />
-    <Compile Include="Materials\MeshBasicMaterial.cs" />
-    <Compile Include="Math\Color.cs" />
-    <Compile Include="Extras\Geometry\ConvexGeometry.cs" />
-    <Compile Include="Extras\Core\Curve.cs" />
-    <Compile Include="Core\Face3.cs" />
-    <Compile Include="Core\Face4.cs" />
-    <Compile Include="Extras\GeometryUtils.cs" />
-    <Compile Include="Extras\Helpers\GridHelper.cs" />
-    <Compile Include="Extras\ImageUtils.cs" />
-    <Compile Include="Loaders\JSONLoader.cs" />
-    <Compile Include="Objects\Line.cs" />
-    <Compile Include="Loaders\Loader.cs" />
-    <Compile Include="Materials\MeshFaceMaterial.cs" />
-    <Compile Include="Extras\Geometry\ParticleBasicMaterial.cs" />
-    <Compile Include="ParticleSystem.cs" />
-    <Compile Include="Materials\ShaderMaterial.cs" />
-    <Compile Include="Extras\Core\Shape.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="TrackballControls.cs" />
-    <Compile Include="TypeValue.cs" />
-    <Compile Include="Uniforms.cs" />
-    <Compile Include="OLD\UV.cs" />
-    <Compile Include="Math\Vector2.cs" />
-    <Compile Include="Extras\Geometry\BoxGeometry.cs" />
-    <Compile Include="Extras\Core\CurvePath.cs" />
-    <Compile Include="Extras\Geometry\CylinderGeometry.cs" />
-    <Compile Include="Extras\Geometry\ExtrudeGeometry.cs" />
-    <Compile Include="Core\Geometry.cs" />
-    <Compile Include="Extras\Geometry\IcosahedronGeometry.cs" />
-    <Compile Include="Extras\Geometry\LatheGeometry.cs" />
-    <Compile Include="Lights\Light.cs" />
-    <Compile Include="Materials\Material.cs" />
-    <Compile Include="Materials\MaterialOptions.cs" />
-    <Compile Include="Math\Matrix4.cs" />
-    <Compile Include="Objects\Mesh.cs" />
-    <Compile Include="Materials\MeshLambertMaterial.cs" />
-    <Compile Include="Core\Object3D.cs" />
-    <Compile Include="Extras\Geometry\OctahedronGeometry.cs" />
-    <Compile Include="Cameras\OrthographicCamera.cs" />
-    <Compile Include="Extras\Geometry\ParametricGeometry.cs" />
-    <Compile Include="Extras\Core\Path.cs" />
-    <Compile Include="Cameras\PerspectiveCamera.cs" />
-    <Compile Include="Extras\Geometry\PlaneGeometry.cs" />
-    <Compile Include="Lights\PointLight.cs" />
-    <Compile Include="Extras\Geometry\PolyhedronGeometry.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Math\Quaternion.cs" />
-    <Compile Include="Scenes\Scene.cs" />
-    <Compile Include="Extras\Geometry\ShapeGeometry.cs" />
-    <Compile Include="Extras\Geometry\SphereGeometry.cs" />
-    <Compile Include="Lights\SpotLight.cs" />
-    <Compile Include="Extras\Geometry\TetrahedronGeometry.cs" />
-    <Compile Include="Extras\Geometry\TextGeometry.cs" />
-    <Compile Include="Extras\Geometry\TorusGeometry.cs" />
-    <Compile Include="Extras\Geometry\TorusKnotGeometry.cs" />
-    <Compile Include="Extras\Geometry\TubeGeometry.cs" />
-    <Compile Include="Math\Vector3.cs" />
-    <Compile Include="Math\Vector4.cs" />
-    <Compile Include="Renderers\WebGLRenderer.cs" />
-    <Compile Include="Renderers\WebGLRendererOptions.cs" />
-    <Compile Include="Renderers\WebGLRenderTarget.cs" />
-    <Compile Include="Renderers\WebGLRenderTargetOptions.cs" />
-  </ItemGroup>
+  <Import Project="..\Common.targets" />
   <ItemGroup>
     <ProjectReference Include="..\JavaScript\JavaScript.csproj">
-      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>SharpKit.JavaScript</Name>
     </ProjectReference>
     <ProjectReference Include="..\jQuery\jQuery.csproj">
-      <Project>{872605DE-E8EC-4D3D-8CEE-A62449A8DAEB}</Project>
-      <Name>SharpKit.jQuery</Name>
     </ProjectReference>
     <ProjectReference Include="..\Html\Html.csproj">
-      <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
-      <Name>SharpKit.Html</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="SharpKit.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Renderers\Shaders\" />
-  </ItemGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

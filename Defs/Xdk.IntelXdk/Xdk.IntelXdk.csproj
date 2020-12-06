@@ -1,66 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F1423780-8705-4BA1-A546-9021186EBA52}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SharpKit.DotNet.IntelXdk</RootNamespace>
     <AssemblyName>SharpKit.Xdk.IntelXdk</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
-    <NoWarn>1591</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <DocumentationFile>..\bin\SharpKit.Xdk.IntelXdk.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <NoWarn>1587,1591</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="IntelXdk-4.0.0.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SharpKit.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="license.txt" />
-  </ItemGroup>
+  <Import Project="..\Common.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Xdk.Html\Xdk.Html.csproj">
-      <Project>{3c3ace44-ef64-4c4e-9c04-084d4a8ee6c9}</Project>
-      <Name>Xdk.Html</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xdk.JavaScript\Xdk.JavaScript.csproj">
-      <Project>{a7b1398f-706f-4057-9185-5e4b305096bf}</Project>
-      <Name>Xdk.JavaScript</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

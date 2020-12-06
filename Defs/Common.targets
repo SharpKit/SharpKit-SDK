@@ -1,25 +1,11 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<!--
-	<ItemDefinitionGroup Condition="'$(DontCopyLocalReferences)' == 'true'">
-	  <Reference>
-		<Private>False</Private>
-	  </Reference>
-	  <ProjectReference>
-		<Private>False</Private>
-	  </ProjectReference>
-	</ItemDefinitionGroup>
--->
+<Project>
 	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
 		<OutputPath>..\bin\</OutputPath>
 		<DocumentationFile>..\bin\$(AssemblyName).xml</DocumentationFile>
-        <UseVSHostingProcess>false</UseVSHostingProcess>
         <DebugSymbols>false</DebugSymbols>
         <DebugType>None</DebugType>
+		<WarningLevel>4</WarningLevel>
+		<NoWarn>1591,0108,0114,1570</NoWarn>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.0'">
-    <DefineConstants>NET4</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v3.5'">
-    <DefineConstants>NET3_5</DefineConstants>
-  </PropertyGroup>
 </Project>

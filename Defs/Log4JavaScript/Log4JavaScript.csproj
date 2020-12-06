@@ -1,76 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-    <NoWarn>1591,0108,0114,1570</NoWarn>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>SharpKit.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C2E399B-46CC-42E1-B930-F0D81313E883}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>log4javascript</RootNamespace>
     <AssemblyName>SharpKit.Log4JavaScript</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>bin\Debug</OutputPath>
-    <NoWarn>1587,1591</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="AjaxAppender.cs" />
-    <Compile Include="AlertAppender.cs" />
-    <Compile Include="Appender.cs" />
-    <Compile Include="BrowserConsoleAppender.cs" />
-    <Compile Include="CommandLineFunctionReturnValue.cs" />
-    <Compile Include="Header.cs" />
-    <Compile Include="InPageAppender.cs" />
-    <Compile Include="Layout.cs" />
-    <Compile Include="Level.cs" />
-    <Compile Include="log4javascriptContext.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="LoggingEvent.cs" />
-    <Compile Include="LogLog.cs" />
-    <Compile Include="NullLayout.cs" />
-    <Compile Include="PatternLayout.cs" />
-    <Compile Include="PopUpAppender.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleLayout.cs" />
-    <Compile Include="_Assembly.cs" />
-  </ItemGroup>
+  <Import Project="..\Common.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Html\Html.csproj">
-      <Project>{F1B6A826-60C3-4038-AABF-BD7C8380CC2F}</Project>
-      <Name>SharpKit.Html</Name>
     </ProjectReference>
     <ProjectReference Include="..\JavaScript\JavaScript.csproj">
-      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>SharpKit.JavaScript</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="SharpKit.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <Import Condition="Exists('..\Common.targets')" Project="..\Common.targets" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
