@@ -1,4 +1,4 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<SkcToolPath Condition=" '$(SkcToolPath)' == '' And Exists('$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\') ">$(MSBuildThisFileDirectory)..\..\Compiler\skc5\bin\</SkcToolPath>
@@ -20,10 +20,4 @@
 		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
         <UseVSHostingProcess>false</UseVSHostingProcess>
 	</PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.0'">
-    <DefineConstants>NET4</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v3.5'">
-    <DefineConstants>NET3_5</DefineConstants>
-  </PropertyGroup>
 </Project>
