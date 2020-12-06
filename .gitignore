@@ -53,3 +53,5 @@ Icon
 *.so
 *.o
 *.obj
+
+.vs/
