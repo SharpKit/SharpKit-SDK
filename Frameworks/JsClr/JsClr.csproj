@@ -4,6 +4,9 @@
     <AssemblyName>SharpKit.JsClr</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="System\Collections\Generic\KeyNotFoundException.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="SharpKit.Html">
       <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
     </Reference>
