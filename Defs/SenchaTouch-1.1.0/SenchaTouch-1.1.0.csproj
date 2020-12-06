@@ -5,11 +5,7 @@
   </PropertyGroup>
   <Import Project="..\Common.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\JavaScript\JavaScript.csproj">
-      <Project>{5A90FAC8-67DA-4823-B114-91F5A26B2FE9}</Project>
-      <Name>SharpKit.JavaScript</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Html\Html.csproj">
-    </ProjectReference>
+    <ProjectReference Include="..\JavaScript\JavaScript.csproj" />
+    <ProjectReference Include="..\Html\Html.csproj" />
   </ItemGroup>
 </Project>

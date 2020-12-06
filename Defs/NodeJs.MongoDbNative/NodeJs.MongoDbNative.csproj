@@ -5,9 +5,7 @@
   </PropertyGroup>
   <Import Project="..\Common.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\JavaScript\JavaScript.csproj">
-    </ProjectReference>
-    <ProjectReference Include="..\NodeJs\NodeJs.csproj">
-    </ProjectReference>
+    <ProjectReference Include="..\JavaScript\JavaScript.csproj" />
+    <ProjectReference Include="..\NodeJs\NodeJs.csproj" />
   </ItemGroup>
 </Project>

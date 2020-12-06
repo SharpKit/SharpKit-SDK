@@ -5,9 +5,7 @@
   </PropertyGroup>
   <Import Project="..\Common.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Xdk.Html\Xdk.Html.csproj">
-    </ProjectReference>
-    <ProjectReference Include="..\Xdk.JavaScript\Xdk.JavaScript.csproj">
-    </ProjectReference>
+    <ProjectReference Include="..\Xdk.Html\Xdk.Html.csproj" />
+    <ProjectReference Include="..\Xdk.JavaScript\Xdk.JavaScript.csproj" />
   </ItemGroup>
 </Project>

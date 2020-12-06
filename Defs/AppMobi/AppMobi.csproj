@@ -11,9 +11,7 @@
     <None Include="appmobi-3.4.0.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Html\Html.csproj">
-    </ProjectReference>
-    <ProjectReference Include="..\JavaScript\JavaScript.csproj">
-    </ProjectReference>
+    <ProjectReference Include="..\Html\Html.csproj" />
+    <ProjectReference Include="..\JavaScript\JavaScript.csproj" />
   </ItemGroup>
 </Project>
