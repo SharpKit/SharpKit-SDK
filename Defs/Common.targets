@@ -2,6 +2,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<OutputPath>..\bin\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<DocumentationFile>..\bin\$(AssemblyName).xml</DocumentationFile>
         <DebugSymbols>false</DebugSymbols>
         <DebugType>None</DebugType>
