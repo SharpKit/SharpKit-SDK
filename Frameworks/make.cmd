@@ -1,4 +1,4 @@
 @cd /D %~dp0
 @call ../scripts/set-variables
 
-%msbuild% Frameworks.sln -verbosity:minimal
+dotnet build Frameworks.sln -verbosity:minimal
