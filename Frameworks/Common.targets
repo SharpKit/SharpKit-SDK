@@ -9,11 +9,15 @@
 		<OutputPath>bin\</OutputPath>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
-        <DebugSymbols>false</DebugSymbols>
-        <DebugType>None</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+		<DebugType>None</DebugType>
 		<WarningLevel>4</WarningLevel>
 		<NoWarn>1591,0108,0114,1570</NoWarn>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	</ItemGroup>
 
 	<Import Project="$(SkcToolPath)\SharpKit.CSharp.targets" />
 </Project>

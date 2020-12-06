@@ -1,41 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6DA2D65-F202-4076-803F-7445BE89B9FC}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SharpKit.Html.Linq</RootNamespace>
     <AssemblyName>Html.Linq</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>..\..\bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SharpKit.Html.Linq.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SharpKit.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="res\SharpKit.Html.Linq.js" />
-    <Content Include="res\SharpKit.Html.Linq.min.js" />
-  </ItemGroup>
+  <Import Project="..\Common.targets" />
   <ItemGroup>
     <Reference Include="SharpKit.Html">
       <HintPath>..\..\Defs\bin\SharpKit.Html.dll</HintPath>
@@ -44,14 +12,4 @@
       <HintPath>..\..\Defs\bin\SharpKit.JavaScript.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <Import Project="..\Common.targets" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SkcToolPath)\SharpKit.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
