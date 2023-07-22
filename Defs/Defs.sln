@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xdk.IntelXdk", "Xdk.IntelXd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xdk.JavaScript", "Xdk.JavaScript\Xdk.JavaScript.csproj", "{A7B1398F-706F-4057-9185-5E4B305096BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIDO", "FIDO\FIDO.csproj", "{7FD68F02-F406-4F7A-9883-865E292B5982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
